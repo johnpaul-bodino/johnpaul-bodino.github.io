@@ -3,10 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpage</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <h1>WELCOME TO MY WEBSITE</h1>
+    <header>
+        <div class="logo">Paul</div>
+        <nav id="desktop-nav">
+            <ul class="nav-links">
+                <li><a class = "ey" href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <nav id="hamburger-nav">
+            <a class = "ey" href="#home">Home</a>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#project" onclick="toggleMenu()">Project</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+    <section>
+        <div class="section_pic-container">
+            <img class = "hero" src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724388660/portfolio%20images/hprabo7c31iipvyoqubc.jpg">
+        </div>
+        <div class="intro">
+            <h1>Hi, I’m <span class="highlight">John Paul</span></h1>
+            <p>a <span class="shesh">Web Designer</span> and <br> Developer</p>
+        </div>
+        <div class="btn-container">
+            <a href="#" class="btn">Browse Projects</a>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about_container">
+            <div class="gif">
+                <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724450256/portfolio%20images/wuroohyjpgwxhuheryf2.gif" alt="for_about">
+            </div>
+            <div class="box2">
+                box2
+            </div>
+            <div class="aboutme_container">
+                About me
+            </div>
+            <div class="skillset_container">
+                Skillset
+            </div>
+            <div class="box1">
+                box1
+            </div>
+            
+            <div class="education_container">
+                Education
+            </div>
+        </div>
+    </section>
+    <section id="project">
+        <div class="project_container">
+            project
+        </div>
+    </section>
+    <script src="script.js"></script>
     
 </body>
 </html>

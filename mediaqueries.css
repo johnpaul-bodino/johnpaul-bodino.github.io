@@ -1,0 +1,53 @@
+
+@media screen and (max-width: 980px) {
+    #desktop-nav {
+        display: None;
+    }
+    #hamburger-nav{
+        display: flex;
+       width: 666.93px;
+        height: 65.28px;
+    }
+    .nav-links:not(:first-child) {display: none;}
+    .nav-links.icon {
+      float: right;
+      display: block;
+    }
+    .ey{
+        font-size: 1.3rem;
+        margin-right: 1.25rem;
+
+    }
+    .intro {
+        padding-left: 50px;
+        margin-top: 150px;
+        color: #D9D9D9;
+    }
+      
+}
+
+@media screen and (max-width: 450px) {
+    .logo{
+        font-size: 1.7rem;
+        margin: 50px 20px 0;
+    }
+    #hamburger-nav{
+        width: 283px;
+        height: 49px;
+    }
+    .nav-links{
+        font-size: 1px;
+    }
+    .ey{
+        font-size: 1rem;
+        margin-right: 1.25rem;
+    
+    }
+
+
+
+
+
+    
+}
+    

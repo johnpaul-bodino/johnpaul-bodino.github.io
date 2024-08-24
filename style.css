@@ -1,0 +1,308 @@
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body {
+        font-family: arial, sans-serif;
+        background-color: #353535;
+        
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    a, .btn {
+        transition: all 300ms ease;
+    }
+
+    /* DESKTOP NAV */
+    header{
+        align-items: center;
+        display: flex;
+    }
+
+    nav, .nav-links {
+        
+        display: flex;
+    }
+    nav{
+        
+        display: flex;
+        background: #396D6D;
+        margin: 50px 10px 0 0px ;
+        width: 970px;
+        height: 65.18px;
+        border-radius: 40px;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        position: relative;
+        /*transform: translateX(-30%);*/
+
+    }
+    .nav-links{
+        float: right;
+        gap: 7rem;
+        list-style: none;
+        text-decoration-style: none;
+        font-size: 1.3rem;
+       
+        
+    }
+
+    .logo{
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin: 50px 50px 0;
+        color: #ffff;
+        
+    }
+    .ey{
+        display: flex;
+        font-size: 1.3rem;
+        list-style: none;
+        text-decoration-style: none;
+        margin-right: 13.25rem;
+        float: right;
+        
+
+        
+    
+    }
+    a{
+        color: #ffff;
+        text-decoration: none;
+        font-weight: 400;
+        font-family: 'Roboto Flex';
+
+    }
+
+    /*Hamburger Menu*/
+    #hamburger-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        position: relative;
+        display: inline-block;
+    }
+
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 25px;
+        cursor: pointer;
+        margin: 3px;
+    }
+
+    .hamburger-icon span{
+        width: 25px;
+        height: 3px;
+        background-color: #d9d9d9;
+        transition: all 0.3 ease-in-out;
+    }
+    
+    .menu-links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #396D6D;
+        width: fit-content;
+        max-height: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3 ease-in-out;
+    }
+    
+    
+    .menu-links a{
+        display: block;
+        padding: 10px;
+        font-size: 1.5rem;
+        color: #d9d9d9;
+        text-decoration: none;
+        transition: all 0.3 ease-in-out;
+    }
+    
+
+    .menu-links li {
+        list-style: none;
+    }
+    .menu-links.open {
+        max-height: 300px;
+    }
+    
+    /* SECTIONS*/
+    
+
+    .section_pic-container {
+        display: flex;
+        margin: -50px 190px 0px 0px;
+        
+        width: 330px;
+        height: 330px;
+        border-radius: 60%;
+        background-color: #D9D9D9;
+        overflow: hidden;
+        box-shadow: 0 0 0 3px #1AABB0;
+        justify-content: center; 
+        align-items: center;
+        float: right;
+        padding-left: auto;
+
+    }
+
+
+    .hero{
+        width: 250px;
+        height: 250px;
+        border-radius: 60%;
+        
+    }
+
+    .intro {
+        padding-left: 200px;
+        margin-top: 150px;
+        color: #D9D9D9;
+        text-align: left;
+    }
+    
+
+    
+    h1 {
+        font-size: 3.2rem;
+        font-weight: normal;
+    }
+    
+    p {
+        overflow: visible;
+        font-size: 2.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+
+        
+    }
+    
+    .highlight {
+        font-weight: bold;
+        color: #ffff; /* Color used for highlight */
+    }
+
+    
+    .shesh {
+        font-size: 2.5rem;
+        font-weight: normal;
+        background: rgba(0, 0, 0, 0); /* Invisible background */
+        border: 3px solid #00B4A2;
+        border-radius: 100% / 100%; /* Creates an elliptical shape */
+
+       
+    }
+    .section{
+        padding-top: 4vh;
+        height: 96vh;
+        margin: 0 10rem;
+        box-sizing: border-box;
+        min-height: fit-content;
+    }
+    
+
+    .btn-container{
+        padding-left: 250px;
+        margin-top: 50px;
+    }
+    .btn {
+        background-color: #396D6D;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 1.3rem;
+        transition: background-color 300ms ease;
+        align-content: center;
+       
+        
+    }
+    
+    .btn:hover {
+        background-color: #2f5a5a;
+    }
+
+    #about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 250px;
+        background-color: #2f5a5a;
+        border-radius: 10%;
+        height: 765px;
+        border: 4px solid black;
+    }
+
+    .about_container{
+        display: flex;
+        width: 1127px;
+        height: 535px;
+        border: 4px solid black;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 1;
+        
+    }
+    .gif{
+        display: flex;
+        width: 166px;
+        height: 195px;
+    }
+    .box1{
+        display: flex;
+        width: 166px;
+        height: 335px;
+        background-color: #284B63;
+        margin-top: -339px;
+
+    }
+    .box2{
+        display: flex;
+        width: 404px;
+        height: 306px;
+        background-color: #D9D9D9;
+        border: 2px solid black;
+    }
+    .education_container{
+        width: 404px;
+        height: 223px;
+        background: #353533;
+        margin-top: -225px;
+        margin-left: 2px;
+    }
+    .aboutme_container{
+        display: flex;
+        width: 330px;
+        height: 533px;
+        background-color: #D9D9D9;
+        margin-left: 1px;
+    }
+    .skillset_container{
+        display: flex;
+        width: 217px;
+        height: 535px;
+        background-color: #284B63;
+        margin-left: 4px;
+    }
+
+    /*PROJECT*/
+    #project{
+        display: flex;
+        margin-top: 250px;
+        background-color: #D9D9D9;
+        height: 765px;
+        
+    }
+    
