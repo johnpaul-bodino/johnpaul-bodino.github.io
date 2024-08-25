@@ -1,0 +1,65 @@
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    background-color: #2f5a5a;
+    border-radius: 10%;
+    height: 765px;
+    border: 4px solid black;
+}
+
+.about_container{
+    display: flex;
+    width: 1127px;
+    height: 535px;
+    border: 4px solid black;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1;
+    
+}
+.gif{
+    display: flex;
+    width: 166px;
+    height: 195px;
+    
+
+}
+.box1{
+    display: flex;
+    width: 166px;
+    height: 335px;
+    background-color: #284B63;
+    margin-top: -339px;
+
+}
+.box2{
+    display: flex;
+    width: 404px;
+    height: 306px;
+    background-color: #D9D9D9;
+    border: 2px solid black;
+}
+.education_container{
+    width: 404px;
+    height: 223px;
+    background: #353533;
+    margin-top: -225px;
+    margin-left: 2px;
+}
+.aboutme_container{
+    display: flex;
+    width: 330px;
+    height: 533px;
+    background-color: #D9D9D9;
+    margin-left: 1px;
+}
+.skillset_container{
+    display: flex;
+    width: 217px;
+    height: 535px;
+    background-color: #284B63;
+    margin-left: 4px;
+}

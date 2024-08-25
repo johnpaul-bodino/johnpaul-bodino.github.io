@@ -6,34 +6,36 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header>
         <div class="logo">Paul</div>
-        <nav id="desktop-nav">
-            <ul class="nav-links">
-                <li><a class = "ey" href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <nav id="hamburger-nav">
-            <a class = "ey" href="#home">Home</a>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <nav id="desktop-nav">
+                <ul class="nav-links">
+                    <li><a class = "ey" href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <nav id="hamburger-nav">
+                <a href="#home" class = "ey">Home</a>
+                <div class="hamburger-menu">
+                    <div class="hamburger-icon" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="menu-links">
+                        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                        <li><a href="#project" onclick="toggleMenu()">Project</a></li>
+                        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                    </div>
                 </div>
-                <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#project" onclick="toggleMenu()">Project</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                </div>
-            </div>
-    
-        </nav>
+            </nav>
     </header>
     <section>
         <div class="section_pic-container">
@@ -44,7 +46,7 @@
             <p>a <span class="shesh">Web Designer</span> and <br> Developer</p>
         </div>
         <div class="btn-container">
-            <a href="#" class="btn">Browse Projects</a>
+            <a href="#project" class="btn">Browse Projects</a>
         </div>
     </section>
     <section id="about">
@@ -74,14 +76,32 @@
         <div class="project_container">
             <h2 class="header2">Projects</h2>
             <p class="p_project">Here are some projects that made. i will add more in the future feel free to check!<br><hr ></p>
+
+            <div class="project_menu">
+                <a href="#" class="content_in_project"> Bank System UI <span> &#129104; </span></a>
+                <a href="#" class="content_in_project"> Contact Search <span> &#129104; </span></a>
+                <a href="#" class="content_in_project"> File Organizer <span> &#129104; </span></a>
+            </div>
         </div>
-        <div>
-            <a href="#" class="content_in_project"> Bank System UI </a>
-            <a href="#" class="content_in_project"> Contact Search </a>
-            <a href="#" class="content_in_project"> File Organizer </a>
-        </div>
+        
     </section>
+    <footer id="contact">
+        <div class="contact-container">
+            <h3>Contact me!</h3>
+            <div class="contact-details">
+                <div class="email">
+                    <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724565130/portfolio%20images/q9xvjwnq4xyigncoqxnn.svg" alt="Email Icon">
+                    <p>johnpaulbodino49@gmail.com</p>
+                </div>
+                <hr>
+                <div class="social-icons">
+                    <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724565129/portfolio%20images/su6esuhc2l6kwjjewfin.svg" alt="Instagram"> 
+                    <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724565129/portfolio%20images/rvxcz3p67b5pv8u6er2x.svg" alt="Facebook">
+                    <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724565129/portfolio%20images/tz4s4ys97womd4ibtfn3.svg" alt="GitHub">
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
-    
 </body>
 </html>

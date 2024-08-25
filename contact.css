@@ -1,0 +1,65 @@
+h3{
+    font-style: italic;
+    font-size: 2.3rem;
+    font-weight: 50px;
+}
+
+#contact{
+    color: #d9d9d9;
+    height: 583px;
+    text-align: center;
+  
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: 100px auto;
+    
+}
+
+.contact-container p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 120px;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.email img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+hr {
+    display: flex;
+
+    width: 1000px;
+    border: 1px solid #aaa;
+   
+}
+
+.social-icons {
+    width: 1000px;
+   
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
