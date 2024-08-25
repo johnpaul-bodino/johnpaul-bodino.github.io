@@ -201,9 +201,9 @@ p {
 .shesh {
     font-size: 2.5rem;
     font-weight: normal;
-    background: rgba(0, 0, 0, 0); /* Invisible background */
+    background: rgba(0, 0, 0, 0);
     border: 3px solid #00B4A2;
-    border-radius: 100% / 100%; /* Creates an elliptical shape */
+    border-radius: 100% / 100%; 
 
    
 }
