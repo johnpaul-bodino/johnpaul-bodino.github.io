@@ -42,7 +42,7 @@
     }
     #hamburger-nav{
         width: 200px;
-        height: 40px;
+        height: 49px;
     }
     .nav-links{
         font-size: 1px;
@@ -113,6 +113,31 @@
     }
     .btn {
         font-size: 0.7rem;
+    }
+    
+    
+
+    .section_pic-container {
+        display: flex;
+        margin: -50px 190px 0px 0px;
+        width: 200px;
+        height: 200px;
+        border-radius: 60%;
+        background-color: #D9D9D9;
+        overflow: hidden;
+        box-shadow: 0 0 0 2px #1AABB0;
+        justify-content: center; 
+        align-items: center;
+       
+        padding-left: auto;
+    
+    }
+
+    .hero{
+        width: 140px;
+        height: 140px;
+        border-radius: 60%;
+        
     }
     
     
