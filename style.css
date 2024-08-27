@@ -2,14 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
-   
 }
 
 body {
     font-family: arial, sans-serif;
     background-color: #353535;
-    
 }
 
 html {
@@ -28,11 +25,9 @@ header{
     justify-content: center;
     top: 0;
     z-index: 1000;
-    
 }
 
 nav, .nav-links {
-    
     display: flex;
 }
 
@@ -49,16 +44,14 @@ nav{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     position: relative;
     /*transform: translateX(-30%);*/
-
 }
+
 .nav-links{
     float: right;
     gap: 7rem;
     list-style: none;
     text-decoration-style: none;
     font-size: 1.3rem;
-   
-    
 }
 
 .logo{
@@ -66,8 +59,8 @@ nav{
     font-weight: bold;
     margin: 50px 50px 0;
     color: #ffff;
-    
 }
+
 .ey{
     display: flex;
     font-size: 1.3rem;
@@ -75,17 +68,12 @@ nav{
     text-decoration-style: none;
     margin-right: 13.25rem;
     float: right;
-    
-
-    
-
 }
+
 a{
     color: #ffff;
     text-decoration: none;
     font-weight: 400;
-    
-
 }
 
 /*Hamburger Menu*/
@@ -128,7 +116,6 @@ a{
     transition: all 0.3 ease-in-out;
 }
 
-
 .menu-links a{
     display: block;
     padding: 10px;
@@ -138,15 +125,13 @@ a{
     transition: all 0.3 ease-in-out;
 }
 
-
 .menu-links li {
     list-style: none;
 }
+
 .menu-links.open {
     max-height: 300px;
 }
-
-/* SECTIONS*/
 
 #profile{
     display: flex;
@@ -154,15 +139,13 @@ a{
     justify-content: center;
     width: 100%;
     height: 500px;
-   
 }
+
 .homepage_container{
     width:1100px;
     flex-wrap: wrap;
     
 }
-
-
 
 .intro {
     padding-left: 100px;
@@ -170,7 +153,6 @@ a{
     color: #D9D9D9;
     text-align: left;
 }
-
 
 .section_pic-container {
     display: flex;
@@ -195,10 +177,6 @@ a{
     
 }
 
-
-
-
-
 h1 {
     font-size: 3.2rem;
     font-weight: normal;
@@ -209,8 +187,6 @@ p {
     font-size: 2.5rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-
-    
 }
 
 .highlight {
@@ -218,16 +194,14 @@ p {
     color: #ffff;
 }
 
-
 .ellipse {
     font-size: 2.5rem;
     font-weight: normal;
     background: rgba(0, 0, 0, 0);
     border: 3px solid #00B4A2;
     border-radius: 100% / 100%; 
-
-   
 }
+
 .section{
     padding-top: 4vh;
     height: 96vh;
@@ -236,11 +210,11 @@ p {
     min-height: fit-content;
 }
 
-
 .btn-container{
     padding-left: 130px;
     margin-top: 50px;
 }
+
 .btn {
     background-color: #396D6D;
     color: white;
@@ -255,19 +229,5 @@ p {
 .btn:hover {
     background-color: #2f5a5a;
 }
-
-
-/*PROJECT*/
-
-
-/*Contact*/
-
-
-
-
-
-
-
-
 
 

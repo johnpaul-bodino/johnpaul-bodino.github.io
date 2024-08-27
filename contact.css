@@ -64,32 +64,73 @@ h3{
     cursor: pointer;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 540px) {
     h3{
         font-style: italic;
         font-size: 1.3rem;
         font-weight: lighter;
     }
+
     #contact{
         color: #d9d9d9;
         height: 300px;
         text-align: center;
     }
+
     .contact-container {
         max-width: 1000px;
         margin: 10px auto;
     }
+
     .contact-container p {
         font-size: 0.7rem;
-       
         font-style: italic;
     }
+
     .email img {
         width: 20px;
         height: 20px;
     }
+
     .social-icons img {
         width: 20px;
         height: 20px;
     }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    h3{
+        font-style: italic;
+        font-size: 1.3rem;
+        font-weight: lighter;
+    }
+
+    #contact{
+        color: #d9d9d9;
+        height: 300px;
+        text-align: center;
+    }
+
+    .contact-container {
+        max-width: 1000px;
+        margin: 10px auto;
+    }
+
+    .contact-container p {
+        font-size: 0.7rem;
+        font-style: italic;
+    }
+
+    .email img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+    
 }
