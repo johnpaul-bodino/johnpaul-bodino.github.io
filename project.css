@@ -10,7 +10,6 @@
 .project_container{
     width: 1000px;
     height: 500px;
-   /** margin: 180px;*/
 }
 
 .header2{
@@ -46,9 +45,6 @@ span{
 
 @media  screen and (max-width: 540px){
     #project{  
-        display: flex;
-        margin-top: 250px;
-        background-color: #D9D9D9;
         height: 730px;
         justify-content: left;
         margin-left: none;
@@ -75,7 +71,6 @@ span{
 
     .content_in_project {
         font-size: 1rem;
-        color: black;
         font-weight: 549;
     }
     

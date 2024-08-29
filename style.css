@@ -144,7 +144,7 @@ a{
 .homepage_container{
     width:1100px;
     flex-wrap: wrap;
-    
+
 }
 
 .intro {
@@ -167,14 +167,12 @@ a{
     align-items: center;
     float: right;
     padding-left: auto;
-
 }
 
 .hero{
     width: 250px;
     height: 250px;
     border-radius: 60%;
-    
 }
 
 h1 {

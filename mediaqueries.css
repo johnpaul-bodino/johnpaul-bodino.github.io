@@ -1,4 +1,10 @@
 
+@media screen and (max-width: 1024px) {
+    .nav-links{
+        gap: 6rem;
+    }
+}
+
 @media screen and (max-width: 980px) {
 
     #desktop-nav {
@@ -73,10 +79,7 @@
 
     .ellipse {
         font-size: 1.9rem;
-        font-weight: normal;
-        background: rgba(0, 0, 0, 0);
         border: 2px solid #00B4A2;
-        border-radius: 100% / 100%; 
     }
 
     h1 {
@@ -88,8 +91,6 @@
     p {
         overflow: visible;
         font-size: 1.9rem;
-        margin-top: 0.5rem;
-        margin-bottom: 1rem;
     }
 
     .btn-container{
@@ -102,6 +103,38 @@
     }
 
 }
+@media screen and (max-width: 425px) {
+    .section_pic-container {
+        margin: 200px 20px 0px 100px;
+        width: 240px;
+        height: 240px;
+        box-shadow: 0 0 0 2px #1AABB0;
+    }
+
+    .intro {
+        padding-left: 10px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .btn-container{
+        padding-left: 130px;
+        margin-top: 20px;
+    }
+
+}
+@media screen and (max-width: 375px) {
+
+    .section_pic-container {
+        margin: 200px 20px 0px 60px;
+        float:none;
+    }
+
+    .btn-container{
+        padding-left: 100px;
+    }
+    
+}
 
 @media screen and (max-width: 360px) {
 
@@ -111,7 +144,6 @@
 
     .logo{
         font-size: 1.7rem;
-        margin: 50px 20px 0;
     }
 
     #hamburger-nav{
@@ -125,7 +157,6 @@
 
     .ey{
         font-size: 1rem;
-        margin-right: 1.25rem;
     }
 
     #profile{
@@ -140,7 +171,6 @@
         margin: 30px 70px 0 auto;
         width: 200px;
         height: 200px;
-        box-shadow: 0 0 0 2px #1AABB0;
         float: right;
     }
 
@@ -152,37 +182,25 @@
     .intro {
         padding-left: auto;
         margin-top: 200px;
-        color: #D9D9D9;
     }
 
-    .highlight {
-        font-weight: bold;
-        color: #ffff;
-    }
 
     .ellipse {
         font-size: 1.6rem;
-        font-weight: normal;
-        background: rgba(0, 0, 0, 0);
-        border: 2px solid #00B4A2;
-        border-radius: 100% / 100%; 
     }
 
     h1 {
         font-size: 1.6rem;
-        font-weight: normal;
         margin-top: 300px;
     }
 
     p {
-        overflow: visible;
         font-size: 1.6rem;
         margin-top: 0.5rem;
         margin-bottom: 1rem;
     }
 
     .btn-container{
-        padding-left: 100px;
         margin-top: 20px;
     }
 
@@ -190,4 +208,3 @@
         font-size: 0.7rem;
     }
 }
-    

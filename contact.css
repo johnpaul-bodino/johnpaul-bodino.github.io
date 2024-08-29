@@ -1,14 +1,14 @@
-h3{
-    font-style: italic;
-    font-size: 2.3rem;
-    font-weight: 50px;
-}
-
 #contact{
     color: #d9d9d9;
     height: 583px;
     text-align: center;
   
+}
+
+h3{
+    font-style: italic;
+    font-size: 2.3rem;
+    font-weight: 50px;
 }
 
 .contact-container {
