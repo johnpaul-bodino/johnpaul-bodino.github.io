@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d9d9d9;
+    color: #333;
+}
+
+.logo img{
+    width: 115px;
+    padding-left: 49px;
+    padding-top: 43px;
+}
+.container{
+    display: flex;
+    
+}
+
+
+.text_container p{
+    font-style: italic;
+    font-size: 2rem;
+    width: 700px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: lighter;
+    margin-top: -40px;
+    margin-left: 3%;
+
+}
+
+.chess_image{
+    position: relative;
+    width: 300px;
+    border-radius: 3%;
+    box-shadow: 15px 15px #7C7E78;
+}
+
+
+.image_container{
+    display: flex;
+    position: relative;
+    background-color: #D9D9D9;
+    width: 680px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 980px) {
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d9d9d9;
+    color: #333;
+}
+
+.logo img{
+    width: 115px;
+    padding-left: 49px;
+    padding-top: 43px;
+}
+.container{
+    display: flex;
+    
+}
+
+
+.text_container p{
+    font-style: italic;
+    font-size: 2rem;
+    width: 400px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: lighter;
+    margin-top: -40px;
+    margin-left: 3%;
+
+}
+
+.chess_image{
+    position: relative;
+    width: 250px;
+    border-radius: 3%;
+    box-shadow: 15px 15px #7C7E78;
+}
+
+
+.image_container{
+    display: flex;
+    position: relative;
+    background-color: #D9D9D9;
+    width: 680px;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
+@media screen and (max-width: 540px) {
+    .container{
+    display: flex;
+    position: relative;
+    
+}
+
+
+    .logo img{
+    width: 70px;
+    padding-left: 10px;
+    padding-top: 40px;
+}
+
+    h1{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-top: 0px;
+    margin-left: 1%;
+
+}
+
+    .chess_image{
+    position: relative;
+    width: 160px;
+    border-radius: 3%;
+    box-shadow: 14px 14px #7C7E78;
+    margin-top: -300px;
+    margin-left: 30px;
+}
+
+    .text_container p{
+    font-style: italic;
+    font-size: 1rem;
+    width: 200px;
+}
+    .text_container{
+        margin-top: 200px;
+        margin-right: 50px;
+}
+    .image_container{
+        display: flex;
+        position: relative;
+        background-color: #D9D9D9;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .container{
+    display: flex;
+    position: relative;
+    
+}
+
+
+    .logo img{
+    width: 70px;
+    padding-left: 10px;
+    padding-top: 40px;
+}
+
+    h1{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-top: 0px;
+    margin-left: 3%;
+
+}
+
+    .chess_image{
+    position: relative;
+    width: 120px;
+    border-radius: 3%;
+    box-shadow: 14px 14px #7C7E78;
+    margin-top: -300px;
+    margin-left: 30px;
+}
+
+    .text_container p{
+    font-style: italic;
+    font-size: 0.90rem;
+    width: 200px;
+}
+    .text_container{
+        margin-top: 200px;
+        margin-right: 600px;
+}
+    .image_container{
+        display: flex;
+        position: relative;
+        background-color: #D9D9D9;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
