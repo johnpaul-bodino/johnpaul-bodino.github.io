@@ -59,6 +59,7 @@ nav{
     font-weight: bold;
     margin: 50px 50px 0;
     color: #ffff;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .ey{
@@ -152,6 +153,7 @@ a{
     margin-top: 140px;
     color: #D9D9D9;
     text-align: left;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .section_pic-container {
@@ -190,6 +192,7 @@ p {
 .highlight {
     font-weight: bold;
     color: #ffff;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .ellipse {
@@ -197,7 +200,7 @@ p {
     font-weight: normal;
     background: rgba(0, 0, 0, 0);
     border: 3px solid #00B4A2;
-    border-radius: 100% / 100%; 
+    border-radius: 48% / 48%; 
 }
 
 .section{
@@ -211,6 +214,7 @@ p {
 .btn-container{
     padding-left: 130px;
     margin-top: 50px;
+   
 }
 
 .btn {
@@ -222,6 +226,7 @@ p {
     font-size: 1rem;
     transition: background-color 300ms ease;
     align-content: center;
+    box-shadow: 0.5rem 1rem rgba(27, 31, 29, 0.616);
 }
 
 .btn:hover {

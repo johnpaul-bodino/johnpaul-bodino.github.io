@@ -39,6 +39,13 @@
     height: 414px;
     background-color: #284B63;
     margin-top: -180px;
+   
+}
+
+.box1 img{
+    height: 414px;
+    width: 167px;
+
 }
 
 .box2{
@@ -47,6 +54,20 @@
     background-color: #D9D9D9;
     border: 1px solid black;
 }
+
+q{
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.q_text{
+    margin-top: 120px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    
+}
+
+
 
 .education_container{
     width: 404px;
@@ -238,10 +259,29 @@
         background-color: #284B63;
     }
 
+    .box1 img{
+        height: 223px;
+        width: 120px;
+    
+    }
+
     .box2{ 
         width: 160px;
         height: 160px;
-        background-color: #D9D9D9;    
+        background-color: #D9D9D9;
+       
+    }
+
+    q{
+        font-style: italic;
+        font-size: 0.90rem;
+    }
+    
+    .q_text{
+        margin-top: 45px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        
     }
 
     .education_container{
