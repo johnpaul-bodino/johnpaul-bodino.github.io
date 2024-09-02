@@ -46,6 +46,19 @@
         height: 47px;
     }
 
+
+    .menu-links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #396D6D;
+        width: fit-content;
+        max-height: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3 ease-in-out;
+    }
+    
     .section_pic-container {
         margin: 200px 110px 0px auto;
         width: 240px;

@@ -147,7 +147,7 @@ q{
 .skillset_container hr {
     display: flex;
     width: 180px;
-    margin-left: 1.5vw;
+    margin-left: 17px;
     
 }
 
@@ -228,6 +228,10 @@ q{
     .skillset_container{
         width: 217px;
 
+    }
+
+    .skillset_container hr {
+        margin-left: 1.5vw;
     }
 
 }
