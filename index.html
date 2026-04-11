@@ -1,153 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="project.css">
-    <link rel="stylesheet" href="contact.css">
-</head>
-<!-- asSsA -->
-<body>
-    <header>
-        <div class="logo">Paul</div>
-            <nav id="desktop-nav">
-                <ul class="nav-links">
-                    <li><a class = "ey" href="#profile">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#project">Project</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Paul Bodino</title>
 
-            <nav id="hamburger-nav">
-                <a href="#profile" class ="ey">Home</a>
-                <div class="hamburger-menu">
-                    <div class="hamburger-icon" onclick="toggleMenu()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="menu-links">
-                        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                        <li><a href="#project" onclick="toggleMenu()">Project</a></li>
-                        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                    </div>
-                </div>
-            </nav>
-    </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
 
-    <section id="profile">
-        <div class="homepage_container">
-            <div class="section_pic-container">
-                <!-- <img class = "hero" src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724388660/portfolio%20images/hprabo7c31iipvyoqubc.jpg">
-            </div> -->
-            <div class="intro">
-                <h1>Hi, I’m <span class="highlight">John Paul</span></h1>
-                <p>a <span class="ellipse">Web Developer</span></p>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Home">
+          <span class="brand-dot" aria-hidden="true"></span>
+        </a>
 
-                <p class="construction">
-                    🚧 Portfolio is currently under construction. I'm actively updating it with new projects and improvements.
-                </p>
-            </div>
-            <div class="btn-container">
-                <a href="#project" class="btn">Browse Projects</a>
-            </div>
+        <div class="topbar-right">
+          <nav class="nav" aria-label="Primary">
+            <a class="nav-link is-active" href="#">Home</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="#">Skills</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="sun" aria-hidden="true"></span>
+          </button>
         </div>
-    </section>
+      </header>
 
-    <section id="about">
-        <div class="about_container">
-            <div class="container1">
-                <div class="gif">
-                    <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724450256/portfolio%20images/wuroohyjpgwxhuheryf2.gif" alt="for_about">
-                </div>
-                <div class="box2">
-                    <div class="q_text">
-                        <q>Testing leads to failure, and failure leads to understanding. </q> - Burt Rutan
-                    </div>
-                </div>
-                <div class="box1">
-                    <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1725032753/portfolio%20images/br2eqjrhu2uc6ylwiorg.gif" alt="blue">
-                </div>
-                <div class="education_container">
-                    <p class="white_text">Education</p>
-                    <p class="oblique_text">College of Mary Immaculate</p>
-                    <p class="normal_text">Bachelor of Science in Computer Science</p>
+      <main class="hero">
+        <h1 class="hero-title">Hey! I'm <span class="hero-name">John Paul Bodino</span></h1>
 
-                </div>
-            </div>
-            <div class="container2">
-                <div class="aboutme_container">
-                    <p class="black_text">About me</p>
-                    <a href="about_page.html">
-                        <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724565155/portfolio%20images/sewehgecqghafxpkgqem.png" alt="another_page">
-                    </a> 
-                    <p class="clickme">Click me!</p>
-                </div>
-                <div class="skillset_container">
-                    <p class="white_text">Skillset</p>
-                    <hr>
-                    <p class="oblique_text">Language</p>
-                    <ul class="normal_text">
-                        <li>Html/CSS</li>
-                        <li>Javascript</li>
-                        <li>Python</li>
-                    </ul>
-                    <hr>
-                    <p class="oblique_text">Tools</p>
-                    <ul class="normal_text">
-                        <li>Canva</li>
-                        <li>Figma</li>
-                    </ul>
+        <p class="hero-body is-lined">
+          I'm a software developer who enjoys building reliable, scalable applications and solving real-world problems through
+          code.<br />
+          I'm comfortable working across the stack, and I like being involved in the full process-from shaping ideas to bringing
+          them into production.
+        </p>
 
+        <p class="under-construction">Portfolio is currently under construction.</p>
 
-                </div>
-            </div>
+        <div class="hero-actions">
+          <a class="resume" href="#" aria-label="Resume">
+            <span class="resume-text">Resume</span>
+            <span class="resume-icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" focusable="false" aria-hidden="true"></svg>
+            </span>
+          </a>
+
+          <div class="social" aria-label="Social links">
+            <a class="social-link" href="#" aria-label="GitHub">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a class="social-link" href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a class="social-link" href="#" aria-label="Email">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
-    </section>
+      </main>
+    </div>
 
-    <section id="project">
-        <div class="project_container">
-            <h2 class="header2">Projects</h2>
-            <p class="p_project">Here are some projects that made. i will add more in the future feel free to check!<br><hr></p>
-
-            <div class="project_menu">
-                <a href="https://github.com/college-of-mary-immaculate/bodino-johnpaul/tree/main/activities/BANK-UI" class="content_in_project"> Bank System UI <span> &#129104; </span></a>
-                <a href="https://github.com/nathanielfaborada/Contact-Search" class="content_in_project"> Contact Search <span> &#129104; </span></a>
-                <a href="https://github.com/college-of-mary-immaculate/FileSorter" class="content_in_project"> File Organizer <span> &#129104; </span></a>
-            </div>
-        </div>
-        
-    </section>
-    <footer id="contact">
-        <div class="contact-container">
-            <h3>Contact me!</h3>
-            <div class="contact-details">
-                <div class="email">
-                    <a href="mailto:johnpaulbodino@gmail.com" target="_blank">
-                        <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724565130/portfolio%20images/q9xvjwnq4xyigncoqxnn.svg" alt="Email Icon">
-                    </a>
-                        <p>johnpaulbodino49@gmail.com</p>
-                </div>
-                <hr>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/bodinojohnpaul?igsh=cWh2cHIyNTlkdjF1" target="_blank">
-                        <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724565129/portfolio%20images/su6esuhc2l6kwjjewfin.svg" alt="Instagram">
-                    </a> 
-                    <a href="https://www.facebook.com/paul.plamianobodino" target="_blank">
-                        <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724565129/portfolio%20images/rvxcz3p67b5pv8u6er2x.svg" alt="Facebook">
-                    </a>
-                    <a href="https://github.com/johnpaul-bodino" target="_blank">
-                        <img src="https://res.cloudinary.com/dda8q97x2/image/upload/v1724565129/portfolio%20images/tz4s4ys97womd4ibtfn3.svg" alt="GitHub">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
