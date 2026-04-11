@@ -17,6 +17,13 @@ a, .btn {
     transition: all 300ms ease;
 }
 
+.construction {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #facc15; /* yellow */
+  opacity: 0.9;
+}
+
 /* DESKTOP NAV */
 header{
     align-items: center;
