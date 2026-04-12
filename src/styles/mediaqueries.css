@@ -1,0 +1,223 @@
+
+@media screen and (max-width: 1024px) {
+    .nav-links{
+        gap: 6rem;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    #desktop-nav {
+        display: None;
+    }
+
+    #hamburger-nav{
+        display: flex;
+        width: 666.93px;
+        height: 65.18px;
+    }
+
+    .nav-links:not(:first-child) {display: none;}
+    .nav-links.icon {
+      float: right;
+      display: block;
+    }
+
+    .ey{
+        font-size: 1.3rem;
+        margin-right: 1.25rem;
+    }
+
+    .intro {
+        padding-left: 50px;
+        margin-top: 150px;
+        color: #D9D9D9;
+    }
+
+    .logo{
+        font-size: 2.9rem;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    #hamburger-nav{
+        width: 600px;
+        height: 47px;
+    }
+
+
+    .menu-links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #396D6D;
+        width: fit-content;
+        max-height: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3 ease-in-out;
+    }
+    
+    .section_pic-container {
+        margin: 200px 110px 0px auto;
+        width: 240px;
+        height: 240px;
+        box-shadow: 0 0 0 2px #1AABB0;
+        float:none;
+    }
+
+    .logo{
+        font-size: 2rem;
+        margin: 50px 20px 0;
+    }
+
+
+    .hero{
+        width: 170px;
+        height: 170px;
+    }
+
+    .intro {
+        padding-left: 10px;
+        margin-top: 70px;
+        color: #D9D9D9;
+        text-align: center;
+    }
+
+    .highlight {
+        font-weight: bold;
+        color: #ffff;
+    }
+
+    .ellipse {
+        font-size: 1.9rem;
+        border: 2px solid #00B4A2;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+        font-weight: normal;
+        margin-top: none;
+    }
+
+    p {
+        overflow: visible;
+        font-size: 1.9rem;
+    }
+
+    .btn-container{
+        padding-left: 150px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+}
+@media screen and (max-width: 425px) {
+    .section_pic-container {
+        margin: 200px 20px 0px 100px;
+        width: 240px;
+        height: 240px;
+        box-shadow: 0 0 0 2px #1AABB0;
+    }
+
+    .intro {
+        padding-left: 10px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .btn-container{
+        padding-left: 130px;
+        margin-top: 20px;
+    }
+
+}
+@media screen and (max-width: 375px) {
+
+    .section_pic-container {
+        margin: 200px 20px 0px 60px;
+        float:none;
+    }
+
+    .btn-container{
+        padding-left: 100px;
+    }
+    
+}
+
+@media screen and (max-width: 360px) {
+
+    .html{
+        font-size: 47%;
+    }
+
+    .logo{
+        font-size: 1.7rem;
+    }
+
+    #hamburger-nav{
+        width: 200px;
+        height: 40px;
+    }
+
+    .nav-links{
+        font-size: 1px;
+    }
+
+    .ey{
+        font-size: 1rem;
+    }
+
+    #profile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 500px;
+    }
+
+    .section_pic-container {
+        margin: 30px 70px 0 auto;
+        width: 200px;
+        height: 200px;
+        float: right;
+    }
+
+    .hero{
+        width: 140px;
+        height: 140px;
+    }
+
+    .intro {
+        padding-left: auto;
+        margin-top: 200px;
+    }
+
+
+    .ellipse {
+        font-size: 1.6rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-top: 300px;
+    }
+
+    p {
+        font-size: 1.6rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-container{
+        margin-top: 20px;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+    }
+}
