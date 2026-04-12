@@ -3,79 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Paul Bodino</title>
+    <title>My Portfolio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      referrerpolicy="no-referrer"
-    />
-
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/mediaqueries.css" />
+    <link rel="stylesheet" href="/about.css" />
+    <link rel="stylesheet" href="/project.css" />
+    <link rel="stylesheet" href="/contact.css" />
   </head>
+
   <body>
-    <div class="page">
-      <header class="topbar">
-        <a class="brand" href="#" aria-label="Home">
-          <span class="brand-dot" aria-hidden="true"></span>
-        </a>
-
-        <div class="topbar-right">
-          <nav class="nav" aria-label="Primary">
-            <a class="nav-link is-active" href="#">Home</a>
-            <a class="nav-link" href="#">About</a>
-            <a class="nav-link" href="#">Projects</a>
-            <a class="nav-link" href="#">Skills</a>
-            <a class="nav-link" href="#">Contact</a>
-          </nav>
-
-          <button class="theme-toggle" type="button" aria-label="Toggle theme">
-            <span class="sun" aria-hidden="true"></span>
-          </button>
-        </div>
-      </header>
-
-      <main class="hero">
-        <h1 class="hero-title">Hey! I'm <span class="hero-name">John Paul Bodino</span></h1>
-
-        <p class="hero-body is-lined">
-          I'm a software developer who enjoys building reliable, scalable applications and solving real-world problems through
-          code.<br />
-          I'm comfortable working across the stack, and I like being involved in the full process-from shaping ideas to bringing
-          them into production.
-        </p>
-
-        <p class="under-construction">Portfolio is currently under construction.</p>
-
-        <div class="hero-actions">
-          <a class="resume" href="#" aria-label="Resume">
-            <span class="resume-text">Resume</span>
-            <span class="resume-icon" aria-hidden="true">
-              <svg viewBox="0 0 16 16" focusable="false" aria-hidden="true"></svg>
-            </span>
-          </a>
-
-          <div class="social" aria-label="Social links">
-            <a class="social-link" href="#" aria-label="GitHub">
-              <i class="fa-brands fa-github" aria-hidden="true"></i>
-            </a>
-            <a class="social-link" href="#" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-            </a>
-            <a class="social-link" href="#" aria-label="Email">
-              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </main>
-    </div>
-
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
