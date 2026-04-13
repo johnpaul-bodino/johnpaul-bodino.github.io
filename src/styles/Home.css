@@ -1,6 +1,6 @@
 .home {
   min-height: 100vh;
-  background: #020617;
+  background: #020817;
   color: #e5e7eb;
   font-family: 'JetBrains Mono', monospace;
   display: flex;              /* ✅ ADDED */
@@ -30,6 +30,17 @@
   margin: 0 auto;             /* ✅ ADDED (MAIN FIX) */
 }
 
+.home__logo {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 110px;
+  opacity: 0.9;
+}
+
+
 .home__title {
   margin: 0;
   margin-top: 11px;
@@ -42,6 +53,7 @@
 
 .home__accent {
   color: #2BD439;
+  font-size: 2.25rem;
 }
 
 .home__desc {

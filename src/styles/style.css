@@ -47,7 +47,6 @@ nav{
     height: 6.18px;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     position: relative;
     /*transform: translateX(-30%);*/
 }
@@ -57,7 +56,7 @@ nav{
     gap: 7rem;
     list-style: none;
     text-decoration-style: none;
-    font-size: 1.3rem;
+    font-size: 32rem;
 }
 
 .logo{

@@ -24,6 +24,17 @@
   padding: 0;
 }
 
+.home__logo {
+  position: absolute;
+  left: 60px;
+  top: 45px;
+  transform: translateY(-50%);
+
+  width: 50px;
+  opacity: 0.9;
+}
+
+
 /* Add inner wrapper behavior */
 .navbar {
   max-width: 1360px;          /* ✅ SAME as .home__content */
@@ -39,13 +50,24 @@
 
 /* Navbar Links */
 .navbar-link {
-  color: #FFFFFF;
+  color: #D9D9D9;
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: 0.950rem;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.05em;
   white-space: nowrap;
   transition: color 0.3s ease;
+  margin-top: 1.6rem;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 23px;
+ 
+
 }
 
 .navbar-link:hover {
@@ -59,6 +81,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+  padding-left: -50px;
+  padding-right: 20px; 
+
 }
 
 /* Mobile */
