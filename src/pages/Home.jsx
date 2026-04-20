@@ -37,12 +37,13 @@ function IconDownload(props) {
   )
 }
 
+// https://res.cloudinary.com/dazttfchn/image/upload/v1776048474/download_resume_lq2gz7.svg
+
 function IconGithub(props) {
   return (
     <svg
       viewBox="0 0 24 24"
-      width="18"
-      height="18"
+      className="home__iconSvg"
       aria-hidden="true"
       focusable="false"
       {...props}
@@ -59,8 +60,7 @@ function IconLinkedIn(props) {
   return (
     <svg
       viewBox="0 0 24 24"
-      width="18"
-      height="18"
+      className="home__iconSvg"
       aria-hidden="true"
       focusable="false"
       {...props}
@@ -77,8 +77,7 @@ function IconMail(props) {
   return (
     <svg
       viewBox="0 0 24 24"
-      width="18"
-      height="18"
+      className="home__iconSvg"
       aria-hidden="true"
       focusable="false"
       {...props}
@@ -94,47 +93,49 @@ function IconMail(props) {
 export default function Home() {
   return (
     <>
-      
       <section className="home">
         <Navbar />
         <div className="home__container">
           <div className="home__content home__fadeIn">
-          <h1 className="home__title">
-            Hey! I&apos;m <span className="home__accent">John Paul Bodino</span>
-          </h1>
+            <h1 className="home__title">
+              Hey! I&apos;m <span className="home__accent">John Paul Bodino</span>
+            </h1>
 
-          <div className="home__desc">
-            <p>
-              I&apos;m a software developer who enjoys building reliable, scalable applications and solving real-world problems
-              through code.
-            </p>
-            <p>
-              I&apos;m comfortable working across the stack, and I like being involved in the full process—from shaping ideas to
-              bringing them into production.
-            </p>
-          </div>
+            <div className="home__desc">
+              <p>
+                I&apos;m an <span className="homey">aspiring Junior Software Developer</span> who enjoys building reliable applications and solving real-world problems
+                through code.
+              </p>
+              <p>
+                I enjoy full-stack development, with a strong focus on backend systems.
+              </p>
+            </div>
 
-          <div className="home__actions">
-            <a className="home__resume" href="#" aria-label="Download resume">
-              <IconDownload />
-              <span>Resume</span>
-            </a>
+            <div className="home__actions">
+              <a className="home__resume" href="#" aria-label="Download resume">
+                <img
+                  src="https://res.cloudinary.com/dazttfchn/image/upload/v1776048474/download_resume_lq2gz7.svg"
+                  alt="Download Resume"
+                  className="home__resumeIcon"
+                />
+                <span>Resume</span>
+              </a>
 
-            <div className="home__icons" aria-label="Social links">
-              <a className="home__iconLink" href="#" aria-label="GitHub">
-                <IconGithub />
-              </a>
-              <a className="home__iconLink" href="#" aria-label="LinkedIn">
-                <IconLinkedIn />
-              </a>
-              <a className="home__iconLink" href="#" aria-label="Email">
-                <IconMail />
-              </a>
+              <div className="home__icons" aria-label="Social links">
+                <a className="home__iconLink" href="#" aria-label="GitHub">
+                  <IconGithub />
+                </a>
+                <a className="home__iconLink" href="#" aria-label="LinkedIn">
+                  <IconLinkedIn />
+                </a>
+                <a className="home__iconLink" href="#" aria-label="Email">
+                  <IconMail />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   )
 }

@@ -18,7 +18,6 @@
 }
 
 .home__content {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,12 +37,18 @@
 
   width: 110px;
   opacity: 0.9;
+  transition: all 0.15s ease;
+}
+
+.home__logo:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5)) drop-shadow(0 0 16px rgba(59, 130, 246, 0.3));
 }
 
 
 .home__title {
   margin: 0;
-  margin-top: 11px;
+  margin-top: 138px;
   font-size: 2.25rem;   /* 36px */
   line-height: 1.2;
   font-weight: 600;
@@ -52,8 +57,14 @@
 }
 
 .home__accent {
-  color: #2BD439;
+  color: #A298E4;
   font-size: 2.25rem;
+  font-weight: 700;
+}
+.homey {
+  color: #A298E4;
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 
 .home__desc {
@@ -63,33 +74,41 @@
   letter-spacing: 0;
   font-weight: 200;          /* Medium */
   max-width: 690px;          /* 🔥 THIS makes it look right */
-  color: #D9D9D9;
+  color: #FAFAFA;
 }
 
 .home__actions {
-  margin-top: 20px;
+  margin-top: 43px;
   display: flex;
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
+  height: 100px;
 }
+
+
 
 .home__resume {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  width: 150px;
+  gap: 20px;
   padding: 10px 12px;
-  border-radius: 10px;
+  border-radius: 6px;
   border: 1px solid rgba(148, 163, 184, 0.35);
   color: #e5e7eb;
   text-decoration: none;
   background: transparent;
-  font-size: 13px;
   font-weight: 400;
   transition:
     background-color 160ms ease,
     border-color 160ms ease,
     color 160ms ease;
+}
+
+.home__resume span {
+  font-size: 1.2rem;
+  
 }
 
 .home__resume:hover {
@@ -98,20 +117,24 @@
   color: #ffffff;
 }
 
+
+
 .home__icons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  margin-left: 20px;
+  gap: 2rem;
+  width: 300px;
+  justify-content: flex-start;
+
 }
 
 .home__iconLink {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  border: 1px solid rgba(148, 163, 184, 0.18);
+  width: 30px;
+  height: 30px;
   color: #9ca3af;
   text-decoration: none;
   transition:
@@ -122,8 +145,7 @@
 
 .home__iconLink:hover {
   color: #ffffff;
-  border-color: rgba(148, 163, 184, 0.45);
-  background: rgba(255, 255, 255, 0.06);
+
 }
 
 .home__fadeIn {

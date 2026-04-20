@@ -12,6 +12,10 @@
   display: flex;
   justify-content: center;   /* ✅ CENTER CONTAINER */
   align-items: center;
+  /* Blur Effect */
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  background: rgba(2, 8, 23, 0.6);
 }
 
 /* INNER CONTAINER (IMPORTANT FIX) */
@@ -30,7 +34,7 @@
   top: 45px;
   transform: translateY(-50%);
 
-  width: 50px;
+  width: 45px;
   opacity: 0.9;
 }
 
@@ -50,7 +54,7 @@
 
 /* Navbar Links */
 .navbar-link {
-  color: #D9D9D9;
+  color: #FAFAFA;
   text-decoration: none;
   font-size: 0.950rem;
   font-family: 'JetBrains Mono', monospace;
@@ -74,17 +78,80 @@
   color: #ffffff;
 }
 
-/* Sun Icon */
-.navbar-sun {
-  font-size: 1.1rem;
+/* Theme Button - Minimalist Design */
+.theme-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
   cursor: pointer;
+  padding: 0;
+  margin-top: 1.3rem;
+  margin-right: 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  padding-left: -50px;
-  padding-right: 20px; 
+  overflow: hidden;
+}
 
+.theme-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.theme-btn:hover::before {
+  opacity: 1;
+}
+
+.theme-btn:active {
+  transform: scale(0.95);
+}
+
+.theme-btn__icon {
+  width: 20px;
+  height: 20px;
+  color: #fbbf24;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 0 6px rgba(251, 191, 116, 0.4));
+}
+
+.theme-btn:hover .theme-btn__icon {
+  color: #fcd34d;
+  filter: drop-shadow(0 0 10px rgba(251, 191, 116, 0.6));
+  transform: rotate(15deg);
+}
+
+/* Moon icon - Dark Blue */
+.theme-btn__icon--moon {
+  color: #1e3a5f;
+  filter: drop-shadow(0 0 6px rgba(30, 58, 95, 0.4));
+}
+
+.theme-btn:hover .theme-btn__icon--moon {
+  color: #2563eb;
+  filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.6));
+}
+
+/* Sun icon glow effect */
+.theme-btn:hover .theme-btn__icon {
+  filter: drop-shadow(0 0 12px rgba(251, 191, 116, 0.7));
 }
 
 /* Mobile */
@@ -96,5 +163,16 @@
 
   .navbar-link {
     font-size: 0.8rem;
+  }
+
+  .theme-btn {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .theme-btn__icon {
+    width: 18px;
+    height: 18px;
   }
 }
