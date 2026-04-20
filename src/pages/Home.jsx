@@ -112,7 +112,7 @@ export default function Home() {
             </div>
 
             <div className="home__actions">
-              <a className="home__resume" href="#" aria-label="Download resume">
+              <a className="home__resume" href="/John Paul Bodino Resume.pdf" download="John Paul Bodino Resume.pdf" aria-label="Download resume">
                 <img
                   src="https://res.cloudinary.com/dazttfchn/image/upload/v1776048474/download_resume_lq2gz7.svg"
                   alt="Download Resume"

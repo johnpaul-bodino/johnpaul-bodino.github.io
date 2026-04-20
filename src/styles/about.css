@@ -48,6 +48,7 @@
 .about__icon {
     margin-top: 180px;
     margin-bottom: 4px;
+    padding-left: 12px;
 }
 
 .about__icon svg {
@@ -62,16 +63,20 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0 100px 4 1px;
+  
 
 }
 .about__cardTitle.green1 {
   color: #A298E4;
+  padding-left: 12px;
 }
 .about__cardTitle.green2 {
   color: #A298E4;
+  padding-left: 12px;
 }
 .about__cardTitle.green3 {
   color: #A298E4;
+  padding-left: 12px;
 }
 .about__cardDesc {
   font-size: 0.89rem;
@@ -79,6 +84,7 @@
   color: #FAFAFA;
   max-width: 900px;
   margin: 0;
+  padding-left: 12px;
 }
 
 @media (max-width: 768px) {

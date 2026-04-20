@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <img
-        src="https://res.cloudinary.com/dazttfchn/image/upload/v1776013650/logo_hero_tjwk0d.svg"
+        src="https://res.cloudinary.com/dazttfchn/image/upload/v1776696594/logo_hero_tjwk0d.svg"
         alt="JB Logo"
         className="home__logo"
       />
