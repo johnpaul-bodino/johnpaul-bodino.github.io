@@ -1,0 +1,37 @@
+.timeline {
+  min-height: 100vh;
+  background: #020817;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.timeline__container {
+  padding: 100px 40px;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .timeline__container {
+    padding: 80px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    min-height: auto;
+  }
+
+  .timeline__container {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline__container {
+    padding: 40px 16px;
+  }
+}

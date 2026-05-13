@@ -1,23 +1,9 @@
 import '../styles/Home.css'
 import Navbar from '../components/Navbar'
+import { FiLinkedin } from "react-icons/fi";
+import FadeIn from "../components/FadeIn";
 
-function IconSun(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      width="18"
-      height="18"
-      aria-hidden="true"
-      focusable="false"
-      {...props}
-    >
-      <path
-        fill="currentColor"
-        d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12Zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM11 1h2v3h-2V1Zm0 20h2v3h-2v-3ZM3.515 4.929 4.93 3.515 7.05 5.636 5.636 7.05 3.515 4.93Zm13.435 13.435 1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121ZM1 11h3v2H1v-2Zm20 0h3v2h-3v-2ZM3.515 19.071l2.121-2.121L7.05 18.364 4.93 20.485l-1.414-1.414Zm13.435-13.435 2.121-2.121 1.414 1.414-2.121 2.121-1.414-1.414Z"
-      />
-    </svg>
-  )
-}
+
 
 function IconDownload(props) {
   return (
@@ -56,23 +42,6 @@ function IconGithub(props) {
   )
 }
 
-function IconLinkedIn(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className="home__iconSvg"
-      aria-hidden="true"
-      focusable="false"
-      {...props}
-    >
-      <path
-        fill="currentColor"
-        d="M6.94 6.5A2.2 2.2 0 1 1 6.94 2.1a2.2 2.2 0 0 1 0 4.4ZM3.9 21.9h6.1V8H3.9v13.9ZM10.9 8h5.8v1.9h.1c.8-1.4 2.3-2.3 4.2-2.3 4.5 0 5.3 3 5.3 6.8v7.5h-6.1v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5v6.7h-6.1V8Z"
-      />
-    </svg>
-  )
-}
-
 function IconMail(props) {
   return (
     <svg
@@ -103,7 +72,7 @@ export default function Home() {
 
             <div className="home__desc">
               <p>
-                I&apos;m an <span className="homey">aspiring Junior Software Developer</span> who enjoys building reliable applications and solving real-world problems
+                I&apos;m an <span className="homey">Aspiring Junior Software Developer</span> who enjoys building reliable applications and solving real-world problems
                 through code.
               </p>
               <p>
@@ -126,7 +95,7 @@ export default function Home() {
                   <IconGithub />
                 </a>
                 <a className="home__iconLink" href="#" aria-label="LinkedIn">
-                  <IconLinkedIn />
+                  <FiLinkedin />
                 </a>
                 <a className="home__iconLink" href="#" aria-label="Email">
                   <IconMail />

@@ -1,7 +1,8 @@
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
-import './styles/Construction.css'
-
+import Projects from './pages/Projects.jsx'
+import Skills from './pages/Skills.jsx'
+import Timeline from './pages/Timeline.jsx'
 function ConstructionIcon() {
   return (
     <svg className="construction__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -31,7 +32,11 @@ export default function App() {
     <>
       <Home />
       <About />
+      <Timeline />
+      {/* <Projects /> */}
+      <Skills />
       <Construction />
+
     </>
   )
 }
