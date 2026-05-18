@@ -5,7 +5,7 @@ import "../styles/TimelinePage.css";
 
 export default function Timeline() {
   return (
-    <section className="timeline">
+    <section id="timeline" className="timeline">
       <div className="timeline__container">
         <TimelineTabs />
       </div>

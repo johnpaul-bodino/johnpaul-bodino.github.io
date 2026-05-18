@@ -1,9 +1,18 @@
 import '../styles/Navbar.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Navbar() {
-  const [isDark, setIsDark] = useState(true)
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem('theme')
+    return savedTheme ? savedTheme === 'dark' : true
+  })
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const theme = isDark ? 'dark' : 'light'
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [isDark])
 
   const toggleTheme = () => {
     setIsDark(!isDark)

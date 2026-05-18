@@ -6,9 +6,8 @@ import { IoLogoHtml5, IoLogoCss3  } from "react-icons/io";
 import { FaReact, FaFigma, FaAws  } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
 import FadeIn from '../components/FadeIn';
-import Badges from '../components/Badges';
-import { TbApi } from "react-icons/tb";
-import { BiTerminal } from "react-icons/bi";
+import { TbApi, TbCode } from "react-icons/tb";
+
 
 
 export default function Skills() {
@@ -60,15 +59,14 @@ export default function Skills() {
   ];
 
   return (
-    <div className="skills__container">
+    <section id="skills" className="skills__container">
       <div className="skills__inner">
         <FadeIn>
           <div className="skills__titleRow">
-            <BiTerminal className="skills__titleIcon" />
+            <TbCode className="skills__titleIcon" />
             <span className="skills__titleText">Skills</span>
           </div>
         </FadeIn>
-      <FadeIn>
         <div className="skills__masonry">
            {skillsData.map((skill, index) => (
             <div key={index} className="skills__card">
@@ -90,7 +88,7 @@ export default function Skills() {
                           style={{
                             color: hoveredIcon === `${index}-${iconIndex}`
                               ? iconData.color
-                              : '#9CA3AF'
+                              : 'var(--color-text-subtle)'
                           }}
                         >
                           {iconData.icon}
@@ -126,8 +124,7 @@ export default function Skills() {
             </div>
           ))}
         </div>
-      </FadeIn>
       </div>
-    </div>
+    </section>
   )
 }

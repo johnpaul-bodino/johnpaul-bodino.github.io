@@ -1,13 +1,15 @@
 .skills__container {
   position: relative;
   padding: 100px 40px;
-  background: linear-gradient(135deg, #0a0e27 0%, #16213e 100%);
-  color: #D9D9D9;
+  background: var(--background-page);
+  background-size: var(--background-page-size);
+  background-attachment: fixed;
+  color: var(--color-text-muted);
   font-family: 'JetBrains Mono', monospace;
   overflow: hidden;
 }
 .skills__titleIcon {
-  color: #A298E4;
+  color: var(--color-accent);
   width: 60px;
   height: 60px;
   margin-right: 0.5rem;
@@ -21,8 +23,8 @@
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(rgba(162, 152, 228, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(162, 152, 228, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(148, 163, 184, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.035) 1px, transparent 1px);
   background-size: 50px 50px;
   pointer-events: none;
   z-index: 0;
@@ -34,7 +36,7 @@
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-  color: #FAFAFA;
+  color: var(--color-text);
   margin: 0 0 9rem 0;
   padding-left: 0;            /* left alignment handled by inner wrapper */
   width: 100%;
@@ -49,7 +51,7 @@
   justify-content: flex-start;
   width: 100%;
   max-width: 1700px;
-  margin: 0 auto 9rem auto;
+  margin: 0 auto 4rem auto;
   padding-left: 20px;
 }
 
@@ -75,10 +77,13 @@
 /* Prevent cards from breaking across columns */
 .skills__card {
   break-inside: avoid;
-  background: rgba(8, 8, 29, 0.7);
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  background: var(--color-surface);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(162, 152, 228, 0.15);
+  border: 1px solid var(--color-border);
   border-radius: 13px;
+  box-shadow: var(--card-shadow);
   padding: 32px;
   margin-bottom: 20px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -86,6 +91,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transform: translateZ(0);
 }
 
 /* Offset first card to create staggered masonry effect */
@@ -102,15 +108,30 @@
 
 .skills__card:hover {
   transform: translateY(-4px);
-  border-color: #21437D;
+  border-color: var(--color-border-strong);
   border-radius: 13px;
+}
+
+:root:not([data-theme='light']) .skills__card:hover {
+  border-color: var(--color-accent);
+  box-shadow:
+    0 0 0 1px var(--color-accent-border),
+    0 18px 48px rgba(5, 6, 12, 0.32);
+}
+
+:root[data-theme='light'] .skills__card:hover {
+  border-color: var(--color-accent);
+  box-shadow:
+    0 0 0 1px rgba(101, 69, 186, 0.2),
+    0 16px 36px rgba(101, 69, 186, 0.12),
+    var(--card-shadow);
 }
 
 .skills__titleText {
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-  color: #FAFAFA;
+  color: var(--color-text);
   
 }
 .skills__cardTitle {
@@ -118,10 +139,10 @@
   z-index: 1;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #FAFAFA;
+  color: var(--color-text);
   margin: 0 0 12px 0;
   letter-spacing: 0.03em;
-  background: linear-gradient(135deg, #FAFAFA 0%, #D9D9D9 100%);
+  background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-muted) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -132,7 +153,7 @@
   z-index: 1;
   font-size: 0.90rem;
   line-height: 1.7;
-  color: #D9D9D9;
+  color: var(--color-text-muted);
   margin: 0 0 16px 0;
   opacity: 0.9;
 }
@@ -167,13 +188,13 @@
 }
 
 .skills__badgeItem {
-  background: linear-gradient(135deg, rgba(162, 152, 228, 0.25), rgba(209, 138, 201, 0.15));
-  color: #A298E4;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
-  border: 1px solid rgba(162, 152, 228, 0.4);
+  border: 1px solid var(--color-accent-border);
   text-transform: capitalize;
   transition: all 0.3s ease;
   display: inline-block;
@@ -198,8 +219,8 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(8px);
-  background: rgba(20, 20, 40, 0.9);
-  color: #D9D9D9;
+  background: var(--color-surface-muted);
+  color: var(--color-text-muted);
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 0.7rem;
@@ -209,7 +230,7 @@
   pointer-events: none;
   z-index: 1000;
   animation: tooltipPopDown 0.25s ease-out forwards;
-  border: 1px solid rgba(162, 152, 228, 0.2);
+  border: 1px solid var(--color-border);
   backdrop-filter: blur(4px);
 }
 
@@ -230,8 +251,8 @@
   top: 75%;
   left: 50%;
   transform: translateX(-50%) translateY(8px);
-  background: rgba(20, 20, 40, 0.95);
-  color: #D9D9D9;
+  background: var(--color-surface-muted);
+  color: var(--color-text-muted);
   padding: 6px 12px;
   border-radius: 3px;
   font-size: 0.7rem;
@@ -241,7 +262,7 @@
   pointer-events: none;
   z-index: 1000;
   animation: tooltipPopDown 0.25s ease-out forwards;
-  border: 1px solid rgba(162, 152, 228, 0.3);
+  border: 1px solid var(--color-border);
   backdrop-filter: blur(4px);
 }
 
@@ -256,7 +277,7 @@
   height: 0;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  border-bottom: 3px solid rgba(20, 20, 40, 0.95);
+  border-bottom: 3px solid var(--color-surface-muted);
 }
 
 /* Pop-down animation - smooth */
@@ -430,7 +451,16 @@
   .skills__titleIcon {
     width: 40px;
     height: 40px;
+    margin-right: -0.3rem;
+    
   }
+
+  .skills__iconsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 2fr));
+    gap: 1px;
+  }
+
+  
 
   .skills__titleText {
     font-size: 1.4rem;
@@ -445,7 +475,7 @@
 }
 
 .skills__titleIcon {
-  color: #A298E4;
+  color: var(--color-accent);
 }
 
 .skills__titleText {

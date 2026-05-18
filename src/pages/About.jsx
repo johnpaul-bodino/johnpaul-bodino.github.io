@@ -3,7 +3,7 @@ import FadeIn from '../components/FadeIn'
 
 export default function About() {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <FadeIn>
         <h2 className="about__title">WHAT I BUILD</h2>
       </FadeIn>
@@ -11,7 +11,7 @@ export default function About() {
         <div className="about__grid">
           <div className="about__card">
             <div className="about__icon about__icon--green1">
-              <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776694016/paint_brush_h8xhjt.svg" style={{color: '#22c55e'}} />
+              <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776694016/paint_brush_h8xhjt.svg" alt="" />
             </div>
             <h3 className="about__cardTitle green1">UI & UX</h3>
             <p className="about__cardDesc">
@@ -21,7 +21,7 @@ export default function About() {
 
           <div className="about__card">
             <div className="about__icon about__icon--green2">
-              <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776065273/mobile_and_laptop_ih2lcq.svg" style={{color: '#4ade80'}} />
+              <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776065273/mobile_and_laptop_ih2lcq.svg" alt="" />
             </div>
             <h3 className="about__cardTitle green2">WEB & MOBILE APP</h3>
             <p className="about__cardDesc">
@@ -31,7 +31,7 @@ export default function About() {
 
           <div className="about__card">
             <div className="about__icon about__icon--green3">
-              <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776694031/kidlat_vacayx.png" style={{color: '#16a34a'}} />
+              <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776694031/kidlat_vacayx.png" alt="" />
             </div>
             <h3 className="about__cardTitle green3">DEVELOPMENT</h3>
             <p className="about__cardDesc">

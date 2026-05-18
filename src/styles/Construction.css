@@ -1,5 +1,5 @@
 .construction {
-  background: #020817;
+  background: var(--color-bg);
   padding: 100px 20px;
   display: flex;
   justify-content: center;
@@ -19,22 +19,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid var(--color-border);
   border-radius: 16px;
-  background: rgba(59, 130, 246, 0.05);
+  background: var(--color-accent-soft);
   transition: all 0.3s ease;
 }
 
 .construction__icon {
   width: 32px;
   height: 32px;
-  color: #A298E4;
+  color: var(--color-accent);
 }
 
 .construction__title {
   font-size: 1rem;
   font-weight: 500;
-  color: #D9D9D9;
+  color: var(--color-text-muted);
   margin: 0 0 16px 0;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -42,7 +42,7 @@
 
 .construction__text {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--color-text-subtle);
   margin: 0;
   line-height: 1.6;
 }

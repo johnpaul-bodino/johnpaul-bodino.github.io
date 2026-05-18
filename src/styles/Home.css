@@ -1,8 +1,10 @@
 .home {
   min-height: 50rem;
-  background: #020817;
+  background: var(--background-page);
+  background-size: var(--background-page-size);
+  background-attachment: fixed;
   /* background-color: #111827;   */
-  color: #e5e7eb;
+  color: var(--color-text-muted);
   font-family: 'JetBrains Mono', monospace;
   display: flex;              /* ✅ ADDED */
   justify-content: center;    /* ✅ ADDED */
@@ -30,6 +32,18 @@
   margin: 0 auto;             /* ✅ ADDED (MAIN FIX) */
 }
 
+.home__heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  align-items: center;
+  gap: clamp(40px, 7vw, 96px);
+  width: 100%;
+}
+
+.home__intro {
+  min-width: 0;
+}
+
 .home__logo {
   position: absolute;
   left: 60px;
@@ -41,7 +55,7 @@
 
 .home__logo:hover {
   opacity: 1;
-  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5)) drop-shadow(0 0 16px rgba(59, 130, 246, 0.3));
+  filter: drop-shadow(0 0 10px var(--color-accent-glow));
 }
 
 
@@ -52,16 +66,16 @@
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: 0.01em;
-  color: #D9D9D9;
+  color: var(--color-text);
 }
 
 .home__accent {
-  color: #A298E4;
+  color: var(--color-brand);
   font-size: 2.25rem;
   font-weight: 700;
 }
 .homey {
-  color: #A298E4;
+  color: var(--color-brand);
   font-size: 1.2rem;
   font-weight: 800;
 }
@@ -73,7 +87,7 @@
   letter-spacing: 0;
   font-weight: 200;          /* Medium */
   max-width: 690px;          /* 🔥 THIS makes it look right */
-  color: #D9D9D9;
+  color: var(--color-text-muted);
 }
 
 .home__actions {
@@ -94,8 +108,8 @@
   gap: 20px;
   padding: 10px 12px;
   border-radius: 6px;
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  color: #e5e7eb;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text);
   text-decoration: none;
   background: transparent;
   font-weight: 400;
@@ -111,9 +125,9 @@
 }
 
 .home__resume:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(148, 163, 184, 0.55);
-  color: #ffffff;
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent-border);
+  color: var(--color-text);
 }
 
 
@@ -134,7 +148,7 @@
   justify-content: center;
   width: 30px;
   height: 30px;
-  color: #9ca3af;
+  color: var(--color-text-subtle);
   text-decoration: none;
   transition: color 160ms ease;
 }
@@ -145,7 +159,78 @@
 }
 
 .home__iconLink:hover {
-  color: #ffffff;
+  color: var(--color-accent);
+}
+
+.home__profileCard {
+  justify-self: center;
+  width: min(100%, 260px);
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: none;
+  overflow: hidden;
+  transform: translateX(-56px);
+}
+
+.home__profileImageWrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f8fafc;
+  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+}
+
+.home__profileImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home__profilePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: #f8fafc;
+}
+
+.home__profilePlaceholder span {
+  color: var(--color-accent);
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.home__profileMeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: var(--color-bg-soft);
+  border-top: 1px solid var(--color-border);
+}
+
+.home__status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  gap: 8px;
+  color: var(--color-text);
+}
+
+.home__statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--status-color, #22c55e);
+  box-shadow:
+    0 0 0 2px var(--color-bg-soft),
+    0 0 0 4px color-mix(in srgb, var(--status-color, #31a24c) 22%, transparent);
 }
 
 .home__fadeIn {
@@ -178,6 +263,18 @@
     padding-top: 50px;
     padding-bottom: 40px;
     max-width: 100%;
+  }
+
+  .home__heroGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .home__profileCard {
+    justify-self: center;
+    width: min(100%, 230px);
+    order: -1;
+    transform: none;
   }
 
   .home__title {
@@ -274,6 +371,12 @@
   .home__iconLink {
     width: 28px;
     height: 28px;
+  }
+
+  .home__profileMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 }
 

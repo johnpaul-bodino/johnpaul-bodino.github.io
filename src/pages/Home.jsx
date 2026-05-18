@@ -1,8 +1,13 @@
 import '../styles/Home.css'
-import Navbar from '../components/Navbar'
 import { FiLinkedin } from "react-icons/fi";
-import FadeIn from "../components/FadeIn";
 
+const profileInfo = {
+  imageUrl: '',
+  imageAlt: 'John Paul Bodino profile photo',
+  initials: 'JB',
+  availability: 'Open to work',
+  availabilityColor: '#31a24c',
+}
 
 
 function IconDownload(props) {
@@ -62,45 +67,75 @@ function IconMail(props) {
 export default function Home() {
   return (
     <>
-      <section className="home">
-        <Navbar />
+      <section id="home" className="home">
         <div className="home__container">
           <div className="home__content home__fadeIn">
-            <h1 className="home__title">
-              Hey! I&apos;m <span className="home__accent">John Paul Bodino</span>
-            </h1>
+            <div className="home__heroGrid">
+              <div className="home__intro">
+                <h1 className="home__title">
+                  Hey! I&apos;m <span className="home__accent">John Paul Bodino</span>
+                </h1>
 
-            <div className="home__desc">
-              <p>
-                I&apos;m an <span className="homey">Aspiring Junior Software Developer</span> who enjoys building reliable applications and solving real-world problems
-                through code.
-              </p>
-              <p>
-                I enjoy full-stack development, with a strong focus on backend systems.
-              </p>
-            </div>
+                <div className="home__desc">
+                  <p>
+                    I&apos;m an <span className="homey">Aspiring Junior Software Developer</span> who enjoys building reliable applications and solving real-world problems
+                    through code.
+                  </p>
+                  <p>
+                    I enjoy full-stack development, with a strong focus on backend systems.
+                  </p>
+                </div>
 
-            <div className="home__actions">
-              <a className="home__resume" href="/John Paul Bodino Resume.pdf" download="John Paul Bodino Resume.pdf" aria-label="Download resume">
-                <img
-                  src="https://res.cloudinary.com/dazttfchn/image/upload/v1776048474/download_resume_lq2gz7.svg"
-                  alt="Download Resume"
-                  className="home__resumeIcon"
-                />
-                <span>Resume</span>
-              </a>
+                <div className="home__actions">
+                  <a className="home__resume" href="/John Paul Bodino Resume.pdf" download="John Paul Bodino Resume.pdf" aria-label="Download resume">
+                    <img
+                      src="https://res.cloudinary.com/dazttfchn/image/upload/v1776048474/download_resume_lq2gz7.svg"
+                      alt="Download Resume"
+                      className="home__resumeIcon"
+                    />
+                    <span>Resume</span>
+                  </a>
 
-              <div className="home__icons" aria-label="Social links">
-                <a className="home__iconLink" href="#" aria-label="GitHub">
-                  <IconGithub />
-                </a>
-                <a className="home__iconLink" href="#" aria-label="LinkedIn">
-                  <FiLinkedin />
-                </a>
-                <a className="home__iconLink" href="#" aria-label="Email">
-                  <IconMail />
-                </a>
+                  <div className="home__icons" aria-label="Social links">
+                    <a className="home__iconLink" href="#" aria-label="GitHub">
+                      <IconGithub />
+                    </a>
+                    <a className="home__iconLink" href="#" aria-label="LinkedIn">
+                      <FiLinkedin />
+                    </a>
+                    <a
+                      className="home__iconLink"
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=johnpaulbodino49@gmail.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Email"
+                    >
+                      <IconMail />
+                    </a>
+                  </div>
+                </div>
               </div>
+
+              <aside className="home__profileCard" aria-label="Profile photo and availability">
+                <div className="home__profileImageWrap">
+                  {profileInfo.imageUrl ? (
+                    <img className="home__profileImage" src={profileInfo.imageUrl} alt={profileInfo.imageAlt} />
+                  ) : (
+                    <div className="home__profilePlaceholder" aria-label={profileInfo.imageAlt}>
+                      <span>{profileInfo.initials}</span>
+                    </div>
+                  )}
+                </div>
+                <div className="home__profileMeta">
+                  <span
+                    className="home__status"
+                    style={{ '--status-color': profileInfo.availabilityColor }}
+                  >
+                    <span className="home__statusDot" aria-hidden="true"></span>
+                    {profileInfo.availability}
+                  </span>
+                </div>
+              </aside>
             </div>
           </div>
         </div>

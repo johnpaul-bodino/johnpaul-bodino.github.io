@@ -1,6 +1,7 @@
 .timeline {
-  min-height: 100vh;
-  background: #020817;
+  background: var(--background-page);
+  background-size: var(--background-page-size);
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -12,6 +13,12 @@
   max-width: 1360px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+@media (max-width: 1025px) {
+  .timeline {
+    min-height: none;
+  }
+
 }
 
 @media (max-width: 1024px) {
