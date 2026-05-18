@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" role="img" aria-label="Profile placeholder">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="560" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1b1d2e"/>
+      <stop offset="0.55" stop-color="#11131f"/>
+      <stop offset="1" stop-color="#0b0d14"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="174" y1="144" x2="484" y2="648" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#6545ba"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(220 260 -260 220 320 360)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.46"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/>
+  <rect width="640" height="800" fill="url(#glow)"/>
+  <circle cx="504" cy="136" r="3" fill="#f8fafc" opacity="0.75"/>
+  <circle cx="112" cy="204" r="2" fill="#c4b5fd" opacity="0.8"/>
+  <circle cx="548" cy="352" r="2" fill="#7dd3fc" opacity="0.65"/>
+  <circle cx="84" cy="612" r="2" fill="#f8fafc" opacity="0.6"/>
+  <path fill="url(#accent)" opacity="0.92" d="M320 136c73 0 132 59 132 132s-59 132-132 132-132-59-132-132 59-132 132-132Z"/>
+  <path fill="#f8fafc" opacity="0.92" d="M320 432c-104 0-188 84-188 188v44h376v-44c0-104-84-188-188-188Z"/>
+  <path fill="#d2ccdf" opacity="0.72" d="M228 626c23-46 55-69 92-69s69 23 92 69H228Z"/>
+</svg>
