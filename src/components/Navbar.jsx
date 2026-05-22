@@ -29,7 +29,7 @@ export default function Navbar() {
         <img
           src="https://res.cloudinary.com/dazttfchn/image/upload/v1776696594/logo_hero_tjwk0d.svg"
           alt="JB Logo"
-          className="home__logo"
+          className="navbar__logo"
         />
         
         <button 
@@ -74,11 +74,11 @@ export default function Navbar() {
             )}
           </div>
 
-            <a href="#home" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Home</a>
-            <a href="#about" className="navbar-link" onClick={() => setIsMenuOpen(false)}>About</a>
-            <a href="#projects" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Projects</a>
-            <a href="#skills" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Skills</a>
-            <a href="#contact" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Contact</a>
+            <a href="/#home" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Home</a>
+            <a href="/#about" className="navbar-link" onClick={() => setIsMenuOpen(false)}>About</a>
+            <a href="/#projects" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Projects</a>
+            <a href="/#skills" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Skills</a>
+            <a href="/#contact" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Contact</a>
         </div>
         
         {/* Show desktop theme button only if not mobile */}

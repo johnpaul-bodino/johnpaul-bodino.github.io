@@ -1,0 +1,172 @@
+{
+  "generatedAt": "2026-05-22T17:23:22.234Z",
+  "username": "johnpaul-bodino",
+  "count": 6,
+  "projects": [
+    {
+      "id": 844052292,
+      "title": "johnpaul-bodino.github.io",
+      "description": "No description provided yet.",
+      "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino.github.io",
+      "liveUrl": "",
+      "stack": [
+        "CSS"
+      ],
+      "accent": "Public",
+      "stars": 1,
+      "forks": 0,
+      "updatedAt": "2026-05-18T23:40:18Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 37
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
+    {
+      "id": 1206465545,
+      "title": "NLP-Based-Text-Processing-Systems",
+      "description": "Tokenization/Normalization/Sentiment Analysis using Python",
+      "repoUrl": "https://github.com/johnpaul-bodino/NLP-Based-Text-Processing-Systems",
+      "liveUrl": "",
+      "stack": [],
+      "accent": "Forked",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-04-10T00:14:04Z",
+      "collaborators": [
+        {
+          "id": 143236109,
+          "login": "JabbyAlicante",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/143236109?v=4",
+          "profileUrl": "https://github.com/JabbyAlicante",
+          "contributions": 141
+        },
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 124
+        }
+      ],
+      "fork": {
+        "isFork": true,
+        "parent": {
+          "id": 1006054969,
+          "title": "NLP-Based-Text-Processing-Systems",
+          "fullName": "college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
+          "repoUrl": "https://github.com/college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
+          "owner": "college-of-mary-immaculate"
+        },
+        "source": {
+          "id": 1006054969,
+          "title": "NLP-Based-Text-Processing-Systems",
+          "fullName": "college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
+          "repoUrl": "https://github.com/college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
+          "owner": "college-of-mary-immaculate"
+        }
+      }
+    },
+    {
+      "id": 918742552,
+      "title": "tug-of-war",
+      "description": "No description provided yet.",
+      "repoUrl": "https://github.com/johnpaul-bodino/tug-of-war",
+      "liveUrl": "",
+      "stack": [
+        "Python"
+      ],
+      "accent": "Public",
+      "stars": 1,
+      "forks": 0,
+      "updatedAt": "2025-05-14T08:09:16Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 6
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
+    {
+      "id": 864401913,
+      "title": "nyt-apsdev",
+      "description": "No description provided yet.",
+      "repoUrl": "https://github.com/johnpaul-bodino/nyt-apsdev",
+      "liveUrl": "",
+      "stack": [
+        "CSS"
+      ],
+      "accent": "Public",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2024-10-07T11:32:54Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 5
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
+    {
+      "id": 864399873,
+      "title": "games",
+      "description": "No description provided yet.",
+      "repoUrl": "https://github.com/johnpaul-bodino/games",
+      "liveUrl": "",
+      "stack": [],
+      "accent": "Public",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2024-10-07T11:32:02Z",
+      "collaborators": [],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
+    {
+      "id": 852003558,
+      "title": "Paulyster",
+      "description": "No description provided yet.",
+      "repoUrl": "https://github.com/johnpaul-bodino/Paulyster",
+      "liveUrl": "",
+      "stack": [],
+      "accent": "Public",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2024-09-04T03:55:18Z",
+      "collaborators": [],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    }
+  ]
+}

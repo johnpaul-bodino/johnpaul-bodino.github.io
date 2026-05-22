@@ -1,9 +1,11 @@
 import '../styles/About.css'
 import FadeIn from '../components/FadeIn'
+import StarOverlay from '../components/StarOverlay.jsx'
 
 export default function About() {
   return (
-    <section id="about" className="about">
+    <section id="about" className="about star-overlay-host">
+      <StarOverlay />
       <FadeIn>
         <h2 className="about__title">WHAT I BUILD</h2>
       </FadeIn>

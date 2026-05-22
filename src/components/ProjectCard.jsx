@@ -1,11 +1,37 @@
 import { FaGithub } from 'react-icons/fa'
-import { FiExternalLink } from 'react-icons/fi'
+import { FiExternalLink, FiStar } from 'react-icons/fi'
 
 export default function ProjectCard({ project }) {
-  const { title, description, stack = [], accent, repoUrl, liveUrl } = project
+  const {
+    title,
+    description,
+    stack = [],
+    accent,
+    repoUrl,
+    liveUrl,
+    stars = 0,
+    collaborators = [],
+  } = project
 
   return (
     <article className="featured-projects__card">
+      {collaborators.length > 0 && (
+        <div className="featured-projects__collaborators" aria-label={`${title} contributors`}>
+          {collaborators.map((user) => (
+            <a
+              href={user.profileUrl}
+              target="_blank"
+              rel="noreferrer"
+              title={`${user.login} - ${user.contributions} contributions`}
+              aria-label={`${user.login} GitHub profile`}
+              key={user.id}
+            >
+              <img src={user.avatarUrl} alt="" />
+            </a>
+          ))}
+        </div>
+      )}
+
       <div className="featured-projects__preview">
         <span>{accent}</span>
       </div>
@@ -21,6 +47,13 @@ export default function ProjectCard({ project }) {
             ))}
           </div>
         )}
+
+        <div className="featured-projects__stats" aria-label={`${title} repository stats`}>
+          <span>
+            <FiStar aria-hidden="true" />
+            {stars}
+          </span>
+        </div>
       </div>
 
       {(repoUrl || liveUrl) && (

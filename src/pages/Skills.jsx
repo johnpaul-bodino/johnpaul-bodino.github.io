@@ -7,6 +7,7 @@ import { FaReact, FaFigma, FaAws  } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
 import FadeIn from '../components/FadeIn';
 import { TbApi, TbCode } from "react-icons/tb";
+import StarOverlay from '../components/StarOverlay.jsx';
 
 
 
@@ -59,7 +60,8 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="skills__container">
+    <section id="skills" className="skills__container star-overlay-host">
+      <StarOverlay />
       <div className="skills__inner">
         <FadeIn>
           <div className="skills__titleRow">

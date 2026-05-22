@@ -119,9 +119,13 @@
     color 160ms ease;
 }
 
+.home__resumeIcon {
+  flex: 0 0 auto;
+  color: currentColor;
+}
+
 .home__resume span {
   font-size: 1.2rem;
-  
 }
 
 .home__resume:hover {
@@ -129,7 +133,6 @@
   border-color: var(--color-accent-border);
   color: var(--color-text);
 }
-
 
 
 .home__icons {
@@ -164,22 +167,41 @@
 
 .home__profileCard {
   justify-self: center;
-  width: min(100%, 260px);
-  padding: 0;
-  background: transparent;
-  border: 1px solid var(--color-border);
+  width: min(100%, 292px);
+  padding: 10px;
+  background:
+    linear-gradient(180deg, rgba(248, 250, 252, 0.08), rgba(248, 250, 252, 0.02)),
+    var(--color-panel-glass);
+  border: 1px solid var(--color-border-strong);
   border-radius: 8px;
-  box-shadow: none;
+  box-shadow:
+    0 22px 60px rgba(3, 7, 18, 0.34),
+    inset 0 1px 0 rgba(248, 250, 252, 0.08);
   overflow: hidden;
   transform: translateX(-56px);
+  backdrop-filter: blur(12px);
 }
 
 .home__profileImageWrap {
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
-  background: #f8fafc;
-  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+  background: var(--color-surface-muted);
+  border: 1px solid rgba(248, 250, 252, 0.1);
+  border-radius: 6px;
+  box-shadow:
+    inset 0 0 0 1px rgba(3, 7, 18, 0.18),
+    0 10px 24px rgba(3, 7, 18, 0.22);
+}
+
+.home__profileImageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 32%),
+    linear-gradient(0deg, rgba(3, 7, 18, 0.14), transparent 36%);
 }
 
 .home__profileImage {
@@ -187,6 +209,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 .home__profilePlaceholder {
@@ -208,9 +231,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
-  background: var(--color-bg-soft);
-  border-top: 1px solid var(--color-border);
+  padding: 12px 4px 2px;
+  background: transparent;
+  border-top: 0;
 }
 
 .home__status {
@@ -272,7 +295,7 @@
 
   .home__profileCard {
     justify-self: center;
-    width: min(100%, 230px);
+    width: min(100%, 250px);
     order: -1;
     transform: none;
   }
@@ -306,13 +329,18 @@
     margin-top: 30px;
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;       
+    flex-wrap: nowrap;
   }
 
   .home__resume {
     width: 100%;
     justify-content: center;
     padding: 14px 20px;
+  }
+
+  .home__resumeIcon {
+    width: 20px;
+    height: 20px;
   }
 
   .home__resume span {
@@ -364,6 +392,11 @@
     padding: 12px 16px;
   }
 
+  .home__resumeIcon {
+    width: 19px;
+    height: 19px;
+  }
+
   .home__resume span {
     font-size: 0.95rem;
   }
@@ -374,8 +407,7 @@
   }
 
   .home__profileMeta {
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
     gap: 4px;
   }
 }
@@ -404,6 +436,11 @@
 
   .home__resume {
     padding: 12px 14px;
+  }
+
+  .home__resumeIcon {
+    width: 18px;
+    height: 18px;
   }
 
   .home__resume span {

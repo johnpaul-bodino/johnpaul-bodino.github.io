@@ -1,10 +1,14 @@
 .timeline {
-  background: var(--background-page);
-  background-size: var(--background-page-size);
-  background-attachment: fixed;
+  background: var(--color-bg);
+  background-size: auto;
+  background-attachment: scroll;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
+
+:root[data-theme='light'] .timeline {
+  background: var(--color-bg);
 }
 
 .timeline__container {

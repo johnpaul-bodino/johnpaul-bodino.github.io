@@ -1,16 +1,15 @@
-import { useEffect, useMemo, useState } from 'react'
-import { FaRegStar } from 'react-icons/fa'
-import { FiArrowUpRight } from 'react-icons/fi'
+import { useEffect, useState } from 'react'
+import { FaRegFolderOpen } from 'react-icons/fa'
+import { FiArrowLeft } from 'react-icons/fi'
 import ProjectCard from '../components/ProjectCard.jsx'
 import StarOverlay from '../components/StarOverlay.jsx'
-import { FEATURED_PROJECT_LIMIT, PINNED_REPOSITORIES } from '../config/githubProjects'
 import { fetchGitHubProjects } from '../services/githubProjects'
 
-export default function Projects() {
+const ALL_LIMIT = 100
+
+export default function AllProjects() {
   const [projects, setProjects] = useState([])
   const [status, setStatus] = useState('loading')
-
-  const hasPinnedRepos = PINNED_REPOSITORIES.length > 0
 
   useEffect(() => {
     let isMounted = true
@@ -20,8 +19,8 @@ export default function Projects() {
 
       try {
         const nextProjects = await fetchGitHubProjects({
-          limit: FEATURED_PROJECT_LIMIT,
-          view: 'featured',
+          limit: ALL_LIMIT,
+          view: 'all',
         })
 
         if (isMounted) {
@@ -43,28 +42,24 @@ export default function Projects() {
     }
   }, [])
 
-  const title = useMemo(() => {
-    return hasPinnedRepos ? 'Featured Projects' : 'Latest Projects'
-  }, [hasPinnedRepos])
-
   return (
-    <section id="projects" className="featured-projects star-overlay-host">
+    <main className="projects-page star-overlay-host">
       <StarOverlay />
-      <div className="featured-projects__inner">
-        <div className="featured-projects__header">
-          <div className="featured-projects__title">
-            <FaRegStar className="featured-projects__titleIcon" />
-            <h2>{title}</h2>
+      <div className="projects-page__inner">
+        <header className="projects-page__header">
+          <div className="projects-page__title">
+            <FaRegFolderOpen className="projects-page__titleIcon" />
+            <div>
+              <h1>Projects</h1>
+              <p>All public repositories from my GitHub.</p>
+            </div>
           </div>
-          <a
-            href="/projects"
-            className="featured-projects__viewAll"
-            aria-label="View all projects"
-          >
-            View all
-            <FiArrowUpRight aria-hidden="true" />
+
+          <a href="/#projects" className="projects-page__back">
+            <FiArrowLeft aria-hidden="true" />
+            Featured
           </a>
-        </div>
+        </header>
 
         {status === 'loading' && (
           <p className="featured-projects__state">Loading GitHub projects...</p>
@@ -75,19 +70,17 @@ export default function Projects() {
         )}
 
         {status === 'ready' && projects.length === 0 && (
-          <p className="featured-projects__state">
-            Add repo names to PINNED_REPOSITORIES to show featured projects.
-          </p>
+          <p className="featured-projects__state">No additional projects to show yet.</p>
         )}
 
         {status === 'ready' && projects.length > 0 && (
-          <div className="featured-projects__grid">
+          <div className="projects-page__grid">
             {projects.map((project) => (
               <ProjectCard project={project} key={project.id || project.title} />
             ))}
           </div>
         )}
       </div>
-    </section>
+    </main>
   )
 }

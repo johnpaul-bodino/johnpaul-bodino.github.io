@@ -1,34 +1,39 @@
 import '../styles/Home.css'
 import { FiLinkedin } from "react-icons/fi";
+import ProfileCard from '../components/ProfileCard.jsx'
+import StarOverlay from '../components/StarOverlay.jsx'
 
 const profileInfo = {
-  imageUrl: '',
+  imageUrl: '/paldo.png',
   imageAlt: 'John Paul Bodino profile photo',
   initials: 'JB',
   availability: 'Open to work',
   availabilityColor: '#31a24c',
 }
 
-
 function IconDownload(props) {
   return (
     <svg
       viewBox="0 0 24 24"
-      width="18"
-      height="18"
+      width="22"
+      height="22"
       aria-hidden="true"
       focusable="false"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...props}
     >
-      <path
-        fill="currentColor"
-        d="M12 3a1 1 0 0 1 1 1v9.586l2.293-2.293 1.414 1.414L12 17.414l-4.707-4.707 1.414-1.414L11 13.586V4a1 1 0 0 1 1-1Zm-7 16h14v2H5v-2Z"
-      />
+      <path d="M6 2h8l4 4v16H6z" />
+      <path d="M14 2v5h5" />
+      <path d="M12 10v6" />
+      <path d="m9 13 3 3 3-3" />
+      <path d="M9 19h6" />
     </svg>
   )
 }
-
-// https://res.cloudinary.com/dazttfchn/image/upload/v1776048474/download_resume_lq2gz7.svg
 
 function IconGithub(props) {
   return (
@@ -67,7 +72,8 @@ function IconMail(props) {
 export default function Home() {
   return (
     <>
-      <section id="home" className="home">
+      <section id="home" className="home star-overlay-host">
+        <StarOverlay />
         <div className="home__container">
           <div className="home__content home__fadeIn">
             <div className="home__heroGrid">
@@ -116,26 +122,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <aside className="home__profileCard" aria-label="Profile photo and availability">
-                <div className="home__profileImageWrap">
-                  {profileInfo.imageUrl ? (
-                    <img className="home__profileImage" src={profileInfo.imageUrl} alt={profileInfo.imageAlt} />
-                  ) : (
-                    <div className="home__profilePlaceholder" aria-label={profileInfo.imageAlt}>
-                      <span>{profileInfo.initials}</span>
-                    </div>
-                  )}
-                </div>
-                <div className="home__profileMeta">
-                  <span
-                    className="home__status"
-                    style={{ '--status-color': profileInfo.availabilityColor }}
-                  >
-                    <span className="home__statusDot" aria-hidden="true"></span>
-                    {profileInfo.availability}
-                  </span>
-                </div>
-              </aside>
+              <ProfileCard profile={profileInfo} />
             </div>
           </div>
         </div>
