@@ -1,5 +1,5 @@
 import { FaGithub } from 'react-icons/fa'
-import { FiExternalLink, FiStar } from 'react-icons/fi'
+import { FiExternalLink, FiGitBranch, FiStar } from 'react-icons/fi'
 
 export default function ProjectCard({ project }) {
   const {
@@ -10,6 +10,7 @@ export default function ProjectCard({ project }) {
     repoUrl,
     liveUrl,
     stars = 0,
+    forks = 0,
     collaborators = [],
   } = project
 
@@ -52,6 +53,10 @@ export default function ProjectCard({ project }) {
           <span>
             <FiStar aria-hidden="true" />
             {stars}
+          </span>
+          <span>
+            <FiGitBranch aria-hidden="true" />
+            {forks}
           </span>
         </div>
       </div>

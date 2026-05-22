@@ -160,6 +160,10 @@
   font-weight: 700;
 }
 
+:root[data-theme='light'] .featured-projects__preview span {
+  color: #f8fafc;
+}
+
 .featured-projects__body {
   position: relative;
   z-index: 1;

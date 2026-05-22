@@ -51,13 +51,13 @@ export default function AllProjects() {
             <FaRegFolderOpen className="projects-page__titleIcon" />
             <div>
               <h1>Projects</h1>
-              <p>All public repositories from my GitHub.</p>
+              <p>Stuff I built, forked, contributed to, and occasionally survived.</p>
             </div>
           </div>
 
-          <a href="/#projects" className="projects-page__back">
+          <a href="/#projects" className="projects-page__back" onClick={() => setIsMenuOpen(false)}>
             <FiArrowLeft aria-hidden="true" />
-            Featured
+            back to home
           </a>
         </header>
 
