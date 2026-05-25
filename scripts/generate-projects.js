@@ -9,6 +9,7 @@ const CACHE_PATH = resolve(ROOT_DIR, '.cache', 'projects', 'github-projects.json
 const GITHUB_API = 'https://api.github.com'
 const DEFAULT_USERNAME = 'johnpaul-bodino'
 const CACHE_TTL_MS = 10 * 60 * 1000
+const CACHE_VERSION = 4
 
 function loadLocalEnv() {
   return readFile(resolve(ROOT_DIR, '.env'), 'utf8')
@@ -83,8 +84,12 @@ async function getPaginated(path) {
   }
 }
 
-function uniqueStack(repo) {
-  return [repo.language, ...(repo.topics || [])]
+function uniqueStack(repo, languages) {
+  const repoLanguages = Object.entries(languages || {})
+    .sort(([, a], [, b]) => b - a)
+    .map(([language]) => language)
+
+  return [...repoLanguages, ...(repo.topics || [])]
     .filter(Boolean)
     .filter((item, index, items) => items.indexOf(item) === index)
 }
@@ -123,14 +128,100 @@ function mapForkInformation(repo, forkDetails) {
   }
 }
 
-function mapProject(repo, contributors, forkDetails) {
+function decodeBase64(value) {
+  return Buffer.from(value || '', 'base64').toString('utf8')
+}
+
+function findReadmeImage(markdown) {
+  const markdownImage = markdown.match(/!\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)/)
+
+  if (markdownImage?.[1]) {
+    return markdownImage[1]
+  }
+
+  const htmlImage = markdown.match(/<img[^>]+src=["']([^"']+)["']/i)
+
+  return htmlImage?.[1] || ''
+}
+
+function normalizeUrl(value) {
+  const url = String(value || '').trim()
+
+  if (!url || url.startsWith('#')) {
+    return ''
+  }
+
+  if (/^https?:\/\//i.test(url)) {
+    return url
+  }
+
+  if (/^[\w.-]+\.[a-z]{2,}(?:\/.*)?$/i.test(url)) {
+    return `https://${url}`
+  }
+
+  return ''
+}
+
+function findReadmeLiveUrl(markdown, repo) {
+  const links = [...markdown.matchAll(/\[[^\]]+]\((https?:\/\/[^)\s]+)(?:\s+"[^"]*")?\)/gi)]
+    .map((match) => normalizeUrl(match[1]))
+    .filter(Boolean)
+
+  const htmlLinks = [...markdown.matchAll(/<a[^>]+href=["'](https?:\/\/[^"']+)["']/gi)]
+    .map((match) => normalizeUrl(match[1]))
+    .filter(Boolean)
+
+  const candidates = [...links, ...htmlLinks]
+  const githubHostPattern = /(^|\.)github\.com$/i
+
+  return candidates.find((url) => {
+    try {
+      const parsed = new URL(url)
+      return !githubHostPattern.test(parsed.hostname) && url !== repo.html_url
+    } catch {
+      return false
+    }
+  }) || ''
+}
+
+function toRawGitHubUrl(imagePath, repo) {
+  if (!imagePath || imagePath.startsWith('#')) {
+    return ''
+  }
+
+  if (/^https?:\/\//i.test(imagePath)) {
+    return imagePath
+  }
+
+  const cleanPath = imagePath
+    .replace(/^\.?\//, '')
+    .split('#')[0]
+    .split('?')[0]
+
+  return `https://raw.githubusercontent.com/${repo.full_name}/${repo.default_branch}/${encodeURI(cleanPath)}`
+}
+
+async function getReadmeMarkdown(repo) {
+  const readme = await getJson(`/repos/${repo.owner.login}/${repo.name}/readme`)
+
+  return decodeBase64(readme.content)
+}
+
+async function getGitHubPagesUrl(repo) {
+  const pages = await getJson(`/repos/${repo.owner.login}/${repo.name}/pages`)
+
+  return normalizeUrl(pages.html_url)
+}
+
+function mapProject(repo, contributors, forkDetails, previewImage, liveUrl, languages) {
   return {
     id: repo.id,
     title: repo.name,
     description: repo.description || 'No description provided yet.',
     repoUrl: repo.html_url,
-    liveUrl: repo.homepage || '',
-    stack: uniqueStack(repo),
+    liveUrl,
+    previewImage,
+    stack: uniqueStack(repo, languages),
     accent: repo.fork ? 'Forked' : repo.private ? 'Private' : 'Public',
     stars: repo.stargazers_count,
     forks: repo.forks_count,
@@ -149,7 +240,11 @@ async function readFreshCache() {
     const cache = JSON.parse(await readFile(CACHE_PATH, 'utf8'))
     const cachedAt = new Date(cache.cachedAt).getTime()
 
-    if (Number.isFinite(cachedAt) && Date.now() - cachedAt < CACHE_TTL_MS) {
+    if (
+      cache.version === CACHE_VERSION &&
+      Number.isFinite(cachedAt) &&
+      Date.now() - cachedAt < CACHE_TTL_MS
+    ) {
       return cache.data
     }
   } catch {
@@ -165,7 +260,7 @@ async function writeJson(path, data) {
 }
 
 async function fetchProject(repo) {
-  const [contributors, forkDetails] = await Promise.all([
+  const [contributors, forkDetails, readmeMarkdown, pagesUrl, languages] = await Promise.all([
     getJson(`/repos/${repo.owner.login}/${repo.name}/contributors?per_page=6`).catch((error) => {
       console.warn(`Could not fetch contributors for ${repo.full_name}: ${error.message}`)
       return []
@@ -176,9 +271,21 @@ async function fetchProject(repo) {
           return null
         })
       : Promise.resolve(null),
+    getReadmeMarkdown(repo).catch((error) => {
+      console.warn(`Could not fetch README for ${repo.full_name}: ${error.message}`)
+      return ''
+    }),
+    getGitHubPagesUrl(repo).catch(() => ''),
+    getJson(`/repos/${repo.owner.login}/${repo.name}/languages`).catch((error) => {
+      console.warn(`Could not fetch languages for ${repo.full_name}: ${error.message}`)
+      return repo.language ? { [repo.language]: 1 } : {}
+    }),
   ])
 
-  return mapProject(repo, contributors, forkDetails)
+  const previewImage = toRawGitHubUrl(findReadmeImage(readmeMarkdown), repo)
+  const liveUrl = normalizeUrl(repo.homepage) || pagesUrl || findReadmeLiveUrl(readmeMarkdown, repo)
+
+  return mapProject(repo, contributors, forkDetails, previewImage, liveUrl, languages)
 }
 
 async function generateProjects() {
@@ -208,6 +315,7 @@ async function generateProjects() {
 
   await writeJson(OUTPUT_PATH, data)
   await writeJson(CACHE_PATH, {
+    version: CACHE_VERSION,
     cachedAt: new Date().toISOString(),
     data,
   })

@@ -1,28 +1,104 @@
 {
-  "generatedAt": "2026-05-25T04:20:04.882Z",
+  "generatedAt": "2026-05-25T05:02:32.118Z",
   "username": "johnpaul-bodino",
-  "count": 6,
+  "count": 7,
   "projects": [
+    {
+      "id": 1248826227,
+      "title": "FAPABRABO",
+      "description": "No description provided yet.",
+      "repoUrl": "https://github.com/johnpaul-bodino/FAPABRABO",
+      "liveUrl": "",
+      "previewImage": "",
+      "stack": [
+        "Python",
+        "TypeScript",
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "accent": "Forked",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-05-25T04:53:43Z",
+      "collaborators": [
+        {
+          "id": 143235940,
+          "login": "nathanielfaborada",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/143235940?v=4",
+          "profileUrl": "https://github.com/nathanielfaborada",
+          "contributions": 41
+        },
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 36
+        },
+        {
+          "id": 143235932,
+          "login": "DietherPano",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/143235932?v=4",
+          "profileUrl": "https://github.com/DietherPano",
+          "contributions": 21
+        },
+        {
+          "id": 127605738,
+          "login": "Nahiwagaan",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/127605738?v=4",
+          "profileUrl": "https://github.com/Nahiwagaan",
+          "contributions": 13
+        },
+        {
+          "id": 143236305,
+          "login": "Genniesysbracia",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/143236305?v=4",
+          "profileUrl": "https://github.com/Genniesysbracia",
+          "contributions": 2
+        }
+      ],
+      "fork": {
+        "isFork": true,
+        "parent": {
+          "id": 1061909677,
+          "title": "FAPABRABO",
+          "fullName": "college-of-mary-immaculate/FAPABRABO",
+          "repoUrl": "https://github.com/college-of-mary-immaculate/FAPABRABO",
+          "owner": "college-of-mary-immaculate"
+        },
+        "source": {
+          "id": 1061909677,
+          "title": "FAPABRABO",
+          "fullName": "college-of-mary-immaculate/FAPABRABO",
+          "repoUrl": "https://github.com/college-of-mary-immaculate/FAPABRABO",
+          "owner": "college-of-mary-immaculate"
+        }
+      }
+    },
     {
       "id": 844052292,
       "title": "johnpaul-bodino.github.io",
-      "description": "No description provided yet.",
+      "description": "My Portfolio using React",
       "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino.github.io",
-      "liveUrl": "",
+      "liveUrl": "https://johnpaul-bodino.github.io/",
+      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/johnpaul-bodino.github.io/main/src/assets/POFTFOLIO.png",
       "stack": [
-        "CSS"
+        "CSS",
+        "JavaScript",
+        "HTML"
       ],
       "accent": "Public",
       "stars": 1,
       "forks": 0,
-      "updatedAt": "2026-05-22T18:03:30Z",
+      "updatedAt": "2026-05-25T04:41:31Z",
       "collaborators": [
         {
           "id": 134007702,
           "login": "johnpaul-bodino",
           "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
           "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 39
+          "contributions": 45
         }
       ],
       "fork": {
@@ -37,7 +113,13 @@
       "description": "Tokenization/Normalization/Sentiment Analysis using Python",
       "repoUrl": "https://github.com/johnpaul-bodino/NLP-Based-Text-Processing-Systems",
       "liveUrl": "",
-      "stack": [],
+      "previewImage": "",
+      "stack": [
+        "Python",
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
       "accent": "Forked",
       "stars": 0,
       "forks": 0,
@@ -82,6 +164,7 @@
       "description": "No description provided yet.",
       "repoUrl": "https://github.com/johnpaul-bodino/tug-of-war",
       "liveUrl": "",
+      "previewImage": "",
       "stack": [
         "Python"
       ],
@@ -109,9 +192,12 @@
       "title": "nyt-apsdev",
       "description": "No description provided yet.",
       "repoUrl": "https://github.com/johnpaul-bodino/nyt-apsdev",
-      "liveUrl": "",
+      "liveUrl": "https://johnpaul-bodino.github.io/nyt-apsdev/",
+      "previewImage": "",
       "stack": [
-        "CSS"
+        "CSS",
+        "JavaScript",
+        "HTML"
       ],
       "accent": "Public",
       "stars": 0,
@@ -138,6 +224,7 @@
       "description": "No description provided yet.",
       "repoUrl": "https://github.com/johnpaul-bodino/games",
       "liveUrl": "",
+      "previewImage": "",
       "stack": [],
       "accent": "Public",
       "stars": 0,
@@ -156,6 +243,7 @@
       "description": "No description provided yet.",
       "repoUrl": "https://github.com/johnpaul-bodino/Paulyster",
       "liveUrl": "",
+      "previewImage": "",
       "stack": [],
       "accent": "Public",
       "stars": 0,

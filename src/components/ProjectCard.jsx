@@ -9,6 +9,7 @@ export default function ProjectCard({ project }) {
     accent,
     repoUrl,
     liveUrl,
+    previewImage,
     stars = 0,
     forks = 0,
     collaborators = [],
@@ -34,6 +35,9 @@ export default function ProjectCard({ project }) {
       )}
 
       <div className="featured-projects__preview">
+        {previewImage && (
+          <img src={previewImage} alt={`${title} preview`} loading="lazy" />
+        )}
         <span>{accent}</span>
       </div>
 
@@ -69,7 +73,14 @@ export default function ProjectCard({ project }) {
             </a>
           )}
           {liveUrl && (
-            <a href={liveUrl} target="_blank" rel="noreferrer" aria-label={`Open ${title} live site`}>
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open ${title} live site`}
+              className="featured-projects__action--live"
+              title="Live site"
+            >
               <FiExternalLink aria-hidden="true" />
             </a>
           )}
