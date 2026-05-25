@@ -1,8 +1,81 @@
 {
-  "generatedAt": "2026-05-25T04:49:46.492Z",
+  "generatedAt": "2026-05-25T05:02:32.118Z",
   "username": "johnpaul-bodino",
-  "count": 6,
+  "count": 7,
   "projects": [
+    {
+      "id": 1248826227,
+      "title": "FAPABRABO",
+      "description": "No description provided yet.",
+      "repoUrl": "https://github.com/johnpaul-bodino/FAPABRABO",
+      "liveUrl": "",
+      "previewImage": "",
+      "stack": [
+        "Python",
+        "TypeScript",
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "accent": "Forked",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-05-25T04:53:43Z",
+      "collaborators": [
+        {
+          "id": 143235940,
+          "login": "nathanielfaborada",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/143235940?v=4",
+          "profileUrl": "https://github.com/nathanielfaborada",
+          "contributions": 41
+        },
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 36
+        },
+        {
+          "id": 143235932,
+          "login": "DietherPano",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/143235932?v=4",
+          "profileUrl": "https://github.com/DietherPano",
+          "contributions": 21
+        },
+        {
+          "id": 127605738,
+          "login": "Nahiwagaan",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/127605738?v=4",
+          "profileUrl": "https://github.com/Nahiwagaan",
+          "contributions": 13
+        },
+        {
+          "id": 143236305,
+          "login": "Genniesysbracia",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/143236305?v=4",
+          "profileUrl": "https://github.com/Genniesysbracia",
+          "contributions": 2
+        }
+      ],
+      "fork": {
+        "isFork": true,
+        "parent": {
+          "id": 1061909677,
+          "title": "FAPABRABO",
+          "fullName": "college-of-mary-immaculate/FAPABRABO",
+          "repoUrl": "https://github.com/college-of-mary-immaculate/FAPABRABO",
+          "owner": "college-of-mary-immaculate"
+        },
+        "source": {
+          "id": 1061909677,
+          "title": "FAPABRABO",
+          "fullName": "college-of-mary-immaculate/FAPABRABO",
+          "repoUrl": "https://github.com/college-of-mary-immaculate/FAPABRABO",
+          "owner": "college-of-mary-immaculate"
+        }
+      }
+    },
     {
       "id": 844052292,
       "title": "johnpaul-bodino.github.io",
