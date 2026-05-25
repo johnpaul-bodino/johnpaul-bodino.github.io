@@ -1,28 +1,31 @@
 {
-  "generatedAt": "2026-05-25T04:20:04.882Z",
+  "generatedAt": "2026-05-25T04:49:46.492Z",
   "username": "johnpaul-bodino",
   "count": 6,
   "projects": [
     {
       "id": 844052292,
       "title": "johnpaul-bodino.github.io",
-      "description": "No description provided yet.",
+      "description": "My Portfolio using React",
       "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino.github.io",
-      "liveUrl": "",
+      "liveUrl": "https://johnpaul-bodino.github.io/",
+      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/johnpaul-bodino.github.io/main/src/assets/POFTFOLIO.png",
       "stack": [
-        "CSS"
+        "CSS",
+        "JavaScript",
+        "HTML"
       ],
       "accent": "Public",
       "stars": 1,
       "forks": 0,
-      "updatedAt": "2026-05-22T18:03:30Z",
+      "updatedAt": "2026-05-25T04:41:31Z",
       "collaborators": [
         {
           "id": 134007702,
           "login": "johnpaul-bodino",
           "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
           "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 39
+          "contributions": 45
         }
       ],
       "fork": {
@@ -37,7 +40,13 @@
       "description": "Tokenization/Normalization/Sentiment Analysis using Python",
       "repoUrl": "https://github.com/johnpaul-bodino/NLP-Based-Text-Processing-Systems",
       "liveUrl": "",
-      "stack": [],
+      "previewImage": "",
+      "stack": [
+        "Python",
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
       "accent": "Forked",
       "stars": 0,
       "forks": 0,
@@ -82,6 +91,7 @@
       "description": "No description provided yet.",
       "repoUrl": "https://github.com/johnpaul-bodino/tug-of-war",
       "liveUrl": "",
+      "previewImage": "",
       "stack": [
         "Python"
       ],
@@ -109,9 +119,12 @@
       "title": "nyt-apsdev",
       "description": "No description provided yet.",
       "repoUrl": "https://github.com/johnpaul-bodino/nyt-apsdev",
-      "liveUrl": "",
+      "liveUrl": "https://johnpaul-bodino.github.io/nyt-apsdev/",
+      "previewImage": "",
       "stack": [
-        "CSS"
+        "CSS",
+        "JavaScript",
+        "HTML"
       ],
       "accent": "Public",
       "stars": 0,
@@ -138,6 +151,7 @@
       "description": "No description provided yet.",
       "repoUrl": "https://github.com/johnpaul-bodino/games",
       "liveUrl": "",
+      "previewImage": "",
       "stack": [],
       "accent": "Public",
       "stars": 0,
@@ -156,6 +170,7 @@
       "description": "No description provided yet.",
       "repoUrl": "https://github.com/johnpaul-bodino/Paulyster",
       "liveUrl": "",
+      "previewImage": "",
       "stack": [],
       "accent": "Public",
       "stars": 0,
