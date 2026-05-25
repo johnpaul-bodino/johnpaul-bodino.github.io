@@ -1,1 +1,1 @@
-![Project preview](./src/assets/PORTFOLIO.png)
+[Project preview](./src/assets/PORTFOLIO.png)
