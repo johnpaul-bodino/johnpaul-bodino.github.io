@@ -1,7 +1,10 @@
 import { FaGithub } from 'react-icons/fa'
-import { FiExternalLink, FiGitBranch, FiStar } from 'react-icons/fi'
+import { FiExternalLink, FiGitBranch, FiStar, FiX } from 'react-icons/fi'
+import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 export default function ProjectCard({ project }) {
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   const {
     title,
     description,
@@ -16,7 +19,48 @@ export default function ProjectCard({ project }) {
     collaborators = [],
   } = project
 
+  useEffect(() => {
+    if (!isPreviewOpen) {
+      return undefined
+    }
+
+    function closeOnEscape(event) {
+      if (event.key === 'Escape') {
+        setIsPreviewOpen(false)
+      }
+    }
+
+    document.addEventListener('keydown', closeOnEscape)
+    return () => document.removeEventListener('keydown', closeOnEscape)
+  }, [isPreviewOpen])
+
+  const previewModal = isPreviewOpen && previewImage
+    ? createPortal(
+        <div
+          className="featured-projects__previewModal"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${title} preview image`}
+          onClick={() => setIsPreviewOpen(false)}
+        >
+          <div className="featured-projects__previewModalContent" onClick={(event) => event.stopPropagation()}>
+            <button
+              type="button"
+              className="featured-projects__previewClose"
+              aria-label="Close preview"
+              onClick={() => setIsPreviewOpen(false)}
+            >
+              <FiX aria-hidden="true" />
+            </button>
+            <img src={previewImage} alt={`${title} preview`} />
+          </div>
+        </div>,
+        document.body
+      )
+    : null
+
   return (
+    <>
     <article className="featured-projects__card">
       {collaborators.length > 0 && (
         <div className="featured-projects__collaborators" aria-label={`${title} contributors`}>
@@ -37,7 +81,14 @@ export default function ProjectCard({ project }) {
 
       <div className="featured-projects__preview">
         {previewImage && (
-          <img src={previewImage} alt={`${title} preview`} loading="lazy" />
+          <button
+            type="button"
+            aria-label={`Open full ${title} preview image`}
+            className="featured-projects__previewLink"
+            onClick={() => setIsPreviewOpen(true)}
+          >
+            <img src={previewImage} alt={`${title} preview`} loading="lazy" />
+          </button>
         )}
         <span>{accent}</span>
       </div>
@@ -90,6 +141,9 @@ export default function ProjectCard({ project }) {
           )}
         </div>
       )}
+
     </article>
+    {previewModal}
+    </>
   )
 }

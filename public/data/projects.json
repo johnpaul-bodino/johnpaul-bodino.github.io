@@ -1,8 +1,134 @@
 {
-  "generatedAt": "2026-05-25T13:51:19.883Z",
+  "generatedAt": "2026-05-25T22:58:15.983Z",
   "username": "johnpaul-bodino",
   "count": 7,
   "projects": [
+    {
+      "id": 864401913,
+      "title": "nyt-apsdev",
+      "description": "A lightweight New York Times-inspired static website built with Parcel.",
+      "repoUrl": "https://github.com/johnpaul-bodino/nyt-apsdev",
+      "liveUrl": "https://johnpaul-bodino.github.io/nyt-apsdev/",
+      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/nyt-apsdev/main/src/assets/nyt.png",
+      "stack": [
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
+      "topics": [
+        "newsapi"
+      ],
+      "accent": "Public",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-05-25T22:57:23Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 12
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
+    {
+      "id": 1206465545,
+      "title": "NLP-Based-Text-Processing-Systems",
+      "description": "Tokenization/Normalization/Sentiment Analysis using Python",
+      "repoUrl": "https://github.com/johnpaul-bodino/NLP-Based-Text-Processing-Systems",
+      "liveUrl": "",
+      "previewImage": "",
+      "stack": [
+        "Python",
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
+      "topics": [
+        "flask-api",
+        "nlp-machine-learning",
+        "normalization",
+        "sentiment-analysis",
+        "tokenization"
+      ],
+      "accent": "Forked",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-05-25T14:15:10Z",
+      "collaborators": [
+        {
+          "id": 143236109,
+          "login": "JabbyAlicante",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/143236109?v=4",
+          "profileUrl": "https://github.com/JabbyAlicante",
+          "contributions": 141
+        },
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 124
+        }
+      ],
+      "fork": {
+        "isFork": true,
+        "parent": {
+          "id": 1006054969,
+          "title": "NLP-Based-Text-Processing-Systems",
+          "fullName": "college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
+          "repoUrl": "https://github.com/college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
+          "owner": "college-of-mary-immaculate"
+        },
+        "source": {
+          "id": 1006054969,
+          "title": "NLP-Based-Text-Processing-Systems",
+          "fullName": "college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
+          "repoUrl": "https://github.com/college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
+          "owner": "college-of-mary-immaculate"
+        }
+      }
+    },
+    {
+      "id": 844052292,
+      "title": "johnpaul-bodino.github.io",
+      "description": "My Portfolio using React",
+      "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino.github.io",
+      "liveUrl": "https://johnpaul-bodino.github.io/",
+      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/johnpaul-bodino.github.io/main/src/assets/POFTFOLIO.png",
+      "stack": [
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
+      "topics": [
+        "reactjs"
+      ],
+      "accent": "Public",
+      "stars": 1,
+      "forks": 0,
+      "updatedAt": "2026-05-25T13:53:59Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 48
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
     {
       "id": 1248826227,
       "title": "GAMEGLE",
@@ -39,7 +165,7 @@
           "login": "johnpaul-bodino",
           "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
           "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 36
+          "contributions": 38
         },
         {
           "id": 143235932,
@@ -82,40 +208,6 @@
       }
     },
     {
-      "id": 844052292,
-      "title": "johnpaul-bodino.github.io",
-      "description": "My Portfolio using React",
-      "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino.github.io",
-      "liveUrl": "https://johnpaul-bodino.github.io/",
-      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/johnpaul-bodino.github.io/main/src/assets/POFTFOLIO.png",
-      "stack": [
-        "CSS",
-        "JavaScript",
-        "HTML"
-      ],
-      "topics": [
-        "reactjs"
-      ],
-      "accent": "Public",
-      "stars": 1,
-      "forks": 0,
-      "updatedAt": "2026-05-25T13:20:50Z",
-      "collaborators": [
-        {
-          "id": 134007702,
-          "login": "johnpaul-bodino",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
-          "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 47
-        }
-      ],
-      "fork": {
-        "isFork": false,
-        "parent": null,
-        "source": null
-      }
-    },
-    {
       "id": 918742552,
       "title": "tug-of-war",
       "description": "Simple Tug of War game where players compete using word similarity mechanics powered by Levenshtein Distance and structured game logic.",
@@ -139,90 +231,6 @@
           "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
           "profileUrl": "https://github.com/johnpaul-bodino",
           "contributions": 13
-        }
-      ],
-      "fork": {
-        "isFork": false,
-        "parent": null,
-        "source": null
-      }
-    },
-    {
-      "id": 1206465545,
-      "title": "NLP-Based-Text-Processing-Systems",
-      "description": "Tokenization/Normalization/Sentiment Analysis using Python",
-      "repoUrl": "https://github.com/johnpaul-bodino/NLP-Based-Text-Processing-Systems",
-      "liveUrl": "",
-      "previewImage": "",
-      "stack": [
-        "Python",
-        "CSS",
-        "JavaScript",
-        "HTML"
-      ],
-      "topics": [],
-      "accent": "Forked",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2026-04-10T00:14:04Z",
-      "collaborators": [
-        {
-          "id": 143236109,
-          "login": "JabbyAlicante",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/143236109?v=4",
-          "profileUrl": "https://github.com/JabbyAlicante",
-          "contributions": 141
-        },
-        {
-          "id": 134007702,
-          "login": "johnpaul-bodino",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
-          "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 124
-        }
-      ],
-      "fork": {
-        "isFork": true,
-        "parent": {
-          "id": 1006054969,
-          "title": "NLP-Based-Text-Processing-Systems",
-          "fullName": "college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
-          "repoUrl": "https://github.com/college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
-          "owner": "college-of-mary-immaculate"
-        },
-        "source": {
-          "id": 1006054969,
-          "title": "NLP-Based-Text-Processing-Systems",
-          "fullName": "college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
-          "repoUrl": "https://github.com/college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
-          "owner": "college-of-mary-immaculate"
-        }
-      }
-    },
-    {
-      "id": 864401913,
-      "title": "nyt-apsdev",
-      "description": "No description provided yet.",
-      "repoUrl": "https://github.com/johnpaul-bodino/nyt-apsdev",
-      "liveUrl": "https://johnpaul-bodino.github.io/nyt-apsdev/",
-      "previewImage": "",
-      "stack": [
-        "CSS",
-        "JavaScript",
-        "HTML"
-      ],
-      "topics": [],
-      "accent": "Public",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2024-10-07T11:32:54Z",
-      "collaborators": [
-        {
-          "id": 134007702,
-          "login": "johnpaul-bodino",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
-          "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 5
         }
       ],
       "fork": {
