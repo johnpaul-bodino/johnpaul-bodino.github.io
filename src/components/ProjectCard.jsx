@@ -6,6 +6,7 @@ export default function ProjectCard({ project }) {
     title,
     description,
     stack = [],
+    topics = [],
     accent,
     repoUrl,
     liveUrl,
@@ -45,10 +46,13 @@ export default function ProjectCard({ project }) {
         <h3>{title}</h3>
         <p>{description}</p>
 
-        {stack.length > 0 && (
+        {(stack.length > 0 || topics.length > 0) && (
           <div className="featured-projects__stack">
             {stack.map((item) => (
-              <span key={item}>{item}</span>
+              <span key={`language-${item}`}>{item}</span>
+            ))}
+            {topics.map((item) => (
+              <span key={`topic-${item}`}>{item}</span>
             ))}
           </div>
         )}

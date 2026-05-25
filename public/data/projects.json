@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-05-25T05:02:32.118Z",
+  "generatedAt": "2026-05-25T13:51:19.883Z",
   "username": "johnpaul-bodino",
   "count": 7,
   "projects": [
     {
       "id": 1248826227,
-      "title": "FAPABRABO",
-      "description": "No description provided yet.",
-      "repoUrl": "https://github.com/johnpaul-bodino/FAPABRABO",
+      "title": "GAMEGLE",
+      "description": "A gaming-focused search engine that aggregates content from multiple sources into one searchable platform. ",
+      "repoUrl": "https://github.com/johnpaul-bodino/GAMEGLE",
       "liveUrl": "",
-      "previewImage": "",
+      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/GAMEGLE/main/FAPABRABO.gg/public/GAMEGLEE.png",
       "stack": [
         "Python",
         "TypeScript",
@@ -17,10 +17,15 @@
         "HTML",
         "JavaScript"
       ],
+      "topics": [
+        "fastapi",
+        "mongodb",
+        "puppeteer"
+      ],
       "accent": "Forked",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2026-05-25T04:53:43Z",
+      "updatedAt": "2026-05-25T13:39:29Z",
       "collaborators": [
         {
           "id": 143235940,
@@ -88,17 +93,52 @@
         "JavaScript",
         "HTML"
       ],
+      "topics": [
+        "reactjs"
+      ],
       "accent": "Public",
       "stars": 1,
       "forks": 0,
-      "updatedAt": "2026-05-25T04:41:31Z",
+      "updatedAt": "2026-05-25T13:20:50Z",
       "collaborators": [
         {
           "id": 134007702,
           "login": "johnpaul-bodino",
           "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
           "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 45
+          "contributions": 47
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
+    {
+      "id": 918742552,
+      "title": "tug-of-war",
+      "description": "Simple Tug of War game where players compete using word similarity mechanics powered by Levenshtein Distance and structured game logic.",
+      "repoUrl": "https://github.com/johnpaul-bodino/tug-of-war",
+      "liveUrl": "",
+      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/tug-of-war/main/pictures/tug-of-war.png",
+      "stack": [
+        "Python"
+      ],
+      "topics": [
+        "tkinter"
+      ],
+      "accent": "Public",
+      "stars": 1,
+      "forks": 0,
+      "updatedAt": "2026-05-25T09:27:01Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 13
         }
       ],
       "fork": {
@@ -120,6 +160,7 @@
         "JavaScript",
         "HTML"
       ],
+      "topics": [],
       "accent": "Forked",
       "stars": 0,
       "forks": 0,
@@ -159,35 +200,6 @@
       }
     },
     {
-      "id": 918742552,
-      "title": "tug-of-war",
-      "description": "No description provided yet.",
-      "repoUrl": "https://github.com/johnpaul-bodino/tug-of-war",
-      "liveUrl": "",
-      "previewImage": "",
-      "stack": [
-        "Python"
-      ],
-      "accent": "Public",
-      "stars": 1,
-      "forks": 0,
-      "updatedAt": "2025-05-14T08:09:16Z",
-      "collaborators": [
-        {
-          "id": 134007702,
-          "login": "johnpaul-bodino",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
-          "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 6
-        }
-      ],
-      "fork": {
-        "isFork": false,
-        "parent": null,
-        "source": null
-      }
-    },
-    {
       "id": 864401913,
       "title": "nyt-apsdev",
       "description": "No description provided yet.",
@@ -199,6 +211,7 @@
         "JavaScript",
         "HTML"
       ],
+      "topics": [],
       "accent": "Public",
       "stars": 0,
       "forks": 0,
@@ -226,6 +239,7 @@
       "liveUrl": "",
       "previewImage": "",
       "stack": [],
+      "topics": [],
       "accent": "Public",
       "stars": 0,
       "forks": 0,
@@ -245,6 +259,7 @@
       "liveUrl": "",
       "previewImage": "",
       "stack": [],
+      "topics": [],
       "accent": "Public",
       "stars": 0,
       "forks": 0,

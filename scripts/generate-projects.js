@@ -9,7 +9,7 @@ const CACHE_PATH = resolve(ROOT_DIR, '.cache', 'projects', 'github-projects.json
 const GITHUB_API = 'https://api.github.com'
 const DEFAULT_USERNAME = 'johnpaul-bodino'
 const CACHE_TTL_MS = 10 * 60 * 1000
-const CACHE_VERSION = 4
+const CACHE_VERSION = 5
 
 function loadLocalEnv() {
   return readFile(resolve(ROOT_DIR, '.env'), 'utf8')
@@ -84,14 +84,20 @@ async function getPaginated(path) {
   }
 }
 
-function uniqueStack(repo, languages) {
-  const repoLanguages = Object.entries(languages || {})
-    .sort(([, a], [, b]) => b - a)
-    .map(([language]) => language)
-
-  return [...repoLanguages, ...(repo.topics || [])]
+function uniqueItems(items) {
+  return items
     .filter(Boolean)
-    .filter((item, index, items) => items.indexOf(item) === index)
+    .filter((item, index, list) => list.indexOf(item) === index)
+}
+
+function mapLanguages(languages) {
+  return uniqueItems(Object.entries(languages || {})
+    .sort(([, a], [, b]) => b - a)
+    .map(([language]) => language))
+}
+
+function mapTopics(repo) {
+  return uniqueItems(repo.topics || [])
 }
 
 function mapCollaborators(contributors) {
@@ -221,7 +227,8 @@ function mapProject(repo, contributors, forkDetails, previewImage, liveUrl, lang
     repoUrl: repo.html_url,
     liveUrl,
     previewImage,
-    stack: uniqueStack(repo, languages),
+    stack: mapLanguages(languages),
+    topics: mapTopics(repo),
     accent: repo.fork ? 'Forked' : repo.private ? 'Private' : 'Public',
     stars: repo.stargazers_count,
     forks: repo.forks_count,
