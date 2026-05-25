@@ -1,6 +1,8 @@
+import profilePhoto from '../assets/paldo.png'
+
 export default function ProfileCard({ profile }) {
   const {
-    imageUrl = '/paldo.png',
+    imageUrl = profilePhoto,
     imageAlt = 'Profile photo',
     initials = 'JB',
     availability = 'Open to work',

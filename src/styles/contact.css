@@ -79,15 +79,44 @@
 }
 
 @media screen and (max-width: 480px) {
+    .site-footer {
+        padding: 14px 12px 24px;
+    }
+
     .site-footer__bar {
-        min-height: 76px;
-        flex-direction: column;
-        justify-content: center;
+        min-height: 52px;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 10px;
-        padding: 12px 16px;
+        padding: 8px 12px;
     }
 
     .site-footer__copyright {
-        font-size: 0.68rem;
+        flex: 1 1 auto;
+        min-width: 0;
+        font-size: clamp(0.58rem, 2.7vw, 0.68rem);
+        gap: 6px;
+        line-height: 1.25;
+        white-space: nowrap;
+    }
+
+    .site-footer__links {
+        flex: 0 0 auto;
+        gap: 10px;
+    }
+
+    .site-footer__links a {
+        width: 22px;
+        height: 22px;
+    }
+
+    .site-footer__links svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .site-footer__statusDot {
+        width: 7px;
+        height: 7px;
     }
 }

@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import "../styles/TimelineTabs.css";
-import { IoIosBriefcase } from "react-icons/io";
-// removed extra stack icons for undo
+import academyLogo from "../assets/8con_academy_logo.jfif";
+import cmiLogo from "../assets/cmi.png";
 
 const workTimeline = [
   {
     date: "April 2025 - June 2025",
-    title: "Software Developer Intern | EAST - Enrollment System",
+    title: "Web Developer Intern | EAST - Enrollment System",
     description: "8Con Academy - Meycauayan, Bulacan",
+    markerImage: academyLogo,
+    markerAlt: "8Con Academy logo",
     bullets: [
       "Improve and maintained backend features for an enrollment system, including server-side logic, database management, and API integration using Node.js and Express.js.",
       "Established and documented RESTful APIs to support enrollment workflows and ensure clear structure for integration.",
@@ -26,6 +28,8 @@ const educationTimeline = [
       "Graduated with a degree in Computer Science, where I developed strong technical skills and gained in-depth knowledge relevant to my career. During my studies, I worked on various projects focused on software and web development, applying both theoretical and practical concepts.",
       "Relevant Coursework:",
     ],
+    markerImage: cmiLogo,
+    markerAlt: "College of Mary Immaculate logo",
     bullets: [
       "Data Structures, Object-Oriented Programming, Programming, Algorithms, Information Security, Natural Language Processing, Intelligent Systems"
     ]
@@ -35,7 +39,16 @@ const educationTimeline = [
 function TimelineItem({ item, isLast }) {
   return (
     <li className={`timeline__item${isLast ? " timeline__item--last" : ""}`}>
-      <div className="timeline__marker"></div>
+      <div className={`timeline__marker${item.markerImage ? " timeline__marker--image" : ""}`}>
+        {item.markerImage && (
+          <img
+            src={item.markerImage}
+            alt={item.markerAlt || ""}
+            className="timeline__markerImage"
+            loading="lazy"
+          />
+        )}
+      </div>
       <time className="timeline__date">{item.date}</time>
       <h3 className="timeline__title">{item.title}</h3>
       {Array.isArray(item.description) ? (

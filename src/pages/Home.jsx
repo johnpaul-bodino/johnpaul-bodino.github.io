@@ -2,9 +2,10 @@ import '../styles/Home.css'
 import { FiLinkedin } from "react-icons/fi";
 import ProfileCard from '../components/ProfileCard.jsx'
 import StarOverlay from '../components/StarOverlay.jsx'
+import profilePhoto from '../assets/paldo.png'
 
 const profileInfo = {
-  imageUrl: '/paldo.png',
+  imageUrl: profilePhoto,
   imageAlt: 'John Paul Bodino profile photo',
   initials: 'JB',
   availability: 'Open to work',

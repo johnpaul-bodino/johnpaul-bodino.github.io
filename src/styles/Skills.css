@@ -88,7 +88,7 @@
   margin-bottom: 20px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   transform: translateZ(0);
@@ -162,7 +162,8 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(52px, max-content));
+  justify-content: start;
   gap: 12px;
   margin-top: 8px;
 }
@@ -171,7 +172,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.4rem;
+  width: 52px;
+  height: 52px;
+  font-size: 2.25rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   
@@ -216,45 +219,13 @@
 
 .skills__tooltip {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 4px);
   left: 50%;
-  transform: translateX(-50%) translateY(8px);
+  transform: translateX(-50%);
   background: var(--color-surface-muted);
   color: var(--color-text-muted);
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 6px;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 1000;
-  animation: tooltipPopDown 0.25s ease-out forwards;
-  border: 1px solid var(--color-border);
-  backdrop-filter: blur(4px);
-}
-
-/* Pop-down animation - smooth */
-@keyframes tooltipPopDown {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(2px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(8px);
-  }
-}
-
-.skills__tooltip {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  background: var(--color-surface-muted);
-  color: var(--color-text-muted);
-  padding: 6px 12px;
-  border-radius: 3px;
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.2px;
@@ -270,14 +241,14 @@
 .skills__tooltip::after {
   content: '';
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  border-bottom: 3px solid var(--color-surface-muted);
+  border-bottom: 3px solid var(--color-border);
 }
 
 /* Pop-down animation - smooth */
@@ -366,14 +337,14 @@
   }
 
   .skills__iconsContainer {
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(48px, max-content));
+    gap: 12px;
   }
 
   .skills__iconBox {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
   }
 
   .skills__badgeItem {
@@ -426,14 +397,14 @@
   }
 
   .skills__iconsContainer {
-    grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(44px, max-content));
+    gap: 10px 12px;
   }
 
   .skills__iconBox {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.85rem;
     border-radius: 8px;
   }
 
@@ -456,8 +427,8 @@
   }
 
   .skills__iconsContainer {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 2fr));
-    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(42px, max-content));
+    gap: 10px;
   }
 
   
