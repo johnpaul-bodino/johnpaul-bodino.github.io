@@ -1,0 +1,139 @@
+{
+  "updatedAt": "2026-05-26T13:11:28.664Z",
+  "count": 2,
+  "projects": [
+    {
+      "id": 1250220793,
+      "title": "infinity-e-commerce",
+      "description": "Infinity E Commerce site source code",
+      "repoUrl": "https://github.com/I-N-F-I-N-I-T-Y-Commerce/infinity-e-commerce",
+      "liveUrl": "",
+      "previewImage": "https://res.cloudinary.com/dda8q97x2/image/upload/v1779800104/infinityy_ydoork.png",
+      "stack": [
+        "PHP",
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
+      "topics": [],
+      "accent": "College Project",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-05-26T12:40:43Z",
+      "collaborators": [
+        {
+          "id": 175491313,
+          "login": "Haimonmon",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/175491313?v=4",
+          "profileUrl": "https://github.com/Haimonmon",
+          "contributions": 37
+        },
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 6
+        },
+        {
+          "id": 134398616,
+          "login": "Wesmabe1129",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134398616?v=4",
+          "profileUrl": "https://github.com/Wesmabe1129",
+          "contributions": 2
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": {
+          "id": 852708367,
+          "title": "infinity-e-commerce",
+          "fullName": "I-N-F-I-N-I-T-Y-Commerce/infinity-e-commerce",
+          "repoUrl": "https://github.com/I-N-F-I-N-I-T-Y-Commerce/infinity-e-commerce",
+          "owner": "I-N-F-I-N-I-T-Y-Commerce"
+        },
+        "source": {
+          "id": 852708367,
+          "title": "infinity-e-commerce",
+          "fullName": "I-N-F-I-N-I-T-Y-Commerce/infinity-e-commerce",
+          "repoUrl": "https://github.com/I-N-F-I-N-I-T-Y-Commerce/infinity-e-commerce",
+          "owner": "I-N-F-I-N-I-T-Y-Commerce"
+        }
+      }
+    },
+    {
+      "id": 1250224249,
+      "title": "Code-Mania",
+      "description": "Code Mania is a learn-to-code web app with a story-driven game loop, interactive coding terminals, quizzes/exams, and a Community hub (Freedom Wall) with weekly challenges.",
+      "repoUrl": "",
+      "liveUrl": "https://codemania.fun",
+      "previewImage": "https://res.cloudinary.com/dda8q97x2/image/upload/v1779799975/codey_a6bkxa.png",
+      "stack": [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "C++",
+        "Python"
+      ],
+      "topics": [],
+      "accent": "Thesis Capstone Project",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-05-26T12:35:55Z",
+      "collaborators": [
+        {
+          "id": 127605738,
+          "login": "Nahiwagaan",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/127605738?v=4",
+          "profileUrl": "https://github.com/Nahiwagaan",
+          "contributions": 291
+        },
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 162
+        },
+        {
+          "id": 143235932,
+          "login": "DietherPano",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/143235932?v=4",
+          "profileUrl": "https://github.com/DietherPano",
+          "contributions": 105
+        },
+        {
+          "id": 113132856,
+          "login": "wilsterdc",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/113132856?v=4",
+          "profileUrl": "https://github.com/wilsterdc",
+          "contributions": 25
+        },
+        {
+          "id": 143236305,
+          "login": "Genniesysbracia",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/143236305?v=4",
+          "profileUrl": "https://github.com/Genniesysbracia",
+          "contributions": 9
+        }
+      ],
+      "fork": {
+        "isFork": true,
+        "parent": {
+          "id": 932544990,
+          "title": "Code-Mania",
+          "fullName": "Code-Mania-Team/Code-Mania",
+          "repoUrl": "https://github.com/Code-Mania-Team/Code-Mania",
+          "owner": "Code-Mania-Team"
+        },
+        "source": {
+          "id": 932544990,
+          "title": "Code-Mania",
+          "fullName": "Code-Mania-Team/Code-Mania",
+          "repoUrl": "https://github.com/Code-Mania-Team/Code-Mania",
+          "owner": "Code-Mania-Team"
+        }
+      }
+    }
+  ]
+}

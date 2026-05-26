@@ -1,8 +1,42 @@
 {
-  "generatedAt": "2026-05-26T13:04:43.993Z",
+  "generatedAt": "2026-05-26T13:15:07.300Z",
   "username": "johnpaul-bodino",
   "count": 7,
   "projects": [
+    {
+      "id": 844052292,
+      "title": "johnpaul-bodino.github.io",
+      "description": "My Portfolio using React",
+      "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino.github.io",
+      "liveUrl": "https://johnpaul-bodino.github.io/",
+      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/johnpaul-bodino.github.io/main/src/assets/POFTFOLIO.png",
+      "stack": [
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
+      "topics": [
+        "reactjs"
+      ],
+      "accent": "Public",
+      "stars": 1,
+      "forks": 0,
+      "updatedAt": "2026-05-26T13:05:18Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 51
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
     {
       "id": 1206465545,
       "title": "NLP-Based-Text-Processing-Systems",
@@ -59,40 +93,6 @@
           "repoUrl": "https://github.com/college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
           "owner": "college-of-mary-immaculate"
         }
-      }
-    },
-    {
-      "id": 844052292,
-      "title": "johnpaul-bodino.github.io",
-      "description": "My Portfolio using React",
-      "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino.github.io",
-      "liveUrl": "https://johnpaul-bodino.github.io/",
-      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/johnpaul-bodino.github.io/main/src/assets/POFTFOLIO.png",
-      "stack": [
-        "CSS",
-        "JavaScript",
-        "HTML"
-      ],
-      "topics": [
-        "reactjs"
-      ],
-      "accent": "Public",
-      "stars": 1,
-      "forks": 0,
-      "updatedAt": "2026-05-25T23:00:46Z",
-      "collaborators": [
-        {
-          "id": 134007702,
-          "login": "johnpaul-bodino",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
-          "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 49
-        }
-      ],
-      "fork": {
-        "isFork": false,
-        "parent": null,
-        "source": null
       }
     },
     {
