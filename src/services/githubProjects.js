@@ -1,6 +1,7 @@
 import { FEATURED_PROJECT_LIMIT, PINNED_REPOSITORIES } from '../config/githubProjects'
 
 const PROJECTS_URL = '/data/projects.json'
+const MANUAL_PROJECTS_URL = '/data/manual-input.json'
 
 async function getJson(url) {
   const response = await fetch(url)
@@ -34,6 +35,20 @@ function sortPinnedFirst(projects) {
   })
 }
 
+function mergeProjects(generatedProjects, manualProjects) {
+  const projectsByKey = new Map()
+
+  for (const project of [...manualProjects, ...generatedProjects]) {
+    const key = project.fullName || project.repoUrl || project.title
+
+    if (!projectsByKey.has(key)) {
+      projectsByKey.set(key, project)
+    }
+  }
+
+  return [...projectsByKey.values()]
+}
+
 function filterPinned(projects) {
   if (PINNED_REPOSITORIES.length === 0) {
     return projects
@@ -63,10 +78,15 @@ export async function fetchGitHubProjects({
   view = 'featured',
 } = {}) {
   try {
-    const data = await getJson(PROJECTS_URL)
+    const [data, manualData] = await Promise.all([
+      getJson(PROJECTS_URL),
+      getJson(MANUAL_PROJECTS_URL).catch(() => ({ projects: [] })),
+    ])
     const projects = Array.isArray(data) ? data : data.projects || []
+    const manualProjects = Array.isArray(manualData) ? manualData : manualData.projects || []
+    const mergedProjects = mergeProjects(projects, manualProjects)
 
-    return view === 'all' ? getAllProjects(projects) : getFeaturedProjects(projects, limit)
+    return view === 'all' ? getAllProjects(mergedProjects) : getFeaturedProjects(mergedProjects, limit)
   } catch (error) {
     console.error('Project data fetch failed:', error)
     throw error
