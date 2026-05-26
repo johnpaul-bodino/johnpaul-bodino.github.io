@@ -314,6 +314,8 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  max-width: calc(100% - 20px);
+  overflow: hidden;
 }
 
 .featured-projects__collaborators a {
@@ -342,6 +344,22 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.featured-projects__collaboratorsMore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-left: -12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent-border);
+  color: var(--color-text);
+  background: var(--color-contrast-overlay);
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow: 0 0 0 1px var(--color-surface);
 }
 
 .featured-projects__actions {
@@ -536,9 +554,16 @@
   }
 
   .featured-projects__collaborators a {
-    width: 38px;
-    height: 38px;
+    width: 32px;
+    height: 32px;
     margin-left: -10px;
+  }
+
+  .featured-projects__collaboratorsMore {
+    width: 32px;
+    height: 32px;
+    margin-left: -10px;
+    font-size: 0.62rem;
   }
 
   .projects-page {
@@ -611,6 +636,14 @@
 
   .featured-projects__stack span {
     font-size: 0.62rem;
+  }
+
+  .featured-projects__card:hover {
+    transform: none;
+  }
+
+  .featured-projects__card:hover::before {
+    opacity: 0;
   }
 
   .projects-page {
