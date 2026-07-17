@@ -18,8 +18,6 @@ export default function ProjectCard({ project }) {
     forks = 0,
     collaborators = [],
   } = project
-  const visibleCollaborators = collaborators.slice(0, 4)
-  const hiddenCollaboratorsCount = Math.max(collaborators.length - visibleCollaborators.length, 0)
 
   useEffect(() => {
     if (!isPreviewOpen) {
@@ -66,7 +64,7 @@ export default function ProjectCard({ project }) {
     <article className="featured-projects__card">
       {collaborators.length > 0 && (
         <div className="featured-projects__collaborators" aria-label={`${title} contributors`}>
-          {visibleCollaborators.map((user) => (
+          {collaborators.map((user) => (
             <a
               href={user.profileUrl}
               target="_blank"
@@ -78,11 +76,6 @@ export default function ProjectCard({ project }) {
               <img src={user.avatarUrl} alt="" />
             </a>
           ))}
-          {hiddenCollaboratorsCount > 0 && (
-            <span className="featured-projects__collaboratorsMore" aria-label={`${hiddenCollaboratorsCount} more contributors`}>
-              +{hiddenCollaboratorsCount}
-            </span>
-          )}
         </div>
       )}
 

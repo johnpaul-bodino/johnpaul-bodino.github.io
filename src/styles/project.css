@@ -346,22 +346,6 @@
   object-fit: cover;
 }
 
-.featured-projects__collaboratorsMore {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  margin-left: -12px;
-  border-radius: 50%;
-  border: 2px solid var(--color-accent-border);
-  color: var(--color-text);
-  background: var(--color-contrast-overlay);
-  font-size: 0.72rem;
-  font-weight: 800;
-  box-shadow: 0 0 0 1px var(--color-surface);
-}
-
 .featured-projects__actions {
   position: relative;
   z-index: 1;
@@ -543,6 +527,25 @@
     padding: 22px;
   }
 
+  .featured-projects__card:hover {
+    transform: none;
+  }
+
+  .featured-projects__card:hover::before {
+    opacity: 0;
+  }
+
+  .featured-projects__collaborators {
+    position: relative;
+    top: auto;
+    left: auto;
+    max-width: 100%;
+    margin: 0 0 12px;
+    overflow: visible;
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
   .featured-projects__body h3 {
     font-size: clamp(0.98rem, 3.4vw, 1.08rem);
     line-height: 1.35;
@@ -557,13 +560,11 @@
     width: 32px;
     height: 32px;
     margin-left: -10px;
+    transition: none;
   }
 
-  .featured-projects__collaboratorsMore {
-    width: 32px;
-    height: 32px;
-    margin-left: -10px;
-    font-size: 0.62rem;
+  .featured-projects__collaborators a:hover {
+    transform: none;
   }
 
   .projects-page {
@@ -638,14 +639,6 @@
     font-size: 0.62rem;
   }
 
-  .featured-projects__card:hover {
-    transform: none;
-  }
-
-  .featured-projects__card:hover::before {
-    opacity: 0;
-  }
-
   .projects-page {
     padding: 76px 16px 48px;
   }
@@ -661,5 +654,23 @@
 
   .projects-page__title p {
     font-size: 0.88rem;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .featured-projects__card,
+  .featured-projects__collaborators a,
+  .featured-projects__actions a {
+    transition: none;
+  }
+
+  .featured-projects__card:hover,
+  .featured-projects__collaborators a:hover,
+  .featured-projects__actions a:hover {
+    transform: none;
+  }
+
+  .featured-projects__card:hover::before {
+    opacity: 0;
   }
 }

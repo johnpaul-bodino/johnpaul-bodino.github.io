@@ -1,8 +1,102 @@
 {
-  "generatedAt": "2026-05-26T13:04:43.993Z",
+  "generatedAt": "2026-07-17T03:58:36.493Z",
   "username": "johnpaul-bodino",
-  "count": 7,
+  "count": 9,
   "projects": [
+    {
+      "id": 844052292,
+      "title": "johnpaul-bodino.github.io",
+      "description": "My Portfolio using React",
+      "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino.github.io",
+      "liveUrl": "https://johnpaul-bodino.github.io/",
+      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/johnpaul-bodino.github.io/main/src/assets/POFTFOLIO.png",
+      "stack": [
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
+      "topics": [
+        "reactjs"
+      ],
+      "accent": "Public",
+      "stars": 1,
+      "forks": 0,
+      "updatedAt": "2026-07-17T03:57:09Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 53
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
+    {
+      "id": 1301400441,
+      "title": "Web2026",
+      "description": "No description provided yet.",
+      "repoUrl": "https://github.com/johnpaul-bodino/Web2026",
+      "liveUrl": "",
+      "previewImage": "",
+      "stack": [
+        "HTML"
+      ],
+      "topics": [],
+      "accent": "Public",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-07-16T05:30:15Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 7
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
+    {
+      "id": 1301340399,
+      "title": "WebDev2026",
+      "description": "No description provided yet.",
+      "repoUrl": "https://github.com/johnpaul-bodino/WebDev2026",
+      "liveUrl": "",
+      "previewImage": "",
+      "stack": [
+        "HTML"
+      ],
+      "topics": [],
+      "accent": "Public",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2026-07-15T08:17:17Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 4
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
     {
       "id": 1206465545,
       "title": "NLP-Based-Text-Processing-Systems",
@@ -59,40 +153,6 @@
           "repoUrl": "https://github.com/college-of-mary-immaculate/NLP-Based-Text-Processing-Systems",
           "owner": "college-of-mary-immaculate"
         }
-      }
-    },
-    {
-      "id": 844052292,
-      "title": "johnpaul-bodino.github.io",
-      "description": "My Portfolio using React",
-      "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino.github.io",
-      "liveUrl": "https://johnpaul-bodino.github.io/",
-      "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/johnpaul-bodino.github.io/main/src/assets/POFTFOLIO.png",
-      "stack": [
-        "CSS",
-        "JavaScript",
-        "HTML"
-      ],
-      "topics": [
-        "reactjs"
-      ],
-      "accent": "Public",
-      "stars": 1,
-      "forks": 0,
-      "updatedAt": "2026-05-25T23:00:46Z",
-      "collaborators": [
-        {
-          "id": 134007702,
-          "login": "johnpaul-bodino",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
-          "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 49
-        }
-      ],
-      "fork": {
-        "isFork": false,
-        "parent": null,
-        "source": null
       }
     },
     {

@@ -1,4 +1,4 @@
-import profilePhoto from '../assets/paldo.png'
+import profilePhoto from '../assets/paldo.webp'
 
 export default function ProfileCard({ profile }) {
   const {

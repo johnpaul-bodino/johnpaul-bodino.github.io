@@ -2,7 +2,7 @@ import '../styles/Home.css'
 import { FiLinkedin } from "react-icons/fi";
 import ProfileCard from '../components/ProfileCard.jsx'
 import StarOverlay from '../components/StarOverlay.jsx'
-import profilePhoto from '../assets/paldo.png'
+import profilePhoto from '../assets/paldo.webp'
 
 const profileInfo = {
   imageUrl: profilePhoto,
