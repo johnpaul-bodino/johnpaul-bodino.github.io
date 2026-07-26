@@ -1,5 +1,5 @@
-import '../styles/About.css'
-import FadeIn from '../components/FadeIn'
+import '../styles/about.css'
+import FadeIn from '../components/FadeIn.jsx'
 import StarOverlay from '../components/StarOverlay.jsx'
 
 export default function About() {
