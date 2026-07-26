@@ -1,6 +1,6 @@
 import '../styles/Home.css'
 import { FiLinkedin } from "react-icons/fi";
-import ProfileCard from '../components/ProfileCard.jsx'
+import ProfileCard from '../componensts/ProfileCard.jsx'
 import StarOverlay from '../components/StarOverlay.jsx'
 import profilePhoto from '../assets/paldo.webp'
 
