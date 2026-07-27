@@ -14,7 +14,7 @@ export default function Footer() {
           <a href="https://github.com/johnpaul-bodino" target="_blank" rel="noreferrer" aria-label="GitHub">
             <FiGithub />
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/john-paul-bodino-96a993332/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <FiLinkedin />
           </a>
           <a

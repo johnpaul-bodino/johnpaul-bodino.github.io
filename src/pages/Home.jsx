@@ -104,10 +104,10 @@ export default function Home() {
                   </a>
 
                   <div className="home__icons" aria-label="Social links">
-                    <a className="home__iconLink" href="#" aria-label="GitHub">
+                    <a className="home__iconLink" href="https://github.com/johnpaul-bodino" aria-label="GitHub">
                       <IconGithub />
                     </a>
-                    <a className="home__iconLink" href="#" aria-label="LinkedIn">
+                    <a className="home__iconLink" href="https://www.linkedin.com/in/john-paul-bodino-96a993332/" aria-label="LinkedIn">
                       <FiLinkedin />
                     </a>
                     <a
