@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-17T03:58:36.493Z",
+  "generatedAt": "2026-08-16T15:21:04.914Z",
   "username": "johnpaul-bodino",
-  "count": 9,
+  "count": 10,
   "projects": [
     {
       "id": 844052292,
       "title": "johnpaul-bodino.github.io",
       "description": "My Portfolio using React",
       "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino.github.io",
-      "liveUrl": "https://johnpaul-bodino.github.io/",
+      "liveUrl": "https://johnpaul-bodino.vercel.app/",
       "previewImage": "https://raw.githubusercontent.com/johnpaul-bodino/johnpaul-bodino.github.io/main/src/assets/POFTFOLIO.png",
       "stack": [
         "CSS",
@@ -21,14 +21,42 @@
       "accent": "Public",
       "stars": 1,
       "forks": 0,
-      "updatedAt": "2026-07-17T03:57:09Z",
+      "updatedAt": "2026-08-16T15:15:14Z",
       "collaborators": [
         {
           "id": 134007702,
           "login": "johnpaul-bodino",
           "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
           "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 53
+          "contributions": 59
+        }
+      ],
+      "fork": {
+        "isFork": false,
+        "parent": null,
+        "source": null
+      }
+    },
+    {
+      "id": 1333708711,
+      "title": "johnpaul-bodino",
+      "description": "No description provided yet.",
+      "repoUrl": "https://github.com/johnpaul-bodino/johnpaul-bodino",
+      "liveUrl": "",
+      "previewImage": "",
+      "stack": [],
+      "topics": [],
+      "accent": "Public",
+      "stars": 1,
+      "forks": 0,
+      "updatedAt": "2026-08-16T05:05:02Z",
+      "collaborators": [
+        {
+          "id": 134007702,
+          "login": "johnpaul-bodino",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
+          "profileUrl": "https://github.com/johnpaul-bodino",
+          "contributions": 9
         }
       ],
       "fork": {
@@ -45,20 +73,23 @@
       "liveUrl": "",
       "previewImage": "",
       "stack": [
-        "HTML"
+        "PHP",
+        "Hack",
+        "HTML",
+        "CSS"
       ],
       "topics": [],
       "accent": "Public",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2026-07-16T05:30:15Z",
+      "updatedAt": "2026-08-13T18:04:16Z",
       "collaborators": [
         {
           "id": 134007702,
           "login": "johnpaul-bodino",
           "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
           "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 7
+          "contributions": 13
         }
       ],
       "fork": {
@@ -68,33 +99,49 @@
       }
     },
     {
-      "id": 1301340399,
-      "title": "WebDev2026",
-      "description": "No description provided yet.",
-      "repoUrl": "https://github.com/johnpaul-bodino/WebDev2026",
+      "id": 1317788685,
+      "title": "likhait-technical-test",
+      "description": "LiKHA-IT technical test",
+      "repoUrl": "https://github.com/johnpaul-bodino/likhait-technical-test",
       "liveUrl": "",
       "previewImage": "",
       "stack": [
-        "HTML"
+        "TypeScript",
+        "Ruby",
+        "Dockerfile",
+        "HTML",
+        "Shell"
       ],
       "topics": [],
-      "accent": "Public",
+      "accent": "Forked",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2026-07-15T08:17:17Z",
+      "updatedAt": "2026-07-31T00:35:56Z",
       "collaborators": [
         {
-          "id": 134007702,
-          "login": "johnpaul-bodino",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/134007702?v=4",
-          "profileUrl": "https://github.com/johnpaul-bodino",
-          "contributions": 4
+          "id": 88814955,
+          "login": "dadia-willand",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/88814955?v=4",
+          "profileUrl": "https://github.com/dadia-willand",
+          "contributions": 1
         }
       ],
       "fork": {
-        "isFork": false,
-        "parent": null,
-        "source": null
+        "isFork": true,
+        "parent": {
+          "id": 1158848207,
+          "title": "likhait-technical-test",
+          "fullName": "freee/likhait-technical-test",
+          "repoUrl": "https://github.com/freee/likhait-technical-test",
+          "owner": "freee"
+        },
+        "source": {
+          "id": 1158848207,
+          "title": "likhait-technical-test",
+          "fullName": "freee/likhait-technical-test",
+          "repoUrl": "https://github.com/freee/likhait-technical-test",
+          "owner": "freee"
+        }
       }
     },
     {
