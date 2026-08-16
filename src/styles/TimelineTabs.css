@@ -338,11 +338,14 @@
 
 @media (max-width: 1024px) {
   .timeline-tabs__wrapper {
-    max-width: 90%;
+    width: 90%;
+    max-width: none;
   }
 
-  .timeline-tabs__tabgroup {
-    min-width: 280px;
+  .timeline-tabs__tabgroup,
+  .timeline-tabs__content {
+    width: 100%;
+    max-width: none;
   }
 
   .timeline-tabs__tab {
