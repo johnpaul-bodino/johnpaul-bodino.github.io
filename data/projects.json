@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-16T15:21:04.914Z",
+  "generatedAt": "2026-08-16T15:49:25.817Z",
   "username": "johnpaul-bodino",
-  "count": 10,
+  "count": 9,
   "projects": [
     {
       "id": 844052292,
@@ -96,52 +96,6 @@
         "isFork": false,
         "parent": null,
         "source": null
-      }
-    },
-    {
-      "id": 1317788685,
-      "title": "likhait-technical-test",
-      "description": "LiKHA-IT technical test",
-      "repoUrl": "https://github.com/johnpaul-bodino/likhait-technical-test",
-      "liveUrl": "",
-      "previewImage": "",
-      "stack": [
-        "TypeScript",
-        "Ruby",
-        "Dockerfile",
-        "HTML",
-        "Shell"
-      ],
-      "topics": [],
-      "accent": "Forked",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2026-07-31T00:35:56Z",
-      "collaborators": [
-        {
-          "id": 88814955,
-          "login": "dadia-willand",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/88814955?v=4",
-          "profileUrl": "https://github.com/dadia-willand",
-          "contributions": 1
-        }
-      ],
-      "fork": {
-        "isFork": true,
-        "parent": {
-          "id": 1158848207,
-          "title": "likhait-technical-test",
-          "fullName": "freee/likhait-technical-test",
-          "repoUrl": "https://github.com/freee/likhait-technical-test",
-          "owner": "freee"
-        },
-        "source": {
-          "id": 1158848207,
-          "title": "likhait-technical-test",
-          "fullName": "freee/likhait-technical-test",
-          "repoUrl": "https://github.com/freee/likhait-technical-test",
-          "owner": "freee"
-        }
       }
     },
     {
