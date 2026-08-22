@@ -1,13 +1,16 @@
 import '../styles/Skills.css';
 import { useState } from 'react';
 import { FaDocker, FaNodeJs, FaPython, FaCloudflare} from 'react-icons/fa';
-import { SiJavascript, SiCplusplus, SiGimp, SiCanva, SiPhp, SiFastapi, SiExpressdotcom, SiMysql, SiFlask } from 'react-icons/si';
+import { SiJavascript, SiCplusplus, SiGimp, SiCanva, SiPhp, SiFastapi, SiExpressdotcom, SiMysql, SiFlask, SiRailway } from 'react-icons/si';
 import { IoLogoHtml5, IoLogoCss3  } from "react-icons/io";
 import { FaReact, FaFigma, FaAws  } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
 import FadeIn from '../components/FadeIn';
 import { TbApi, TbCode } from "react-icons/tb";
 import StarOverlay from '../components/StarOverlay.jsx';
+import { RiSupabaseFill } from "react-icons/ri";
+import { TbBrandVercel } from "react-icons/tb";
+
 
 
 
@@ -25,7 +28,7 @@ export default function Skills() {
         { icon: <SiFastapi />, name: 'FastAPI', color: '#009485' },
         { icon: <SiFlask />, name: 'Flask', color: '#39A6BD' },
         { icon: <SiExpressdotcom />, name: 'Express.js', color: '#F0CF00' },
-        { icon: <TbApi />, name: 'REST API', color: '#3f6791' },
+        { icon: <TbApi />, name: 'REST API', color: '#3f6791' }
       ]
     },
     {
@@ -50,6 +53,9 @@ export default function Skills() {
         { icon: <FaDocker />, name: 'Docker', color: '#2496ED' },
         { icon: <BiLogoPostgresql />, name: 'PostgreSQL', color: '#376695' },
         { icon: <SiMysql />, name: 'MySQL', color: '#4479A1' },
+        { icon: <RiSupabaseFill />, name: 'Supabase', color: '#3ECF8E'},
+        { icon: <TbBrandVercel />, name: 'Vercel', color: '#0070F3'},
+        { icon: <SiRailway />, name: 'Railway', color: '#6C3FE7'}
       ],
     },
     {

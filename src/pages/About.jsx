@@ -1,7 +1,9 @@
 import '../styles/about.css'
 import FadeIn from '../components/FadeIn.jsx'
 import StarOverlay from '../components/StarOverlay.jsx'
-
+import { GiPaintBrush } from "react-icons/gi";
+import { BsLightningCharge } from "react-icons/bs";
+import { FaLaptopCode } from "react-icons/fa6";
 export default function About() {
   return (
     <section id="about" className="about star-overlay-host">
@@ -13,7 +15,7 @@ export default function About() {
         <div className="about__grid">
           <div className="about__card">
             <div className="about__icon about__icon--green1">
-              <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776694016/paint_brush_h8xhjt.svg" alt="" />
+              <GiPaintBrush />
             </div>
             <h3 className="about__cardTitle green1">UI & UX</h3>
             <p className="about__cardDesc">
@@ -23,7 +25,7 @@ export default function About() {
 
           <div className="about__card">
             <div className="about__icon about__icon--green2">
-              <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776065273/mobile_and_laptop_ih2lcq.svg" alt="" />
+              <FaLaptopCode />
             </div>
             <h3 className="about__cardTitle green2">FRONTEND DEVELOPMENT</h3>
             <p className="about__cardDesc">
@@ -33,7 +35,7 @@ export default function About() {
 
           <div className="about__card">
             <div className="about__icon about__icon--green3">
-              <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776694031/kidlat_vacayx.png" alt="" />
+              <BsLightningCharge />
             </div>
             <h3 className="about__cardTitle green3">BACKEND DEVELOPMENT</h3>
             <p className="about__cardDesc">
