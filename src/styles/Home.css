@@ -166,42 +166,36 @@
 }
 
 .home__profileCard {
+  position: relative;
   justify-self: center;
-  width: min(100%, 292px);
-  padding: 10px;
-  background:
-    linear-gradient(180deg, rgba(248, 250, 252, 0.08), rgba(248, 250, 252, 0.02)),
-    var(--color-panel-glass);
-  border: 1px solid var(--color-border-strong);
-  border-radius: 8px;
-  box-shadow:
-    0 22px 60px rgba(3, 7, 18, 0.34),
-    inset 0 1px 0 rgba(248, 250, 252, 0.08);
-  overflow: hidden;
+  width: min(100%, 280px);
+  margin: 14px 0 0 14px;
   transform: translateX(-56px);
-  backdrop-filter: blur(12px);
+}
+
+.home__profileFrame {
+  position: relative;
+}
+
+.home__profileFrame::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-accent);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .home__profileImageWrap {
   position: relative;
+  z-index: 1;
   aspect-ratio: 4 / 5;
   overflow: hidden;
+  border: 1px solid var(--color-border-strong);
   background: var(--color-surface-muted);
-  border: 1px solid rgba(248, 250, 252, 0.1);
-  border-radius: 6px;
-  box-shadow:
-    inset 0 0 0 1px rgba(3, 7, 18, 0.18),
-    0 10px 24px rgba(3, 7, 18, 0.22);
-}
-
-.home__profileImageWrap::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 32%),
-    linear-gradient(0deg, rgba(3, 7, 18, 0.14), transparent 36%);
 }
 
 .home__profileImage {
@@ -210,6 +204,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  filter: grayscale(0.2);
 }
 
 .home__profilePlaceholder {
@@ -217,7 +212,7 @@
   height: 100%;
   display: grid;
   place-items: center;
-  background: #f8fafc;
+  background: var(--color-surface-muted);
 }
 
 .home__profilePlaceholder span {
@@ -230,30 +225,32 @@
 .home__profileMeta {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 12px 4px 2px;
-  background: transparent;
-  border-top: 0;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 0 2px;
 }
 
 .home__status {
   display: inline-flex;
   align-items: center;
-  min-height: 24px;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   gap: 8px;
-  color: var(--color-text);
+  color: var(--color-text-muted);
 }
 
 .home__statusDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+  width: 6px;
+  height: 6px;
   background: var(--status-color, #22c55e);
-  box-shadow:
-    0 0 0 2px var(--color-bg-soft),
-    0 0 0 4px color-mix(in srgb, var(--status-color, #31a24c) 22%, transparent);
+  flex: 0 0 auto;
+}
+
+.home__profileIndex {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--color-text-subtle);
 }
 
 .home__fadeIn {

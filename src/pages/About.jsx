@@ -25,9 +25,9 @@ export default function About() {
             <div className="about__icon about__icon--green2">
               <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776065273/mobile_and_laptop_ih2lcq.svg" alt="" />
             </div>
-            <h3 className="about__cardTitle green2">WEB & MOBILE APP</h3>
+            <h3 className="about__cardTitle green2">FRONTEND DEVELOPMENT</h3>
             <p className="about__cardDesc">
-              Building modern, fast, and responsive applications that work flawlessly across all devices.
+              Crafting interfaces that feel fast, responsive, and effortless — no matter the screen size.
             </p>
           </div>
 
@@ -35,9 +35,9 @@ export default function About() {
             <div className="about__icon about__icon--green3">
               <img src="https://res.cloudinary.com/dazttfchn/image/upload/q_auto/f_auto/v1776694031/kidlat_vacayx.png" alt="" />
             </div>
-            <h3 className="about__cardTitle green3">DEVELOPMENT</h3>
+            <h3 className="about__cardTitle green3">BACKEND DEVELOPMENT</h3>
             <p className="about__cardDesc">
-              Creating scalable, reliable, and production-ready systems that handle real-world demands.
+              Engineering the logic and data layer that keeps an application reliable under real-world load.
             </p>
           </div>
         </div>
