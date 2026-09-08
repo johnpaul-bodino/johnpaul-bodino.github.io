@@ -35,9 +35,9 @@ export default function About() {
       <FadeIn>
         <div className="about__header">
           <h2 className="about__title">WHAT I BUILD</h2>
-          <button 
-            type="button" 
-            className={`about__button ${isGridActive ? 'about__button--active' : ''}`} 
+          <button
+            type="button"
+            className={`about__button ${isGridActive ? 'about__button--active' : ''}`}
             aria-label="Toggle grid view"
             onClick={() => setIsGridActive(prev => !prev)}
           >

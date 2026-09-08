@@ -10,10 +10,10 @@ export default function ProfileCard({ profile = {} }) {
       <div className="home__profileFrame">
         <div className="home__profileImageWrap">
           {imageUrl ? (
-            <img 
-              className="home__profileImage" 
-              src={imageUrl} 
-              alt={imageAlt} 
+            <img
+              className="home__profileImage"
+              src={imageUrl}
+              alt={imageAlt}
               loading="eager"
               fetchpriority="high"
             />
