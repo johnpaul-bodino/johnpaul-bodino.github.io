@@ -230,8 +230,11 @@
   transform: translateY(50%) rotate(-45deg);
 }
 
-.theme-btn-mobile {
-  display: none;
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
 }
 
 /* Mobile */
@@ -249,7 +252,6 @@
   .theme-btn {
     width: 40px;
     height: 40px;
-    margin-right: 8px;
   }
 
   .theme-btn__icon {
@@ -260,24 +262,8 @@
 
 /* Show hamburger only on mobile */
 @media (max-width: 600px) {
-  .theme-btn-desktop {
-    display: none !important;
-  }
-
-  .theme-btn-mobile {
-    width: 100%;
-    display: flex !important;
-    justify-content: flex-start;
-    background: none;
-    box-shadow: none;
-    margin: 0;
-    padding: 0 0 8px 20px;
-  }
-
-  .theme-btn-mobile .theme-btn {
-    margin: 0;
-    box-shadow: none;
-    background: rgba(248, 250, 252, 0.04);
+  .navbar__actions {
+    margin-left: auto;
   }
 
   .hamburger-btn {
@@ -286,10 +272,8 @@
     border: none;
     cursor: pointer;
     padding: 8px;
-    margin-right: 8px;
-    margin-left: auto;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
@@ -306,12 +290,14 @@
     top: 72px;
     left: 0;
     right: 0;
-    background: var(--color-navbar);
+    background: color-mix(in srgb, var(--color-bg) 96%, transparent);
     flex-direction: column;
+    align-items: stretch;
     padding: 0;
     gap: 0;
     margin: 0;
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--color-border);
   }
 
@@ -321,7 +307,8 @@
 
   .navbar-link {
     display: block;
-    padding: 16px 20px;
+    width: 100%;
+    padding: 16px var(--container-pad);
     font-size: 1rem;
     text-align: left;
     border-bottom: 1px solid var(--color-border);
@@ -343,7 +330,7 @@
 
   .navbar-link:hover {
     color: var(--color-accent);
-    padding-left: 28px;
+    padding-left: calc(var(--container-pad) + 8px);
     transform: none;
   }
 
@@ -359,13 +346,6 @@
   .navbar__logo {
     width: 40px;
   }
-
-  .theme-btn {
-    width: 40px;
-    height: 40px;
-    margin-right: 4px;
-    margin-bottom: 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -374,8 +354,8 @@
   }
 
   .hamburger-btn {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
   }
 
   .hamburger-icon {
@@ -407,8 +387,8 @@
   }
 
   .hamburger-btn {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
   }
 
   .hamburger-icon {
@@ -436,10 +416,10 @@
 
   .navbar-link {
     font-size: 0.95rem;
-    padding: 14px 16px;
+    padding: 14px var(--container-pad);
   }
 
   .navbar-link:hover {
-    padding-left: 20px;
+    padding-left: calc(var(--container-pad) + 8px);
   }
 }

@@ -53,32 +53,7 @@ export default function Navbar() {
           className="navbar__logo"
         />
 
-        <button
-          className="hamburger-btn"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <span className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
-
         <div className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
-          {/* Theme toggle INSIDE hamburger on mobile only */}
-          <div className="theme-btn-mobile">
-            {isMenuOpen && (
-              <button
-                className="theme-btn"
-                onClick={toggleTheme}
-                aria-label="Toggle theme"
-              >
-                {themeIcon}
-              </button>
-            )}
-          </div>
-
           <a href="/#home" className="navbar-link" onClick={closeMenu}>Home</a>
           <a href="/#about" className="navbar-link" onClick={closeMenu}>About</a>
           <a href="/#projects" className="navbar-link" onClick={closeMenu}>Projects</a>
@@ -86,14 +61,27 @@ export default function Navbar() {
           <a href="/#contact" className="navbar-link" onClick={closeMenu}>Contact</a>
         </div>
 
-        {/* Show desktop theme button only if not mobile */}
-        <button
-          className="theme-btn theme-btn-desktop"
-          onClick={toggleTheme}
-          aria-label="Toggle theme"
-        >
-          {themeIcon}
-        </button>
+        <div className="navbar__actions">
+          <button
+            className="theme-btn"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            {themeIcon}
+          </button>
+
+          <button
+            className="hamburger-btn"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            <span className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
       </div>
     </nav>
   )
