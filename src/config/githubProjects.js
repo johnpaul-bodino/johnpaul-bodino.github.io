@@ -1,4 +1,3 @@
-export const GITHUB_USERNAME = 'johnpaul-bodino'
 export const FEATURED_PROJECT_LIMIT = 2
 
 // Put only the repo names you want in the Featured Projects view.

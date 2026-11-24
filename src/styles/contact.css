@@ -1,13 +1,10 @@
 .site-footer {
-    background: var(--background-page);
-    background-size: var(--background-page-size);
-    background-attachment: fixed;
     color: var(--color-text-muted);
-    padding: 18px 40px 32px;
+    padding: 18px var(--container-pad) 32px;
 }
 
 .site-footer__bar {
-    width: min(76%, 1220px);
+    width: min(100%, var(--container-max));
     min-height: 48px;
     margin: 0 auto;
     padding: 0 16px;
@@ -17,7 +14,7 @@
     gap: 20px;
     background: var(--color-bg-soft);
     border: 1px solid var(--color-border);
-    border-radius: 8px;
+    border-radius: var(--radius-card);
 }
 
 .site-footer__copyright {
@@ -70,23 +67,17 @@
 
 @media screen and (max-width: 768px) {
     .site-footer {
-        padding: 16px 20px 28px;
-    }
-
-    .site-footer__bar {
-        width: 100%;
+        padding: 16px var(--container-pad) 28px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .site-footer {
-        padding: 14px 12px 24px;
+        padding: 14px var(--container-pad) 24px;
     }
 
     .site-footer__bar {
         min-height: 52px;
-        flex-direction: row;
-        justify-content: space-between;
         gap: 10px;
         padding: 8px 12px;
     }

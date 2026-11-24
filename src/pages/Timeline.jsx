@@ -1,4 +1,3 @@
-import React from "react";
 import TimelineTabs from "../components/TimelineTabs";
 import "../styles/TimelinePage.css";
 import StarOverlay from "../components/StarOverlay.jsx";

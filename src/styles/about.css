@@ -1,17 +1,14 @@
 .about {
   padding: 80px 0;
-  background: var(--background-page);
-  background-size: var(--background-page-size);
-  background-attachment: fixed;
   color: var(--color-text-muted);
   font-family: 'JetBrains Mono', monospace;
 }
 
 .about__header {
   position: relative;
-  max-width: 1280px;
+  max-width: calc(var(--container-max) + var(--container-pad) * 2);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--container-pad);
   box-sizing: border-box;
 }
 
@@ -20,8 +17,8 @@
   text-transform: uppercase;
   font-size: 2rem;
   font-family: 'JetBrains Mono', monospace;
-  font-weight: bolder;
-  letter-spacing: 0.01em;
+  font-weight: 800;
+  letter-spacing: 0.05em;
   color: var(--color-text);
   margin: 0;
 }
@@ -29,7 +26,7 @@
 .about__button {
   position: absolute;
   top: 4px;
-  right: 20px;
+  right: var(--container-pad);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -55,10 +52,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1280px;
+  max-width: calc(var(--container-max) + var(--container-pad) * 2);
   margin: 60px auto 10px;
   min-height: 440px;
-  padding: 0 20px;
+  padding: 0 var(--container-pad);
   box-sizing: border-box;
 }
 
@@ -66,7 +63,7 @@
   position: relative;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: var(--radius-card);
   box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
@@ -78,7 +75,7 @@
 }
 
 .about__card-content {
-  padding: 0 12px 65px;
+  padding: 28px 24px 48px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -101,7 +98,6 @@
   box-shadow: var(--card-shadow);
 }
 
-.about__card.no-hover:hover .about__icon img,
 .about__card.no-hover:hover .about__icon svg {
   filter: grayscale(0.85) brightness(0.85);
 }
@@ -114,7 +110,6 @@
   margin: 0 0 8px;
 }
 
-.about__icon img,
 .about__icon svg {
   display: block;
   width: clamp(46px, 5vw, 64px);
@@ -125,7 +120,6 @@
   transition: filter 320ms ease;
 }
 
-.about__card:hover .about__icon img,
 .about__card:hover .about__icon svg {
   filter: grayscale(0) brightness(1);
 }
@@ -170,7 +164,6 @@
   .about__grid {
     grid-template-columns: 1fr;
     gap: 16px;
-    padding: 0 20px;
     min-height: 0;
     margin: 44px auto 16px;
   }
@@ -185,7 +178,6 @@
 
   .about__cardDesc {
     font-size: clamp(0.78rem, 2.7vw, 0.86rem);
-    line-height: 1.55;
   }
 }
 
@@ -218,11 +210,6 @@
     font-size: 1.45rem;
   }
 
-  .about__icon {
-    margin-bottom: 8px;
-  }
-
-  .about__icon img,
   .about__icon svg {
     width: 42px;
     height: 42px;

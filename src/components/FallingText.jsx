@@ -111,11 +111,8 @@ const FallingText = ({
       return { elem, body };
     });
 
-    wordBodies.forEach(({ elem, body }) => {
+    wordBodies.forEach(({ elem }) => {
       elem.style.position = 'absolute';
-      elem.style.left = `${body.position.x - body.bounds.max.x + body.bounds.min.x / 2}px`;
-      elem.style.top = `${body.position.y - body.bounds.max.y + body.bounds.min.y / 2}px`;
-      elem.style.transform = 'none';
     });
 
     const mouse = Mouse.create(containerRef.current);
@@ -161,12 +158,12 @@ const FallingText = ({
     <div
       ref={containerRef}
       className={`falling-text-container ${className}`}
-      style={{ position: 'relative', overflow: 'hidden', width: '100%', height: '100%' }}
+      style={{ overflow: 'hidden' }}
     >
       <div
         ref={textRef}
         className="falling-text-target"
-        style={{ fontSize: fontSize, lineHeight: 1.4 }}
+        style={{ fontSize, lineHeight: 1.4 }}
       />
       <div ref={canvasContainerRef} className="falling-text-canvas" />
     </div>

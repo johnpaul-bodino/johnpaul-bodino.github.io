@@ -85,9 +85,7 @@ async function getPaginated(path) {
 }
 
 function uniqueItems(items) {
-  return items
-    .filter(Boolean)
-    .filter((item, index, list) => list.indexOf(item) === index)
+  return [...new Set(items.filter(Boolean))]
 }
 
 function mapLanguages(languages) {
@@ -110,27 +108,25 @@ function mapCollaborators(contributors) {
   }))
 }
 
+function mapForkRepoRef(repoRef) {
+  if (!repoRef) {
+    return null
+  }
+
+  return {
+    id: repoRef.id,
+    title: repoRef.name,
+    fullName: repoRef.full_name,
+    repoUrl: repoRef.html_url,
+    owner: repoRef.owner?.login || '',
+  }
+}
+
 function mapForkInformation(repo, forkDetails) {
   return {
     isFork: Boolean(repo.fork),
-    parent: forkDetails?.parent
-      ? {
-          id: forkDetails.parent.id,
-          title: forkDetails.parent.name,
-          fullName: forkDetails.parent.full_name,
-          repoUrl: forkDetails.parent.html_url,
-          owner: forkDetails.parent.owner?.login || '',
-        }
-      : null,
-    source: forkDetails?.source
-      ? {
-          id: forkDetails.source.id,
-          title: forkDetails.source.name,
-          fullName: forkDetails.source.full_name,
-          repoUrl: forkDetails.source.html_url,
-          owner: forkDetails.source.owner?.login || '',
-        }
-      : null,
+    parent: mapForkRepoRef(forkDetails?.parent),
+    source: mapForkRepoRef(forkDetails?.source),
   }
 }
 
@@ -169,15 +165,13 @@ function normalizeUrl(value) {
 }
 
 function findReadmeLiveUrl(markdown, repo) {
-  const links = [...markdown.matchAll(/\[[^\]]+]\((https?:\/\/[^)\s]+)(?:\s+"[^"]*")?\)/gi)]
+  const candidates = [
+    ...markdown.matchAll(/\[[^\]]+]\((https?:\/\/[^)\s]+)(?:\s+"[^"]*")?\)/gi),
+    ...markdown.matchAll(/<a[^>]+href=["'](https?:\/\/[^"']+)["']/gi),
+  ]
     .map((match) => normalizeUrl(match[1]))
     .filter(Boolean)
 
-  const htmlLinks = [...markdown.matchAll(/<a[^>]+href=["'](https?:\/\/[^"']+)["']/gi)]
-    .map((match) => normalizeUrl(match[1]))
-    .filter(Boolean)
-
-  const candidates = [...links, ...htmlLinks]
   const githubHostPattern = /(^|\.)github\.com$/i
 
   return candidates.find((url) => {
@@ -277,7 +271,7 @@ async function fetchProject(repo) {
           console.warn(`Could not fetch fork details for ${repo.full_name}: ${error.message}`)
           return null
         })
-      : Promise.resolve(null),
+      : null,
     getReadmeMarkdown(repo).catch((error) => {
       console.warn(`Could not fetch README for ${repo.full_name}: ${error.message}`)
       return ''

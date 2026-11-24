@@ -1,51 +1,17 @@
-import { useEffect, useMemo, useState } from 'react'
 import { FaRegStar } from 'react-icons/fa'
 import { FiArrowUpRight } from 'react-icons/fi'
 import ProjectCard from '../components/ProjectCard.jsx'
 import StarOverlay from '../components/StarOverlay.jsx'
 import { FEATURED_PROJECT_LIMIT, PINNED_REPOSITORIES } from '../config/githubProjects'
-import { fetchGitHubProjects } from '../services/githubProjects'
+import { useGitHubProjects } from '../hooks/useGitHubProjects'
+
+const PROJECTS_TITLE = PINNED_REPOSITORIES.length > 0 ? 'Featured Projects' : 'Latest Projects'
 
 export default function Projects() {
-  const [projects, setProjects] = useState([])
-  const [status, setStatus] = useState('loading')
-
-  const hasPinnedRepos = PINNED_REPOSITORIES.length > 0
-
-  useEffect(() => {
-    let isMounted = true
-
-    async function loadProjects() {
-      setStatus('loading')
-
-      try {
-        const nextProjects = await fetchGitHubProjects({
-          limit: FEATURED_PROJECT_LIMIT,
-          view: 'featured',
-        })
-
-        if (isMounted) {
-          setProjects(nextProjects)
-          setStatus('ready')
-        }
-      } catch {
-        if (isMounted) {
-          setProjects([])
-          setStatus('error')
-        }
-      }
-    }
-
-    loadProjects()
-
-    return () => {
-      isMounted = false
-    }
-  }, [])
-
-  const title = useMemo(() => {
-    return hasPinnedRepos ? 'Featured Projects' : 'Latest Projects'
-  }, [hasPinnedRepos])
+  const { projects, status } = useGitHubProjects({
+    limit: FEATURED_PROJECT_LIMIT,
+    view: 'featured',
+  })
 
   return (
     <section id="projects" className="featured-projects star-overlay-host">
@@ -54,7 +20,7 @@ export default function Projects() {
         <div className="featured-projects__header">
           <div className="featured-projects__title">
             <FaRegStar className="featured-projects__titleIcon" />
-            <h2>{title}</h2>
+            <h2>{PROJECTS_TITLE}</h2>
           </div>
           <a
             href="/projects"

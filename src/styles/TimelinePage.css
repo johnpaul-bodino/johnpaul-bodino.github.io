@@ -1,49 +1,32 @@
 .timeline {
-  background: var(--background-page);
-  background-size: var(--background-page-size);
-  background-attachment: fixed;
   color: var(--color-text);
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-:root[data-theme='light'] .timeline {
-  background: var(--background-page);
-}
-
 .timeline__container {
-  padding: 100px 40px;
+  padding: 100px var(--container-pad);
   width: 100%;
-  max-width: 1360px;
+  max-width: calc(var(--container-max) + var(--container-pad) * 2);
   margin: 0 auto;
   box-sizing: border-box;
-}
-@media (max-width: 1025px) {
-  .timeline {
-    min-height: none;
-  }
-
 }
 
 @media (max-width: 1024px) {
   .timeline__container {
-    padding: 80px 32px;
+    padding: 80px var(--container-pad);
   }
 }
 
 @media (max-width: 768px) {
-  .timeline {
-    min-height: auto;
-  }
-
   .timeline__container {
-    padding: 60px 20px;
+    padding: 60px var(--container-pad);
   }
 }
 
 @media (max-width: 480px) {
   .timeline__container {
-    padding: 40px 16px;
+    padding: 40px var(--container-pad);
   }
 }

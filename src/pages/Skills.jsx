@@ -6,10 +6,9 @@ import { IoLogoHtml5, IoLogoCss3  } from "react-icons/io";
 import { FaReact, FaFigma, FaAws  } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
 import FadeIn from '../components/FadeIn';
-import { TbApi, TbCode } from "react-icons/tb";
+import { TbApi, TbBrandVercel, TbCode } from "react-icons/tb";
 import StarOverlay from '../components/StarOverlay.jsx';
 import { RiSupabaseFill } from "react-icons/ri";
-import { TbBrandVercel } from "react-icons/tb";
 
 
 
@@ -81,7 +80,7 @@ export default function Skills() {
               <h2 className="skills__cardTitle">{skill.title}</h2>
               <p className="skills__cardDescription">{skill.description}</p>
               
-              {skill.icons && skill.icons.length > 0 ? (
+              {skill.icons && skill.icons.length > 0 && (
                 <div className="skills__iconsContainer">
                       {skill.icons.map((iconData, iconIndex) => (
                     <div
@@ -109,23 +108,12 @@ export default function Skills() {
                       </div>
                     ))}
                   </div>
-                ) : null}
+                )}
               
-              {skill.badges && skill.badges.length > 0 ? (
+              {skill.badges && skill.badges.length > 0 && (
                 <div className="skills__badgesContainer">
                   {skill.badges.map((badge, badgeIndex) => (
                     <span key={badgeIndex} className="skills__badgeItem">{badge}</span>
-                  ))}
-                </div>
-              ) : null}
-              {/* Tech stack chips for Work item (optional) */}
-              {skill.techStack && skill.techStack.length > 0 && (
-                <div className="skills__techStack">
-                  {skill.techStack.map((t, idx) => (
-                    <span key={idx} className="badge" style={{ borderColor: t.color, color: t.color }}>
-                      {t.icon}
-                      <span style={{ marginLeft: 6 }}>{t.name}</span>
-                    </span>
                   ))}
                 </div>
               )}

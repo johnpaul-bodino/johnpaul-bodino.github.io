@@ -27,7 +27,7 @@ export default function ProjectCard({ project }) {
   // Close preview modal when pressing Escape
   useEffect(() => {
     if (!isPreviewOpen) {
-      return undefined
+      return
     }
 
     function closeOnEscape(event) {

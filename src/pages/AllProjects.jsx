@@ -1,46 +1,16 @@
-import { useEffect, useState } from 'react'
 import { FaRegFolderOpen } from 'react-icons/fa'
 import { FiArrowLeft } from 'react-icons/fi'
 import ProjectCard from '../components/ProjectCard.jsx'
 import StarOverlay from '../components/StarOverlay.jsx'
-import { fetchGitHubProjects } from '../services/githubProjects'
+import { useGitHubProjects } from '../hooks/useGitHubProjects'
 
 const ALL_LIMIT = 100
 
 export default function AllProjects() {
-  const [projects, setProjects] = useState([])
-  const [status, setStatus] = useState('loading')
-
-  useEffect(() => {
-    let isMounted = true
-
-    async function loadProjects() {
-      setStatus('loading')
-
-      try {
-        const nextProjects = await fetchGitHubProjects({
-          limit: ALL_LIMIT,
-          view: 'all',
-        })
-
-        if (isMounted) {
-          setProjects(nextProjects)
-          setStatus('ready')
-        }
-      } catch {
-        if (isMounted) {
-          setProjects([])
-          setStatus('error')
-        }
-      }
-    }
-
-    loadProjects()
-
-    return () => {
-      isMounted = false
-    }
-  }, [])
+  const { projects, status } = useGitHubProjects({
+    limit: ALL_LIMIT,
+    view: 'all',
+  })
 
   return (
     <main className="projects-page star-overlay-host">
@@ -55,7 +25,7 @@ export default function AllProjects() {
             </div>
           </div>
 
-          <a href="/#projects" className="projects-page__back" onClick={() => setIsMenuOpen(false)}>
+          <a href="/#projects" className="projects-page__back">
             <FiArrowLeft aria-hidden="true" />
             back to home
           </a>

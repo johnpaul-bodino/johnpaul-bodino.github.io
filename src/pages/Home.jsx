@@ -8,32 +8,6 @@ const profileInfo = {
   imageUrl: profilePhoto,
   imageAlt: 'John Paul Bodino profile photo',
   initials: 'JB',
-  availability: 'Open to work',
-  availabilityColor: '#31a24c',
-}
-
-function IconDownload(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      width="22"
-      height="22"
-      aria-hidden="true"
-      focusable="false"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M6 2h8l4 4v16H6z" />
-      <path d="M14 2v5h5" />
-      <path d="M12 10v6" />
-      <path d="m9 13 3 3 3-3" />
-      <path d="M9 19h6" />
-    </svg>
-  )
 }
 
 function IconGithub(props) {
@@ -72,62 +46,60 @@ function IconMail(props) {
 
 export default function Home() {
   return (
-    <>
-      <section id="home" className="home star-overlay-host">
-        <StarOverlay />
-        <div className="home__container">
-          <div className="home__content home__fadeIn">
-            <div className="home__heroGrid">
-              <div className="home__intro">
-                <h1 className="home__title">
-                  Hey! I&apos;m <span className="home__accent">John Paul Bodino</span>
-                </h1>
+    <section id="home" className="home star-overlay-host">
+      <StarOverlay />
+      <div className="home__container">
+        <div className="home__content home__fadeIn">
+          <div className="home__heroGrid">
+            <div className="home__intro">
+              <h1 className="home__title">
+                Hey! I&apos;m <span className="home__accent">John Paul Bodino</span>
+              </h1>
 
-                <div className="home__desc">
-                  <p>
-                    I&apos;m an <span className="homey">Aspiring Junior Software Developer</span> who enjoys building reliable applications and solving real-world problems
-                    through code.
-                  </p>
-                  <p>
-                    I enjoy full-stack development, with a strong focus on backend systems.
-                  </p>
-                </div>
-
-                <div className="home__actions">
-                  <a className="home__resume" href="/John_Paul_P_Bodino_Resume.pdf" download="John Paul Bodino Resume.pdf" aria-label="Download resume">
-                    <img
-                      src="https://res.cloudinary.com/dazttfchn/image/upload/v1776048474/download_resume_lq2gz7.svg"
-                      alt="Download Resume"
-                      className="home__resumeIcon"
-                    />
-                    <span>Resume</span>
-                  </a>
-
-                  <div className="home__icons" aria-label="Social links">
-                    <a className="home__iconLink" href="https://github.com/johnpaul-bodino" aria-label="GitHub">
-                      <IconGithub />
-                    </a>
-                    <a className="home__iconLink" href="https://www.linkedin.com/in/john-paul-bodino-96a993332/" aria-label="LinkedIn">
-                      <FiLinkedin />
-                    </a>
-                    <a
-                      className="home__iconLink"
-                      href="https://mail.google.com/mail/?view=cm&fs=1&to=johnpaulbodino49@gmail.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="Email"
-                    >
-                      <IconMail />
-                    </a>
-                  </div>
-                </div>
+              <div className="home__desc">
+                <p>
+                  I&apos;m an <span className="homey">Aspiring Junior Software Developer</span> who enjoys building reliable applications and solving real-world problems
+                  through code.
+                </p>
+                <p>
+                  I enjoy full-stack development, with a strong focus on backend systems.
+                </p>
               </div>
 
-              <ProfileCard profile={profileInfo} />
+              <div className="home__actions">
+                <a className="home__resume" href="/John_Paul_P_Bodino_Resume.pdf" download="John Paul Bodino Resume.pdf" aria-label="Download resume">
+                  <img
+                    src="https://res.cloudinary.com/dazttfchn/image/upload/v1776048474/download_resume_lq2gz7.svg"
+                    alt="Download Resume"
+                    className="home__resumeIcon"
+                  />
+                  <span>Resume</span>
+                </a>
+
+                <div className="home__icons" aria-label="Social links">
+                  <a className="home__iconLink" href="https://github.com/johnpaul-bodino" aria-label="GitHub">
+                    <IconGithub />
+                  </a>
+                  <a className="home__iconLink" href="https://www.linkedin.com/in/john-paul-bodino-96a993332/" aria-label="LinkedIn">
+                    <FiLinkedin />
+                  </a>
+                  <a
+                    className="home__iconLink"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=johnpaulbodino49@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Email"
+                  >
+                    <IconMail />
+                  </a>
+                </div>
+              </div>
             </div>
+
+            <ProfileCard profile={profileInfo} />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }

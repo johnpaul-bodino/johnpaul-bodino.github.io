@@ -1,19 +1,18 @@
 .skills__container {
   position: relative;
-  padding: 100px 40px;
-  background: var(--background-page);
-  background-size: var(--background-page-size);
-  background-attachment: fixed;
+  padding: 100px var(--container-pad);
   color: var(--color-text-muted);
   font-family: 'JetBrains Mono', monospace;
   overflow: hidden;
 }
+
 .skills__titleIcon {
   color: var(--color-accent);
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   margin-right: 0.5rem;
 }
+
 /* Faint grid background pattern */
 .skills__container::before {
   content: '';
@@ -22,26 +21,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     linear-gradient(rgba(148, 163, 184, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(148, 163, 184, 0.035) 1px, transparent 1px);
   background-size: 50px 50px;
   pointer-events: none;
   z-index: 0;
-}
-
-.skills__title {
-  display: flex;
-  position: relative;
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  color: var(--color-text);
-  margin: 0 0 9rem 0;
-  padding-left: 0;            /* left alignment handled by inner wrapper */
-  width: 100%;
-  justify-content: flex-start;
-  text-align: left;
 }
 
 /* Title row wrapper for better alignment with content */
@@ -50,19 +35,14 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  max-width: 1700px;
   margin: 0 auto 4rem auto;
-  padding-left: 20px;
 }
 
 /* Inner content wrapper to keep both title and cards aligned together */
 .skills__inner {
-  width: min(1330px, 100%);
+  width: min(var(--container-max), 100%);
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
 }
-
 
 /* CSS Columns - True Masonry Layout */
 .skills__masonry {
@@ -70,7 +50,7 @@
   z-index: 1;
   column-count: 2;
   column-gap: 20px;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -80,18 +60,19 @@
   page-break-inside: avoid;
   -webkit-column-break-inside: avoid;
   background: var(--color-surface);
-  backdrop-filter: blur(10px);
   border: 1px solid var(--color-border);
-  border-radius: 13px;
+  border-radius: var(--radius-card);
   box-shadow: var(--card-shadow);
   padding: 32px;
   margin-bottom: 20px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: visible;
   display: flex;
   flex-direction: column;
-  transform: translateZ(0);
 }
 
 /* Offset first card to create staggered masonry effect */
@@ -99,17 +80,9 @@
   margin-top: -3rem;
 }
 
-/* Gradient overlay on hover */
-
-
-.skills__card:hover::before {
-  left: 100%;
-}
-
 .skills__card:hover {
   transform: translateY(-4px);
   border-color: var(--color-border-strong);
-  border-radius: 13px;
 }
 
 :root:not([data-theme='light']) .skills__card:hover {
@@ -132,8 +105,11 @@
   font-weight: 800;
   letter-spacing: 0.05em;
   color: var(--color-text);
-  
+  margin-left: 10px;
+  display: inline-block;
+  transform: translateY(1px);
 }
+
 .skills__cardTitle {
   position: relative;
   z-index: 1;
@@ -177,9 +153,7 @@
   font-size: 2.25rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  
 }
-
 
 .skills__badgesContainer {
   position: relative;
@@ -202,12 +176,6 @@
   transition: all 0.3s ease;
   display: inline-block;
 }
-
-/* .skills__badgeItem:hover {
-  background: linear-gradient(135deg, rgba(162, 152, 228, 0.4), rgba(209, 138, 201, 0.25));
-  border-color: rgba(162, 152, 228, 0.7);
-  transform: translateY(-2px);
-} */
 
 /* Tooltip Styles */
 .skills__iconWrapper {
@@ -267,11 +235,10 @@
 
 @media (max-width: 1024px) {
   .skills__container {
-    padding: 80px 32px;
+    padding: 80px var(--container-pad);
   }
 
   .skills__masonry {
-    column-count: 2;
     column-gap: 28px;
   }
 
@@ -279,37 +246,15 @@
     padding: 28px;
     margin-bottom: 28px;
   }
-
-  .skills__cardTitle {
-    font-size: 1.4rem;
-  }
-
-  .skills__cardDescription {
-    font-size: 0.95rem;
-  }
 }
 
 @media (max-width: 768px) {
-
-
-  .skills__titleText{
+  .skills__titleText {
     font-size: 1.5rem;
   }
 
-  .skills__titleIcon {
-    width: 40px;
-    height: 40px;
-  }
-  
   .skills__container {
-    padding: 60px 20px;
-  }
-
-  .skills__title {
-    margin-left: 1rem;
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    margin-top: 0;
+    padding: 60px var(--container-pad);
   }
 
   .skills__titleIcon {
@@ -318,13 +263,20 @@
   }
 
   .skills__masonry {
-    column-count: 1;
+    column-count: auto;
     column-gap: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   .skills__card {
     padding: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
+  }
+
+  .skills__card:nth-child(1) {
+    margin-top: 0;
   }
 
   .skills__cardTitle {
@@ -355,37 +307,20 @@
 
 @media (max-width: 480px) {
   .skills__container {
-    padding: 40px 16px;
-  }
-
-  .skills__title {
-    margin-left: 0.5rem;
-    font-size: 1.3rem;
-    margin-bottom: 3rem;
-    margin-top: -1rem;
-    justify-content: center;
+    padding: 40px var(--container-pad);
   }
 
   .skills__titleIcon {
-    width: 40px;
-    height: 40px;
-  }
-  .skills__inner {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  .skills__titleRow {
-    padding-left: 12px;
+    width: 28px;
+    height: 28px;
   }
 
   .skills__masonry {
-    column-count: 1;
+    gap: 20px;
   }
 
   .skills__card {
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 12px;
   }
 
   .skills__cardTitle {
@@ -415,42 +350,17 @@
 }
 
 @media (max-width: 375px) {
-  .skills__title {
-    font-size: 1.15rem;
-  }
-
-  .skills__titleIcon {
-    width: 40px;
-    height: 40px;
-    margin-right: -0.3rem;
-    
-  }
-
   .skills__iconsContainer {
     grid-template-columns: repeat(auto-fit, minmax(42px, max-content));
     gap: 10px;
   }
-
-  
 
   .skills__titleText {
     font-size: 1.4rem;
   }
 
   .skills__titleRow {
-    justify-content: center;
     padding-left: 0;
-    margin-left: -10px;
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem;
   }
-}
-
-.skills__titleIcon {
-  color: var(--color-accent);
-}
-
-.skills__titleText {
-  margin-left: 10px;
-  display: inline-block;
-  transform: translateY(1px);
 }

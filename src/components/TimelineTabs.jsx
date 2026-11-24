@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/TimelineTabs.css";
 import academyLogo from "../assets/8con_academy_logo.jfif";
 import cmiLogo from "../assets/cmi.png";
@@ -36,9 +36,9 @@ const educationTimeline = [
   },
 ];
 
-function TimelineItem({ item, isLast }) {
+function TimelineItem({ item }) {
   return (
-    <li className={`timeline__item${isLast ? " timeline__item--last" : ""}`}>
+    <li className="timeline__item">
       <div className={`timeline__marker${item.markerImage ? " timeline__marker--image" : ""}`}>
         {item.markerImage && (
           <img
@@ -68,27 +68,9 @@ function TimelineItem({ item, isLast }) {
       {item.badges && item.badges.length > 0 && (
         <div className="timeline__badgesRow" aria-label="Tech badges">
           {item.badges.map((b, i) => (
-            <span key={i} className={`badge-pill badge-${b.toLowerCase()}`}>{b}</span>
+            <span key={i} className="badge-pill">{b}</span>
           ))}
         </div>
-      )}
-      {item.techStack && item.techStack.length > 0 && (
-        <div className="timeline__techStack" aria-label="Tech stack">
-          {item.techStack.map((t, idx) => (
-            <span key={idx} className="timeline__chip" style={{ borderColor: t.color, color: t.color }}>
-              {t.icon}
-              <span className="timeline__chipLabel" style={{ marginLeft: 6 }}>{t.name}</span>
-            </span>
-          ))}
-        </div>
-      )}
-      {item.link && (
-        <a href={item.link} className="timeline__link">
-          {item.linkText}
-          <svg className="timeline__linkIcon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
-          </svg>
-        </a>
       )}
     </li>
   );
@@ -118,12 +100,8 @@ export default function TimelineTabs() {
       </div>
       <div className="timeline-tabs__content">
         <ol className="timeline__list">
-      {timelineData.map((item, index) => (
-            <TimelineItem
-              key={index}
-              item={item}
-              isLast={index === timelineData.length - 1}
-            />
+          {timelineData.map((item, index) => (
+            <TimelineItem key={index} item={item} />
           ))}
         </ol>
       </div>

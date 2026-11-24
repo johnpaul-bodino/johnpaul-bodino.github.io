@@ -7,26 +7,15 @@
   height: 72px;
   z-index: 10000;
   margin: 0;
-  background: transparent;
+  padding: 0;
   display: flex;
-  justify-content: center;   /* ✅ CENTER CONTAINER */
+  justify-content: center;
   align-items: center;
-  /* Blur Effect */
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   background: var(--color-navbar);
   transform: translateZ(0);
   will-change: transform;
-}
-
-/* INNER CONTAINER (IMPORTANT FIX) */
-.navbar::before {
-  content: "";
-}
-
-/* Wrap content like your hero */
-.navbar {
-  padding: 0;
 }
 
 .navbar__logo {
@@ -46,16 +35,14 @@
     drop-shadow(0 8px 18px rgba(58, 49, 40, 0.14));
 }
 
-
-/* Add inner wrapper behavior */
 .inner-navbar {
-  max-width: 1360px;        
-  margin: 0 auto;           
+  max-width: calc(var(--container-max) + var(--container-pad) * 2);
+  margin: 0 auto;
   width: 100%;
   height: 100%;
-  padding: 0 clamp(24px, 4vw, 55px);
+  padding: 0 var(--container-pad);
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
 }
@@ -98,7 +85,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(2.4rem, 2vw, 1.5rem);
+  gap: 2.4rem;
   margin-left: auto;
   margin-right: 0.75rem;
 }
@@ -170,74 +157,20 @@
   height: 20px;
   color: #facc15;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: none;
 }
 
 .theme-btn:hover .theme-btn__icon {
   color: #fde047;
-  filter: none;
   transform: rotate(15deg);
 }
 
 /* Moon icon - Dark Blue */
 .theme-btn__icon--moon {
   color: var(--color-accent);
-  filter: none;
 }
 
 .theme-btn:hover .theme-btn__icon--moon {
   color: var(--color-accent-strong);
-  filter: none;
-}
-
-/* Sun icon glow effect */
-.theme-btn:hover .theme-btn__icon {
-  filter: none;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0;
-    gap: 0.5rem;
-  }
-
-  .navbar-link {
-    font-size: 0.8rem;
-  }
-
-  .theme-btn {
-    width: 40px;
-    height: 40px;
-    margin-right: 8px;
-  }
-
-  .theme-btn__icon {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* Show hamburger only on mobile */
-@media (max-width: 600px) {
-  .hamburger-btn {
-    display: flex;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    margin-right: 8px;
-    width: 44px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-  }
-
-  .hamburger-btn:hover {
-    background: var(--color-accent-soft);
-  }
 }
 
 /* Hamburger Menu Button - Hidden on tablet and larger */
@@ -296,14 +229,41 @@
   bottom: 50%;
   transform: translateY(50%) rotate(-45deg);
 }
+
 .theme-btn-mobile {
   display: none;
 }
 
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar-links {
+    gap: clamp(0.5rem, 2vw, 1.25rem);
+    margin-right: 0.25rem;
+  }
+
+  .navbar-link {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .theme-btn {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .theme-btn__icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Show hamburger only on mobile */
 @media (max-width: 600px) {
   .theme-btn-desktop {
     display: none !important;
   }
+
   .theme-btn-mobile {
     width: 100%;
     display: flex !important;
@@ -311,18 +271,33 @@
     background: none;
     box-shadow: none;
     margin: 0;
-    padding: 0 0 8px 20px; /* Align with nav links, with slight bottom space */
+    padding: 0 0 8px 20px;
   }
+
   .theme-btn-mobile .theme-btn {
     margin: 0;
-    /* Optional: visually align top, left */
     box-shadow: none;
     background: rgba(248, 250, 252, 0.04);
   }
 
   .hamburger-btn {
     display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 8px;
     margin-left: auto;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+
+  .hamburger-btn:hover {
+    background: var(--color-accent-soft);
   }
 
   .navbar-links {
@@ -396,11 +371,6 @@
 @media (max-width: 480px) {
   .navbar {
     height: 54px;
-    padding: 0;
-  }
-
-  .navbar__logo {
-    width: 40px;
   }
 
   .hamburger-btn {
@@ -430,11 +400,10 @@
 @media (max-width: 375px) {
   .navbar {
     height: 52px;
-    padding: 0;
   }
 
   .navbar__logo {
-    width: 42px;
+    width: 36px;
   }
 
   .hamburger-btn {

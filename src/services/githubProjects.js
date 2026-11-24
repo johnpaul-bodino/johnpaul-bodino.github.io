@@ -14,22 +14,13 @@ async function getJson(url) {
 }
 
 function sortPinnedFirst(projects) {
-  if (PINNED_REPOSITORIES.length === 0) {
-    return projects
-  }
-
   const order = new Map(
     PINNED_REPOSITORIES.map((repoName, index) => [repoName, index])
   )
 
   return [...projects].sort((a, b) => {
-    const aOrder = order.has(a.title)
-      ? order.get(a.title)
-      : Number.MAX_SAFE_INTEGER
-
-    const bOrder = order.has(b.title)
-      ? order.get(b.title)
-      : Number.MAX_SAFE_INTEGER
+    const aOrder = order.get(a.title) ?? Number.MAX_SAFE_INTEGER
+    const bOrder = order.get(b.title) ?? Number.MAX_SAFE_INTEGER
 
     return aOrder - bOrder
   })

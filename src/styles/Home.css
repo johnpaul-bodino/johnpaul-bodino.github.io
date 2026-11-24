@@ -1,22 +1,18 @@
 .home {
   min-height: 50rem;
-  background: var(--background-page);
-  background-size: var(--background-page-size);
-  background-attachment: fixed;
-  /* background-color: #111827;   */
   color: var(--color-text-muted);
   font-family: 'JetBrains Mono', monospace;
-  display: flex;              /* ✅ ADDED */
-  justify-content: center;    /* ✅ ADDED */
-  align-items: flex-start;      /* ✅ ADDED */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .home__container {
   min-height: auto;
-  padding: 28px clamp(20px, 6vw, 120px);
+  padding: 28px var(--container-pad);
   display: flex;
   flex-direction: column;
-  align-items: center;        /* ✅ ADDED */
+  align-items: center;
   width: 100%;
 }
 
@@ -26,10 +22,9 @@
   justify-content: center;
   align-items: flex-start;
   padding-top: 60px;
-
   width: 100%;
-  max-width: 1220px;
-  margin: 0 auto;             /* ✅ ADDED (MAIN FIX) */
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
 .home__heroGrid {
@@ -44,24 +39,8 @@
   min-width: 0;
 }
 
-.home__logo {
-  position: absolute;
-  left: 60px;
-  transform: translateY(-50%);
-  width: 64px;
-  opacity: 0.9;
-  transition: all 0.15s ease;
-}
-
-.home__logo:hover {
-  opacity: 1;
-  filter: drop-shadow(0 0 10px var(--color-accent-glow));
-}
-
-
 .home__title {
-  margin: 0;
-  margin-top: 138px;
+  margin: 138px 0 0;
   font-size: 2.25rem;   /* 36px */
   line-height: 1.2;
   font-weight: 600;
@@ -74,6 +53,7 @@
   font-size: 2.25rem;
   font-weight: 700;
 }
+
 .homey {
   color: var(--color-brand);
   font-size: 1.2rem;
@@ -83,10 +63,12 @@
 .home__desc {
   margin-top: 14px;
   display: grid;
-  gap: 1px;
+  gap: 8px;
+  font-size: 1.15rem;
+  line-height: 1.65;
   letter-spacing: 0;
-  font-weight: 200;          /* Medium */
-  max-width: 690px;          /* 🔥 THIS makes it look right */
+  font-weight: 400;
+  max-width: 690px;
   color: var(--color-text-muted);
 }
 
@@ -98,8 +80,6 @@
   flex-wrap: wrap;
   height: 100px;
 }
-
-
 
 .home__resume {
   display: inline-flex;
@@ -134,7 +114,6 @@
   color: var(--color-text);
 }
 
-
 .home__icons {
   display: flex;
   align-items: center;
@@ -142,7 +121,6 @@
   gap: 2rem;
   width: 300px;
   justify-content: flex-start;
-
 }
 
 .home__iconLink {
@@ -167,10 +145,9 @@
 
 .home__profileCard {
   position: relative;
-  justify-self: center;
+  justify-self: end;
   width: min(100%, 280px);
-  margin: 14px 0 0 14px;
-  transform: translateX(-56px);
+  margin: 14px 0 0;
 }
 
 .home__profileFrame {
@@ -222,37 +199,6 @@
   letter-spacing: 0.04em;
 }
 
-.home__profileMeta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 16px;
-  padding: 0 2px;
-}
-
-.home__status {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  gap: 8px;
-  color: var(--color-text-muted);
-}
-
-.home__statusDot {
-  width: 6px;
-  height: 6px;
-  background: var(--status-color, #22c55e);
-  flex: 0 0 auto;
-}
-
-.home__profileIndex {
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  color: var(--color-text-subtle);
-}
-
 .home__fadeIn {
   animation: homeFadeIn 600ms ease-out both;
 }
@@ -275,7 +221,7 @@
   }
 
   .home__container {
-    padding: 20px 16px;
+    padding: 20px var(--container-pad);
     min-height: 100vh;
   }
 
@@ -293,12 +239,13 @@
   .home__profileCard {
     justify-self: center;
     width: min(100%, 250px);
+    margin: 14px 0 0;
     order: -1;
     transform: none;
   }
 
   .home__title {
-    margin-top: 100px;
+    margin-top: 0;
     font-size: 1.8rem;
     line-height: 1.3;
   }
@@ -310,12 +257,8 @@
   .home__desc {
     font-size: 1rem;
     max-width: 100%;
-    line-height: 1.5;
-  }
-
-  .home__desc p {
-    margin-bottom: 10px;
-    font-size: 1rem;
+    line-height: 1.6;
+    gap: 10px;
   }
 
   .homey {
@@ -324,9 +267,9 @@
 
   .home__actions {
     margin-top: 30px;
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
   }
 
   .home__resume {
@@ -345,7 +288,6 @@
   }
 
   .home__icons {
-    display: flex;
     justify-content: center;
     width: 100%;
     margin-left: 0;
@@ -356,20 +298,14 @@
     width: 36px;
     height: 36px;
   }
-
-  .home__iconLink svg {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 @media (max-width: 480px) {
   .home__container {
-    padding: 16px 14px;
+    padding: 16px var(--container-pad);
   }
 
   .home__title {
-    margin-top: 80px;
     font-size: 1.6rem;
   }
 
@@ -402,20 +338,14 @@
     width: 28px;
     height: 28px;
   }
-
-  .home__profileMeta {
-    justify-content: center;
-    gap: 4px;
-  }
 }
 
 @media (max-width: 375px) {
   .home__container {
-    padding: 14px 12px;
+    padding: 14px var(--container-pad);
   }
 
   .home__title {
-    margin-top: 70px;
     font-size: 1.45rem;
   }
 
